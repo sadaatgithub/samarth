@@ -1,3 +1,13 @@
+import {GoLocation} from "react-icons/go"
+import {BiTime} from "react-icons/bi"
+
+import {GrMail} from "react-icons/gr"
+import {MdPhoneInTalk} from "react-icons/md"
+import Link from "next/link";
+
+
+const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
+
 
 const navbar = () => {
   return (

@@ -4,7 +4,7 @@ const footer = () => {
 
 
   return (
-    <footer className="bg-cover relative bg-center after:content-[''] after:absolute after:inset-0 after:bg-black/70">
+    <footer className=" bg-cover relative bg-center after:content-[''] after:absolute after:inset-0 after:bg-black/70">
     <div className="grid md:grid-cols-6 p-12 gap-4 py-16 z-10">
     <div className="col-span-2 flex flex-col gap-4 z-10">
         <h1 className="text-3xl text-white font-bold ">SAMARTH</h1>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-main{
+/* main{
   background-image: url('../public/hero.jpg');
+} */
+
+footer{
+  background-image: url('../public/slide1.jpg');
 }
