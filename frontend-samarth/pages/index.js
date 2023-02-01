@@ -7,6 +7,7 @@ import Introduction from '@/components/herosection/Introduction'
 import OurServices from '@/components/services/OurServices'
 import Testimonials from '@/components/testimonial/Testimonials'
 import BlogsArticles from '@/components/blog/BlogsArticles'
+import OurTeam from '@/components/team/OurTeam'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <HeroSlider/>
       <Introduction/>
       <OurServices/>
+      <OurTeam/>
       <Testimonials/>
       <BlogsArticles/>
     </>

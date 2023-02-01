@@ -52,7 +52,7 @@ const HeroSlider = () => {
               {({ isActive }) => (
                 <div
                   className="relative after:content-[''] after:absolute object-cover
-        after:inset-0 after:bg-black/60"
+        after:inset-0 after:bg-slate-900/60"
                 >
                   <Image
                     src={slide.image}
