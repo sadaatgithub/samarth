@@ -1,0 +1,123 @@
+import {Swiper, SwiperSlide} from "swiper/react"
+import Image from "next/image"
+import Slide1 from "../../public/slide1.jpg"
+import Slide2 from "../../public/slide2.jpg"
+import Slide3 from "../../public/slide3.jpg"
+
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper";
+
+
+export const services = [
+  {
+    id: 1,
+    name: "Orthopedic Physiotherapy",
+    designation: "Doctor",
+    content:
+      "Orthopedic physiotherapy helps finding pain relief due to or musculoskeletal conditions in bones or soft tissues - including back pain, neck pain, shoulder pain, knee pain, joint pain...",
+    image: Slide1,
+  },
+  {
+    id: 2,
+    name: "Neuro Physiotherapy",
+    designation: "Advocate",
+    content:
+      "Neuro physiotherapy for Stroke, Multiple Sclerosis, Paralysis, Muscular Dystrophy, Bell's Palsy, Parkinson's disease to relearn skills lost due to the damage to their brain, spinal...",
+    image: Slide2,
+  },
+  {
+    id: 3,
+    name: "Sports Physiotherapy & Fitness",
+    designation: "Social worker",
+    content:
+      "Sports Physiotherapy and fitness services for sports injury, sports rehabilitation and injury prevention. Running marathon, playing football, dancing zumba or aerobics, stay injury...",
+    image: Slide3,
+  },
+  {
+    id: 4,
+    name: "Hydrotherapy",
+    designation: "Advocate",
+    content:
+      "Hydrotherapy refers to using water as therapy in any form, in this instance we use it for the performing of exercises in water.",
+    image: Slide1,
+  },
+];
+
+const SliderTwo = () => {
+  return (
+    <>
+    <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        slidesPerGroup={3}
+        loop={true}
+        lazy={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        // loopFillGroupWithBlank={true}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          240:{
+            slidesPerView: 1,
+            // spaceBetween: 20,
+          slidesPerGroup:1,
+          },
+          420:{
+            slidesPerView: 2,
+            spaceBetween: 10,
+          slidesPerGroup:2,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          slidesPerGroup:2,
+
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          slidesPerGroup:3,
+
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          slidesPerGroup:3,
+
+          },
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation,Autoplay]}
+        className="mySwiper w-full flex mt-8 md:mt-16"
+      >
+        {services.map((data) =>{
+          return(
+          <SwiperSlide key={data.id}>
+            <div className="flex h-fit flex-col gap-4 border rounded-md overflow-hidden hover:shadow-lg">
+              <div className="h-60 overflow-hidden">
+            <Image src={data.image} alt="" width="480px" height="320px" className="w-full h-full object-cover"/>
+            </div>
+            <div className="h-1/2 flex flex-col gap-4 py-6 px-2 mt-1">
+            <h4 className="text-xl font-semibold px-2 text-slate-800">{data.name} </h4>
+            <p className="text-slate-500 px-2 leading-8">{data.content}</p>
+                    <button className="self-end mr-2 mb-2">Read More</button>
+                    </div>
+            </div>
+
+          </SwiperSlide>)
+        })}
+       
+      </Swiper>
+    </>
+    
+  )
+}
+
+export default SliderTwo

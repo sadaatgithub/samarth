@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { EffectFade, Navigation, Autoplay, Lazy } from "swiper";
+import HeroBanner from "./HeroBanner";
 
 
 const data = [
@@ -58,7 +59,7 @@ const HeroSlider = () => {
                     alt=""
                     width="1200"
                     height="780"
-                    className="w-full h-full  object-cover  swiper-lazy"
+                    className="w-full h-full  object-cover  swiper-lazy object-center"
                   />
                   <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                   <div
@@ -80,7 +81,7 @@ const HeroSlider = () => {
         })}
 
       </Swiper>
-        {/* <HeroBanner/> */}
+        <HeroBanner/>
       </div>
     </>
   )

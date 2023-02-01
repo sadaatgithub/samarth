@@ -22,7 +22,7 @@ const navbar = () => {
         </div>
       </div>
       <div className="logo px-6 lg:px-20  py-6 grid md:grid-cols-6 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2">
-          <h1 className="text-3xl font-bold text-coral-red-500 uppercase  col-span-full w-full md:col-span-2 text-center md:text-start">Samarth</h1>
+          <h1 className="text-3xl font-bold text-coral-red-500 uppercase  col-span-full w-full md:col-span-2 text-slate-700 text-center md:text-start">Samarth</h1>
           <div className="md:col-span-4 w-full flex  flex-wrap justify-center md:justify-end font-semibold text-slate-800 text-base md:text-lg gap-x-6">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10  p-2 rounded-full bg-slate-100 flex justify-center items-center">
