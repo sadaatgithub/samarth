@@ -5,7 +5,12 @@ import Food from "../../public/food.jpg"
 import Theraband from "../../public/theraband.jpg"
 import Bone from "../../public/bones.jpg"
 import { MdArrowRightAlt } from "react-icons/md"
+import imageUrlBuilder from '@sanity/image-url'
+import client from "@/sanity/client"
 
+function urlFor(source){
+  return imageUrlBuilder(client).image(source)
+}
 export const blogs = [
   {
     id:1,
@@ -39,31 +44,31 @@ export const blogs = [
 
 
 
-const BlogsArticles = () => {
+const BlogsArticles = ({post}) => {
   return (
     <div className="min-h-screen mt-12 flex flex-col items-center gap-4 py-10 px-2 lg:px-20">
         <h2 className="text-2xl lg:text-5xl text-slate-700 font-semibold">Latest Blogs & Articles</h2>
 
         <div className="grid md:grid-cols-2 grid-cols-1 gap-2 md:gap-4 md:mt-20">
-            {blogs.map(post =>(
-              <div key={post.id} className="md:cols-span-2 flex w-full md:flex-row flex-col gap-2 place-items-center group">
+            {post.map(post =>(
+              <div key={post._id} className="md:cols-span-2 flex w-full md:flex-row flex-col gap-2 place-items-center group">
                 <div className="md:w-1/2 h-44 rounded-md overflow-hidden relative">
-                {/* <img
+                <img
             src={urlFor(post.mainImage)
               .width(320)
               .url()}
               className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
-          /> */}
-                <Image src={post.image} alt="" className="object-cover h-full group-hover:scale-110 transition-transform duration-500"/>
+          />
+                {/* <Image src={post.image} alt="" className="object-cover h-full group-hover:scale-110 transition-transform duration-500"/> */}
                 <div className="absolute right-0 top-0  z-10 text-white bg-teal-500 p-2 rounded-sm uppercase text-xs">
-                {post.date}
+                {new Date(post._createdAt).toDateString()}
                 </div>
                 </div>
                 <div className="md:w-1/2">
                 <div className="flex flex-col gap-2 p-4">
                   <h3 className="text-base font-bold text-slate-600">{post.title}</h3>
-                  <p className="text-gray-400">{post.desc}</p>
-                  <Link href={`/blog/${post.id}`}className="text-rose-500 flex gap-2 items-center">Read More <MdArrowRightAlt/></Link>
+                  <p className="text-gray-400">{post.description}</p>
+                  <Link href={`/blog/${post.slug}`}className="text-rose-500 flex gap-2 items-center">Read More <MdArrowRightAlt/> </Link>
                 </div>
                 </div>
                 

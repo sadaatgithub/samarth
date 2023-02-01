@@ -10,7 +10,10 @@ import BlogsArticles from '@/components/blog/BlogsArticles'
 import OurTeam from '@/components/team/OurTeam'
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+import sanityClient from "../sanity/client"
+
+
+export default function Home({post}) {
   return (
     <>
       <Head>
@@ -24,7 +27,15 @@ export default function Home() {
       <OurServices/>
       <OurTeam/>
       <Testimonials/>
-      <BlogsArticles/>
+      <BlogsArticles post={post}/>
     </>
   )
+}
+export async function getStaticProps() {
+  const post = await sanityClient.fetch(`*[_type=="post" && defined(slug.current) && !(_id in path("drafts.**"))]{title,description,mainImage,_createdAt, "slug":slug.current}[0..4]`)
+  return {
+    props: {
+      post
+    }
+  }
 }

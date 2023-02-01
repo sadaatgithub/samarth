@@ -59,7 +59,7 @@ const HeroSlider = () => {
                     alt=""
                     width="1200"
                     height="780"
-                    className="w-full h-full  object-cover  swiper-lazy object-center"
+                    className="w-full h-full object-cover object-top  swiper-lazy"
                   />
                   <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                   <div

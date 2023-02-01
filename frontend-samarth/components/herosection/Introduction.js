@@ -3,7 +3,7 @@ import { useState } from "react"
 import {FaCheckCircle} from "react-icons/fa"
 import FreeConsultation from "../modals/FreeConsultation"
 import Portal from "../portal/Portal"
-
+import {MdArrowRightAlt} from "react-icons/md"
 
 
 const Introduction = () => {
@@ -19,8 +19,9 @@ const Introduction = () => {
             <li><FaCheckCircle/>Personalised Treatment</li>
             <li><FaCheckCircle/>Professional and Certified Therapists</li>
             <li><FaCheckCircle/>Experienced staff</li>
+            
         </ul>
-        <button className="text-xl bg-teal-700 z-[1] text-white px-6 py-4 rounded-full shadow-sm  hover:bg-teal-800 transition-all duration-100" onClick={()=> setOpen(!open)}>Get Free Consultation</button>
+        <button className="flex justify-center items-center gap-4 text-xl bg-teal-700 z-[1] text-white px-6 py-4 rounded-full shadow-sm  hover:bg-teal-800 transition-all duration-100" onClick={()=> setOpen(!open)}>Get Free Consultation <MdArrowRightAlt/></button>
         {open?
         <Portal>
           <FreeConsultation setOpen={setOpen}/>

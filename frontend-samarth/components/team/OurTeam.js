@@ -3,7 +3,8 @@ import Image from "next/image"
 import Team1 from "@/public/team1.jpg"
 import Team2 from "@/public/team2.jpg"
 import Team3 from "@/public/team3.jpg"
-
+import {BsTwitter,BsFacebook} from "react-icons/bs"
+import {AiFillInstagram} from "react-icons/ai"
 export const team = [
     {
       id: 1,
@@ -60,6 +61,7 @@ const OurTeam = () => {
 
       <div className="flex justify-evenly w-full mt-10 md:mt-28 sm:flex-row flex-col gap-4">
         {team.map((member) => (
+          <div className="flex flex-col gap-8">
           <Link key={member.id}
             href={`/our-team/${member.id}`} className="flex flex-col justify-center rounded-md items-center relative overflow-hidden"
           >
@@ -72,7 +74,14 @@ const OurTeam = () => {
               <p className="font-bold">{member.member}</p>
               <p className="text-gray-700">{member.designation}</p>
             </div>
+            
           </Link>
+          <div className="flex gap-4 justify-center text-2xl text-slate-600 [&>svg]:cursor-pointer [&>svg:hover]:text-rose-500 [&>svg]:transition-all [&>svg]:duration-150">
+          <BsTwitter/>
+          <BsFacebook/>
+          <AiFillInstagram/>
+          </div>
+      </div>
         ))}
 
       

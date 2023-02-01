@@ -41,7 +41,7 @@ const navbar = () => {
         </div>
       <nav className="flex justify-between w-full lg:px-20 px-6  text-slate-800 font-medium border-b-2 border-teal-300">
         
-        <ul className="hidden md:flex gap-8 [&>li]:cursor-pointer [&>li]:py-3 navlink font-semibold">
+        <ul className="hidden md:flex gap-8 [&>li]:cursor-pointer [&>li]:py-3 navlink font-semibold [&>li]:relative">
           <li><Link href="/">Home</Link></li>
           <li><Link href="/about">About Us</Link></li>
           <li className="relative group">Services

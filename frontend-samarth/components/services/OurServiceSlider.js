@@ -10,7 +10,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper";
 
-
 export const services = [
   {
     id: 1,
@@ -94,8 +93,8 @@ const SliderTwo = () => {
           },
         }}
         navigation={true}
-        modules={[Pagination, Navigation,Autoplay]}
-        className="mySwiper w-full flex mt-8 md:mt-16"
+        modules={[Pagination,Autoplay]}
+        className="mySwiper w-full flex mt-8 md:mt-16 relative"
       >
         {services.map((data) =>{
           return(
@@ -114,6 +113,8 @@ const SliderTwo = () => {
           </SwiperSlide>)
         })}
        
+
+
       </Swiper>
     </>
     
