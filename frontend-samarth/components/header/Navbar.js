@@ -4,6 +4,7 @@ import {BiTime} from "react-icons/bi"
 import {GrMail} from "react-icons/gr"
 import {MdPhoneInTalk} from "react-icons/md"
 import Link from "next/link";
+import { AiOutlineCaretDown } from "react-icons/ai";
 
 
 const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
@@ -22,7 +23,7 @@ const navbar = () => {
         </div>
       </div>
       <div className="logo px-6 lg:px-20  py-6 grid md:grid-cols-6 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2">
-          <h1 className="text-3xl font-bold text-coral-red-500 uppercase  col-span-full w-full md:col-span-2 text-slate-700 text-center md:text-start">Samarth</h1>
+          <h1 className="text-3xl font-bold text-coral-red-500 uppercase  col-span-full w-full md:col-span-2 text-slate-700 text-center md:text-start drop-shadow-xl">Samarth</h1>
           <div className="md:col-span-4 w-full flex  flex-wrap justify-center md:justify-end font-semibold text-slate-800 text-base md:text-lg gap-x-6">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10  p-2 rounded-full bg-slate-100 flex justify-center items-center">
@@ -39,16 +40,16 @@ const navbar = () => {
                 <button className="bg-teal-400 text-white px-4 py-2 rounded-full text-base hidden lg:block">Book Appointment</button>
           </div>
         </div>
-      <nav className="flex justify-between w-full lg:px-20 px-6  text-slate-800 font-medium border-b-2 border-teal-300">
+      <nav className="flex justify-between w-full lg:px-20 px-6  text-slate-800 font-medium">
         
         <ul className="hidden md:flex gap-8 [&>li]:cursor-pointer [&>li]:py-3 navlink font-semibold [&>li]:relative">
           <li><Link href="/">Home</Link></li>
           <li><Link href="/about">About Us</Link></li>
-          <li className="relative group">Services
+          <li className="relative group flex items-center gap-2">Services <AiOutlineCaretDown className="text-sm"/>
             <ul className="group-hover:visible group-hover:opacity-100 group-hover:translate-y-2 opacity-0 top-[40px] invisible absolute left-0 z-[20] bg-white 
-          w-[500%] transition-all duration-100 ease-linear flex flex-col shadow-xl overflow-hidden rounded-sm scale-75  group-hover:scale-100 origin-top-left">
+          w-[350%] transition-all duration-100 ease-linear flex flex-col shadow-xl overflow-hidden rounded-sm scale-75  group-hover:scale-100 origin-top-left">
               {link.map((services,index) =>(
-                <li key={index} className="font-normal border-l-4 border-transparent hover:border-l-4 hover:border-teal-400 p-3 hover:bg-gray-50 transition-all duration-200">{services}</li>
+                <li key={index} className="font-normal border-l-4 border-transparent hover:border-l-4 hover:border-rose-500 p-3 hover:bg-gray-50 transition-all duration-200">{services}</li>
               ))}
             </ul>
           </li>

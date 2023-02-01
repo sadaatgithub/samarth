@@ -93,7 +93,7 @@ const SliderTwo = () => {
           },
         }}
         navigation={true}
-        modules={[Pagination,Autoplay]}
+        modules={[Pagination,Navigation,Autoplay]}
         className="mySwiper w-full flex mt-8 md:mt-16 relative"
       >
         {services.map((data) =>{

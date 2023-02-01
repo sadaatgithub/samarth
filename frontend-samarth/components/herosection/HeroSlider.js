@@ -1,9 +1,9 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import Image from "next/image";
 
-import Slide1 from "../../public/slide1.jpg"
-import Slide2 from "../../public/slide2.jpg"
-import Slide3 from "../../public/slide3.jpg"
+import Slide1 from "../../public/banner1.jpg"
+import Slide2 from "../../public/banner2.jpg"
+import Slide3 from "../../public/banner3.jpg"
 
 import "swiper/css";
 import "swiper/css/lazy";
@@ -52,7 +52,7 @@ const HeroSlider = () => {
               {({ isActive }) => (
                 <div
                   className="relative after:content-[''] after:absolute object-cover
-        after:inset-0 after:bg-slate-900/60"
+        after:inset-0 after:bg-teal-900/70"
                 >
                   <Image
                     src={slide.image}
@@ -70,7 +70,7 @@ const HeroSlider = () => {
                     }  w-full absolute z-10 rounded-sm left-1/2 top-[30%] translate-x-[-50%]  md:w-2/3 
                 text-white  p-5  flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-linear`}
                   >
-                    <p className="text-2xl sm:text-4xl md:text-6xl font-bold text-center font-serif tracking-wide drop-shadow-sm ">
+                    <p className="text-2xl sm:text-4xl md:text-6xl font-bold text-center font-serif tracking-wide drop-shadow-2xl ">
                       <span className="text-teal-400">&ldquo;</span>{slide.desc} <span className="text-teal-400">&rdquo;</span>
                     </p>
                   </div>

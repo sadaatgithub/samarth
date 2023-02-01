@@ -55,14 +55,14 @@ const OurTeam = () => {
     <div className="h-fit lg:px-20 px-2 flex flex-col items-center mt-10 md:mt-20">
       {/* <p className="mt-12 text-rose-500 font-semibold">OUR TEAM</p> */}
       <div className="mt-20  self-start flex gap-3">
-           <h2 className="text-2xl lg:text-5xl text-slate-700 font-semibold">Our Team</h2>
+           <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold drop-shadow-md">Our Team</h2>
            <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
             </div>
 
       <div className="flex justify-evenly w-full mt-10 md:mt-28 sm:flex-row flex-col gap-4">
         {team.map((member) => (
-          <div className="flex flex-col gap-8">
-          <Link key={member.id}
+          <div className="flex flex-col gap-8" key={member.id}>
+          <Link 
             href={`/our-team/${member.id}`} className="flex flex-col justify-center rounded-md items-center relative overflow-hidden"
           >
             <Image
@@ -76,7 +76,7 @@ const OurTeam = () => {
             </div>
             
           </Link>
-          <div className="flex gap-4 justify-center text-2xl text-slate-600 [&>svg]:cursor-pointer [&>svg:hover]:text-rose-500 [&>svg]:transition-all [&>svg]:duration-150">
+          <div className="flex gap-4 justify-center text-2xl text-slate-400 [&>svg]:cursor-pointer [&>svg:hover]:text-rose-300 [&>svg]:transition-all [&>svg]:duration-150">
           <BsTwitter/>
           <BsFacebook/>
           <AiFillInstagram/>

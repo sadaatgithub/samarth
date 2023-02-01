@@ -47,9 +47,12 @@ export const blogs = [
 const BlogsArticles = ({post}) => {
   return (
     <div className="min-h-screen mt-12 flex flex-col items-center gap-4 py-10 px-2 lg:px-20">
-        <h2 className="text-2xl lg:text-5xl text-slate-700 font-semibold">Latest Blogs & Articles</h2>
+        <div className="mt-20  self-start flex gap-3">
+           <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold drop-shadow-md">Blogs and Articles</h2>
+           <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
+            </div>
 
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-2 md:gap-4 md:mt-20">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-2 md:gap-4 md:mt-12">
             {post.map(post =>(
               <div key={post._id} className="md:cols-span-2 flex w-full md:flex-row flex-col gap-2 place-items-center group">
                 <div className="md:w-1/2 h-44 rounded-md overflow-hidden relative">
