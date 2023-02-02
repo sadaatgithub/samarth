@@ -40,7 +40,7 @@ const HeroSlider = () => {
         loop={true}
         lazy={true}
         modules={[EffectFade, Navigation, Autoplay, Lazy]}
-        className="mySwiper  h-[60vh] sm:h-screen"
+        className="mySwiper  h-[60vh] md:h-[600px]"
         style={{
           "--swiper-navigation-color": "#fff",
           // "--swiper-pagination-color": "#fff",

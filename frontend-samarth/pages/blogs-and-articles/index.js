@@ -2,7 +2,7 @@ import client from "@/sanity/client";
 import Link from "next/link";
 import imageUrlBuilder from '@sanity/image-url'
 import { MdArrowRightAlt } from "react-icons/md";
-
+import PageBanner from "@/components/banners/PageBanner";
 
 function urlFor (source) {
     return imageUrlBuilder(client).image(source)
@@ -11,6 +11,8 @@ function urlFor (source) {
   
   const index = ({post}) => {
     return (
+      <>
+      <PageBanner/>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-2 md:gap-8 px-2 lg:px-20 bg-gray-50 w-full mb-12 py-16">
         {post.map((post) =>{
           return (
@@ -57,7 +59,7 @@ function urlFor (source) {
           )
         })}
             </div>
-    )
+            </>)
   }
   
   export default index
@@ -65,7 +67,6 @@ function urlFor (source) {
   export async function getStaticProps() {
 
     const post = await client.fetch(`*[_type=="post" && defined(slug.current) && !(_id in path("drafts.**"))]{title,description,mainImage,_createdAt, "slug":slug.current}`)
-    console.log(post)
     return {
       props: {
         post

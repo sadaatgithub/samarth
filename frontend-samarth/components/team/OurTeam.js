@@ -55,7 +55,7 @@ const OurTeam = () => {
     <div className="h-fit lg:px-20 px-2 flex flex-col items-center mt-10 md:mt-20">
       {/* <p className="mt-12 text-rose-500 font-semibold">OUR TEAM</p> */}
       <div className="mt-20  self-start flex gap-3">
-           <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold drop-shadow-md">Our Team</h2>
+           <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold">Our Team</h2>
            <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
             </div>
 

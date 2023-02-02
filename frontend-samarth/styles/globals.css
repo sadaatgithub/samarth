@@ -27,3 +27,9 @@ transform-origin: left;
 
 
 }
+form label{
+  @apply text-slate-600 font-medium
+}
+body{
+  @apply font-sourceSansPro transition-all duration-300
+}
