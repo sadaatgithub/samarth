@@ -9,6 +9,8 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
+import SwiperButtonLeft from "../buttons/SwiperButtonLeft";
+import SwiperButtonRight from "../buttons/SwiperButtonRight";
 
 const Testimonials = () => {
   return (
@@ -35,10 +37,10 @@ const Testimonials = () => {
           clickable: true,
         }}
       
-        navigation={true}
+        navigation={false}
         modules={[Pagination, Navigation,Autoplay]}
         className="mySwiper testimonial-div bg-[url('../public/slide2.jpg')] bg-fixed w-full h-fit flex mt-8 md:mt-16  bg-center after:content-[''] after:absolute after:inset-0
-         after:bg-gradient-to-r after:from-slate-800/80 after:to-slate-800/80"
+         after:bg-gradient-to-r after:from-slate-800/80 after:to-slate-800/80 group"
       >
         
         {services.map((data) =>{
@@ -64,7 +66,8 @@ const Testimonials = () => {
 
           </SwiperSlide>)
         })}
-       
+       <SwiperButtonLeft/>
+       <SwiperButtonRight/>
       </Swiper>
     </div>
   )

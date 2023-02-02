@@ -13,6 +13,8 @@ import "swiper/css/pagination";
 
 import { EffectFade, Navigation, Autoplay, Lazy } from "swiper";
 import HeroBanner from "./HeroBanner";
+import SwiperButtonRight from "../buttons/SwiperButtonRight";
+import SwiperButtonLeft from "../buttons/SwiperButtonLeft";
 
 
 const data = [
@@ -29,7 +31,7 @@ const HeroSlider = () => {
       <Swiper
         spaceBetween={30}
         effect={"fade"}
-        navigation={true}
+        navigation={false}
         pagination={{
           clickable: true,
         }}
@@ -40,7 +42,7 @@ const HeroSlider = () => {
         loop={true}
         lazy={true}
         modules={[EffectFade, Navigation, Autoplay, Lazy]}
-        className="mySwiper  h-[60vh] md:h-[600px]"
+        className="mySwiper  h-[60vh] md:h-[600px] group"
         style={{
           "--swiper-navigation-color": "#fff",
           // "--swiper-pagination-color": "#fff",
@@ -79,7 +81,8 @@ const HeroSlider = () => {
             </SwiperSlide>
           );
         })}
-
+        <SwiperButtonRight/>
+        <SwiperButtonLeft/>
       </Swiper>
         <HeroBanner/>
       </div>

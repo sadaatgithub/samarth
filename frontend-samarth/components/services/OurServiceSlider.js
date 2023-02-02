@@ -9,6 +9,8 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper";
+import SwiperButtonLeft from "../buttons/SwiperButtonLeft"
+import SwiperButtonRight from "../buttons/SwiperButtonRight"
 
 export const services = [
   {
@@ -92,10 +94,12 @@ const SliderTwo = () => {
 
           },
         }}
-        navigation={true}
-        modules={[Pagination,Navigation,Autoplay]}
-        className="mySwiper w-full flex mt-8 md:mt-16 relative"
+        navigation={false}
+        modules={[Pagination,Autoplay]}
+        className="mySwiper w-full flex mt-8 md:mt-16 relative overflow-visible group"
       >
+        <SwiperButtonLeft/>
+        <SwiperButtonRight pos="attached"/>
         {services.map((data) =>{
           return(
           <SwiperSlide key={data.id}>
@@ -104,9 +108,9 @@ const SliderTwo = () => {
             <Image src={data.image} alt="" width="480px" height="320px" className="w-full h-full object-cover"/>
             </div>
             <div className="h-1/2 flex flex-col gap-4 py-6 px-2 mt-1">
-            <h4 className="text-xl font-semibold px-2 text-slate-800">{data.name} </h4>
-            <p className="text-slate-500 px-2 leading-8">{data.content}</p>
-                    <button className="self-end mr-2 mb-2">Read More</button>
+            <h4 className="text-xl font-bold px-2 text-slate-900">{data.name} </h4>
+            <p className="text-slate-600 px-2">{data.content}</p>
+                    <button className="self-end mr-2 mb-2 text-rose-500 font-semibold">Read More</button>
                     </div>
             </div>
 
