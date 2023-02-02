@@ -1,14 +1,14 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+// import Image from 'next/image'
+// import { Inter } from '@next/font/google'
+// import styles from '@/styles/Home.module.css'
 import HeroSlider from '@/components/herosection/HeroSlider'
 import Introduction from '@/components/herosection/Introduction'
 import OurServices from '@/components/services/OurServices'
 import Testimonials from '@/components/testimonial/Testimonials'
 import BlogsArticles from '@/components/blog/BlogsArticles'
 import OurTeam from '@/components/team/OurTeam'
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 import sanityClient from "../sanity/client"
 

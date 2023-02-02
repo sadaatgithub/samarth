@@ -18,14 +18,13 @@ const Navbar = () => {
   const [animateNav, setAnimateNav] = useState(false)
 
   const navbarOnScroll = () =>{
-    if(window.scrollY >=250){
+    if(window.scrollY >=178){
       setAnimateNav(true)
     
     } else{
       setAnimateNav(false)
     }
   }
-  console.log(animateNav)
   useEffect(() =>{
     window.addEventListener("scroll", navbarOnScroll)
     return()=>{
@@ -34,7 +33,7 @@ const Navbar = () => {
   },[])
 
   return (
-    <header className={`flex flex-col`}>
+    <header className={` flex flex-col border-b bg-white z-30`}>
       <div className="flex bg-[#17234D] text-gray-200 lg:px-20 px-6 justify-between items-center flex-col md:flex-row py-2 md:py-2 text-xs md:text-base font-light">
         <div className=" md:w-1/3  lg:w-2/4">
           <h4 className="">Welcome to Samarth Physiotherapy!</h4>
@@ -66,9 +65,9 @@ const Navbar = () => {
                 </div>
                 <BookAppointement/>
           </div>}
-
         </div>
       <Navlink/>
+{/* {animateNav? <div className={`${animateNav? "h-[178px]":"h-0"} transition-all duration-1000`}></div>:null} */}
     </header>
   )
 }

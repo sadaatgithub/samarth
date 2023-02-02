@@ -59,7 +59,7 @@ const OurTeam = () => {
            <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
             </div>
 
-      <div className="flex justify-evenly w-full mt-10 md:mt-28 sm:flex-row flex-col gap-4">
+      <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-4">
         {team.map((member) => (
           <div className="flex flex-col gap-8" key={member.id}>
           <Link 
