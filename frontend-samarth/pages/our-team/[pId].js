@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 
 import { team } from '../../components/team/OurTeam'
-
+ import PageBanner from '@/components/banners/PageBanner'
 
 
 const MyTeam = () => {
@@ -14,10 +14,12 @@ const MyTeam = () => {
   
 
   return (
+    <>
+      <PageBanner/>
     <div className="min-h-screen px-20">
       {team.filter(data => data.id === Number(pId)).map((data,index) => {
         return (
-          <div className="flex gap-10 mt-8" key={index}>
+          <div className="flex gap-10 mt-8 mb-10" key={index}>
 
           <div className="w-1/2  flex flex-col justify-center items-center">
         <Image src={data.image} className="aspect-square object-cover w-5/6 rounded-md"/>
@@ -33,7 +35,7 @@ const MyTeam = () => {
         )
       })}
     </div>
-  )
+    </>)
 }
 
 export default MyTeam
