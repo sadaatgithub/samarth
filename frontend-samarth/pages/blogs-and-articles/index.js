@@ -66,7 +66,7 @@ function urlFor (source) {
 
   export async function getStaticProps() {
 
-    const post = await client.fetch(`*[_type=="post" && defined(slug.current) && !(_id in path("drafts.**"))]{title,description,mainImage,_createdAt, "slug":slug.current}`)
+    const post = await client.fetch(`*[_type=="post" && defined(slug.current) && !(_id in path("drafts.**"))]{_id,title,description,mainImage,_createdAt, "slug":slug.current}`)
     return {
       props: {
         post

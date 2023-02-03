@@ -4,30 +4,28 @@ import { TfiEmail,TfiLocationPin } from "react-icons/tfi";
 const contactUs = () => {
   return (
     <div name="contact-us" className="min-h-screen md:px-10 flex justify-center w-full md:flex-row flex-col bg-gray-100  rounded-md overflow-hidden p-12">
-    <div className="w-full md:w-5/12 lg:w-4/12 flex flex-col gap-y-4 bg-slate-600  py-6 text-white justify-between md:rounded-l-lg px-6 font-hindGuntur shadow-lg">
-      <h3 className="text-xl md:text-2xl font-semibold font-monteserrat">Get in touch</h3>
-      <h5 className="text-base font-hindGuntur">
-        Got a question about us? Are you intrested in volunteering with us?
-        Have some suggestions or any other query? Just contact us. we are here
-        to assist you.
-      </h5>
+    <div className="w-full md:w-5/12 lg:w-4/12 flex flex-col gap-y-4 relative after:content-[''] after:absolute after:inset-0 after:bg-teal-900/80 after:backdrop-blur-sm bg-[url('../public/dumbels.jpg')] bg-no-repeat bg-cover py-6  text-gray-200 justify-between md:rounded-l-lg px-8 font-hindGuntur shadow-lg">
+      <h3 className="text-xl md:text-2xl font-semibold font-monteserrat mt-4 z-[1]">Book an appointement</h3>
+      
 
-      <div className="flex gap-4  items-center">
-        <FiPhoneCall /> <p>9823598235</p>
-      </div>
-      <div className="flex gap-4 items-center">
-        <TfiEmail /> <p>nagpur@email.com</p>
-      </div>
-      <div className="flex gap-4  flex-col">
+      <ul className="flex gap-4 flex-col divide-y-[1px] divide-gray-200 mt-5 z-[1]">
+       <li className="flex gap-4"> <FiPhoneCall className="my-auto"/> <p>9823598235</p></li>
+       <li className="flex gap-4"> <FiPhoneCall className="my-auto"/> <p>9823598235</p></li>
+       <li className="flex gap-4"> <FiPhoneCall className="my-auto"/> <p>9823598235</p></li>
+       <li className="flex gap-4"><TfiEmail className="my-auto"/> <p>nagpur@email.com</p></li>
+      </ul>
+     
+      
+      <div className="flex gap-4  flex-col z-[1]">
         <address className="flex">
         <TfiLocationPin className="text-xl"/>
                 123, Swawalambi Nagar, Abc Road, Nagpur <br/>
                 Dist Nagpur 440022 MS
             </address>
-            <p>9876543210</p>
-            <p>contact@email.com</p>
+            {/* <p>9876543210</p> */}
+            {/* <p>contact@email.com</p> */}
           </div>
-        <div className="mt-2 rounded-sm overflow-hidden">
+        <div className="mt-2 rounded-sm overflow-hidden z-[1]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.3527285104383!2d79.07790911253058!3d21.144842442857172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bff90e72306f%3A0x192616fc50e41145!2sLata%20Mangeshkar%20Hospital!5e0!3m2!1sen!2sin!4v1670243702439!5m2!1sen!2sin"
             width="350"

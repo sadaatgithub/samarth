@@ -35,7 +35,7 @@ import { FaUserCircle } from "react-icons/fa";
           {mainImage? <img className="w-full"
                 src={urlFor(mainImage).width(480).height(320)
                   .url()}
-              />:null}
+              />:""}
           <div className="text-3xl font-bold text-white z-10 absolute bottom-0 bg-black/70 right-0 py-8
         left-0 flex items-center justify-center break-words"> <h1 className="">{post.title}</h1></div>
         <span className="z-10 absolute top-0 right-0 p-2 bg-rose-500 text-white">{new Date(_createdAt).toDateString('en-US')}</span>
