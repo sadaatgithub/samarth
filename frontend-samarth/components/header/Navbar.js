@@ -33,7 +33,7 @@ const Navbar = () => {
   },[])
 
   return (
-    <header className={` flex flex-col border-b bg-white z-30`}>
+    <header className={` flex flex-col border-b bg-white`}>
       <div className="flex bg-[#17234D] text-gray-200 lg:px-20 px-6 justify-between items-center flex-col md:flex-row py-2 md:py-2 text-xs md:text-base font-light">
         <div className=" md:w-1/3  lg:w-2/4">
           <h4 className="">Welcome to Samarth Physiotherapy!</h4>
@@ -43,8 +43,8 @@ const Navbar = () => {
           <span className="flex items-center gap-2"><BiTime className="text-teal-500"/>Mon to Fri 9:00am to 6:00pm</span>
         </div>
       </div>
-      <div className={` ${animateNav? "fixed top-0 left-0 z-[999] right-0  transition-all duration-700 bg-white py-3 shadow-md":"py-6 -top-40"} logo px-6 lg:px-20  grid md:grid-cols-6 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2`}>
-          <h1 className="text-3xl font-bold text-coral-red-500 uppercase  col-span-full w-full md:col-span-2 text-slate-700 text-center md:text-start drop-shadow-xl">Samarth</h1>
+      <div className={` ${animateNav? "fixed top-0 left-0 z-[100] right-0  transition-all duration-700 bg-white py-3 shadow-md":"py-6 -top-40"} logo px-6 lg:px-20  grid md:grid-cols-6 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2`}>
+        <h1 className="text-3xl font-bold text-coral-red-500   col-span-full w-full md:col-span-2 text-slate-700 text-center md:text-start drop-shadow-xl"><Link href="/">Samarth <span className="text-teal-500">Physio</span></Link></h1>
           {animateNav? 
           <div className="md:col-span-4 flex w-full">
           <Navlink animateNav={animateNav}/> 

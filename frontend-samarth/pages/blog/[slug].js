@@ -1,49 +1,56 @@
 import client from "@/sanity/client";
-import imageUrlBuilder from '@sanity/image-url'
 import { PortableText } from "@portabletext/react";
-import { Truculenta } from "@next/font/google";
+import RichTextComponent from "../../components/richtext/RichTextComponent"
+import urlFor from "@/lib/urlFor";
+import Image from "next/image";
+import { FaUserCircle } from "react-icons/fa";
+// function urlFor (source) {
+//     return imageUrlBuilder(client).image(source)
+//   }
 
-
-function urlFor (source) {
-    return imageUrlBuilder(client).image(source)
-  }
-
-  const ptComponents = {
-    types: {
-      image: ({ value }) => {
-        if (!value?.asset?._ref) {
-          return null
-        }
-        return (
-          <img
-            alt={value.alt || ' '}
-            loading="lazy"
-            src={urlFor(value).width(320).height(240).fit('max').auto('format')}
-          />
-        )
-      }
-    }
-  }
+  // const ptComponents = {
+  //   types: {
+  //     image: ({ value }) => {
+  //       if (!value?.asset?._ref) {
+  //         return null
+  //       }
+  //       return (
+  //         <Image
+  //           alt={value.alt || ' '}
+  //           loading="lazy"
+  //           src={urlFor(value).width(320).height(240).fit('max').auto('format')}
+  //         />
+  //       )
+  //     }
+  //   },
+  // }
 
   const Post = ({post}) => {
 
     const {mainImage,body,_createdAt} = post
     
       return (
-        <div className="h-screen mx-20">
-          {new Date(_createdAt).toDateString('en-US')}
-          {mainImage? <img
-                src={urlFor(mainImage)
-                  .width(450)
+        <div className="min-h-screen mx-20 mb-10 w-2/3 mt-12">
+          <div className="h-[420px] overflow-hidden relative shadow-lg">
+          {mainImage? <img className="w-full"
+                src={urlFor(mainImage).width(480).height(320)
                   .url()}
               />:null}
-    
-          <h1 className="text-xl font-bold"> {post.title}</h1>
-          <p>{post.description}</p>
+          <div className="text-3xl font-bold text-white z-10 absolute bottom-0 bg-black/70 right-0 py-8
+        left-0 flex items-center justify-center break-words"> <h1 className="">{post.title}</h1></div>
+        <span className="z-10 absolute top-0 right-0 p-2 bg-rose-500 text-white">{new Date(_createdAt).toDateString('en-US')}</span>
+    </div>
+    <div className="mt-10 flex items-center gap-4 text-gray-500">
+    <FaUserCircle className=""/><span>By Admin</span>
+    </div>
+
+
+          {/* <p>{post.description}</p> */}
+          <div className="mt-10">
           <PortableText
             value={body}
-            components={ptComponents}
-          />
+            components={RichTextComponent}
+          /></div>
         </div>
       )
     }

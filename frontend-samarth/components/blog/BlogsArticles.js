@@ -52,7 +52,7 @@ const BlogsArticles = ({post}) => {
            <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
             </div>
 
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 md:gap-4 md:mt-12 border">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 md:gap-4 md:mt-12 relative">
             {post.map(post =>(
               <div key={post._id} className="md:cols-span-2 max-w-xl flex w-full md:flex-row flex-col gap-2 place-items-center group">
                 <div className="md:w-1/2 h-44 rounded-md overflow-hidden relative">
@@ -78,6 +78,8 @@ const BlogsArticles = ({post}) => {
                 
               </div>
             ))}
+            <button className="absolute bottom-1 right-0 text-lg text-rose-600 bg-transparent border border-rose-600 p-2 
+            rounded-sm hover:text-white hover:bg-rose-600 transition-all duration-200 ease-linear"><Link href="/blogs-and-articles">View More</Link></button>
         </div>
 
     </div>
