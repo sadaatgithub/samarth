@@ -1,6 +1,5 @@
 import {Swiper, SwiperSlide} from "swiper/react"
 import Image from "next/image"
-import { FaQuoteLeft,FaQuoteRight } from "react-icons/fa"
 import { services } from "../services/OurServiceSlider";
 
 
@@ -60,7 +59,7 @@ const Testimonials = () => {
               <h4 className="text-xl px-2 font-medium mt-12 self-center">- {data.name}</h4>
               <p className="text-sm px-2 self-center text-slate-300">{data.designation}</p>
               </div>
-              <Image src={data.image} alt={data.desc} className="w-20 h-20 object-cover rounded-full"/>
+              <Image src={data.image} alt={data.name} className="w-20 h-20 object-cover rounded-full"/>
             </div>
 
 

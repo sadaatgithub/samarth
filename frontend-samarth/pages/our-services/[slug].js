@@ -77,11 +77,11 @@ const Services = () => {
         .map((service) => {
           return (
             <>
-              <div className=" mt-10 px-20" key={service.id}>
+              <div className=" mt-10 md:px-20 px-4" key={service.id}>
                 <div className="capitalize text-4xl font-bold text-slate-800">
                   {service.slug}
                 </div>
-                <div className=" mt-8 flex flex-col gap-6 mr-96 mb-10 text-slate-600 text-lg">
+                <div className=" mt-8 flex flex-col gap-6 lg:mr-96 mb-10 text-slate-600 text-lg">
                   {service.desc.split("/n").map((desc, index) => {
                     return (
                     

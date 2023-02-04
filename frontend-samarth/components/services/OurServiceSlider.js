@@ -3,7 +3,7 @@ import Image from "next/image"
 import Slide1 from "../../public/slide1.jpg"
 import Slide2 from "../../public/slide2.jpg"
 import Slide3 from "../../public/slide3.jpg"
-
+import Link from "next/link"
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import SwiperButtonLeft from "../buttons/SwiperButtonLeft"
 import SwiperButtonRight from "../buttons/SwiperButtonRight"
+import { useState } from "react"
 
 export const services = [
   {
@@ -48,6 +49,8 @@ export const services = [
 ];
 
 const SliderTwo = () => {
+const [autoSlider, setAutoSlider] = useState(true)
+
   return (
     <>
     <Swiper
@@ -96,13 +99,13 @@ const SliderTwo = () => {
         }}
         navigation={false}
         modules={[Pagination,Autoplay]}
-        className="mySwiper w-full flex mt-8 md:mt-16 relative overflow-visible group"
+        className="mySwiper w-full flex mt-8 md:mt-16 relative overflow-visible group" 
       >
         <SwiperButtonLeft/>
         <SwiperButtonRight pos="attached"/>
         {services.map((data) =>{
           return(
-          <SwiperSlide key={data.id}>
+          <SwiperSlide key={data.id} >
             <div className="flex h-fit flex-col gap-4 border rounded-md overflow-hidden hover:shadow-lg">
               <div className="h-60 overflow-hidden">
             <Image src={data.image} alt="" width="480px" height="320px" className="w-full h-full object-cover"/>
@@ -110,7 +113,7 @@ const SliderTwo = () => {
             <div className="h-1/2 flex flex-col gap-4 py-6 px-2 mt-1">
             <h4 className="text-xl font-bold px-2 text-slate-900">{data.name} </h4>
             <p className="text-slate-600 px-2">{data.content}</p>
-                    <button className="self-end mr-2 mb-2 text-rose-500 font-semibold">Read More</button>
+                    <button className="self-end mr-2 mb-2 text-rose-500 font-semibold"><Link href={`/our-services/${data.name.split(" ").join("-").toLowerCase()}`}>Read More</Link></button>
                     </div>
             </div>
 
