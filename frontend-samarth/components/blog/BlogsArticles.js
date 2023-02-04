@@ -46,8 +46,8 @@ export const blogs = [
 
 const BlogsArticles = ({post}) => {
   return (
-    <div className="min-h-screen mt-12 flex flex-col items-center gap-4 py-10 px-2 lg:px-10 xl:px20">
-        <div className="mt-20  self-start flex gap-3 px-10">
+    <div className="min-h-screen  md:mt-12 flex flex-col items-center gap-4 py-10 px-2 lg:px-10 xl:px20">
+        <div className="mt-20  self-start flex gap-3">
            <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold">Blogs and Articles</h2>
            <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
             </div>
@@ -55,7 +55,7 @@ const BlogsArticles = ({post}) => {
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 md:gap-4 md:mt-12 relative">
             {post.map(post =>(
               <div key={post._id} className="md:cols-span-2 max-w-xl flex w-full md:flex-row flex-col gap-2 place-items-center group">
-                <div className="md:w-1/2 h-44 rounded-md overflow-hidden relative">
+                <div className="w-full md:w-1/2 h-44 rounded-md overflow-hidden relative">
                 <img
             src={urlFor(post.mainImage)
               .width(320)
@@ -67,7 +67,7 @@ const BlogsArticles = ({post}) => {
                 {new Date(post._createdAt).toDateString()}
                 </div>
                 </div>
-                <div className="md:w-1/2">
+                <div className=" md:w-1/2">
                 <div className="flex flex-col gap-2 p-4">
                   <h3 className="text-base font-bold text-slate-600">{post.title}</h3>
                   <p className="text-gray-500">{post.description}</p>

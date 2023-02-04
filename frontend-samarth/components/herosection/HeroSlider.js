@@ -42,7 +42,7 @@ const HeroSlider = () => {
         loop={true}
         lazy={true}
         modules={[EffectFade, Navigation, Autoplay, Lazy]}
-        className="mySwiper  h-[60vh] md:h-[600px] group"
+        className="mySwiper  h-[50vh] sm:h-[400px] lg:h-[600px] group"
         style={{
           "--swiper-navigation-color": "#fff",
           // "--swiper-pagination-color": "#fff",
@@ -53,7 +53,7 @@ const HeroSlider = () => {
             <SwiperSlide key={index}>
               {({ isActive }) => (
                 <div
-                  className="relative after:content-[''] after:absolute object-cover
+                  className="relative after:content-[''] after:absolute object-cover h-full
         after:inset-0 after:bg-teal-900/70"
                 >
                   <Image
@@ -72,7 +72,7 @@ const HeroSlider = () => {
                     }  w-full absolute z-10 rounded-sm left-1/2 top-[40%] translate-x-[-50%]  md:w-2/3 
                 text-white  p-5  flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-linear`}
                   >
-                    <p className="text-2xl sm:text-4xl md:text-5xl font-bold text-center font-serif tracking-wide drop-shadow-2xl ">
+                    <p className="text-xl sm:text-4xl md:text-5xl font-bold text-center font-serif tracking-wide drop-shadow-2xl ">
                       <span className="text-teal-400">&ldquo;</span>{slide.desc} <span className="text-teal-400">&rdquo;</span>
                     </p>
                   </div>

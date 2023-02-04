@@ -47,13 +47,13 @@ const Testimonials = () => {
           <SwiperSlide key={data.id} className="p-2  lg:p-8  w-full h-full flex flex-col justify-center">
            
             <div className="relative flex h-full m-auto flex-col-reverse  max-w-4xl rounded-xl  p-2 py-12 justify-center
-                            items-center md:gap-8">
+                            items-center gap-4 md:gap-8">
               
               <div className="flex flex-col  text-white w-full">
               <div className="px-2 text-base md:text-xl text-center flex gap-2  relative">
                 <span className="font-serif text-7xl  absolute -top-5 -left-5 ">&ldquo;</span>
 
-                  <p className="self-center leading-8 text-gray-100 font-light">{data.content} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, sed!</p>
+                  <p className="self-center md:leading-8 text-gray-100 font-light px-4">{data.content} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, sed!</p>
                     <span className="font-serif text-7xl  flex flex-col absolute -bottom-10 right-0">&rdquo;</span>
             </div>
               <h4 className="text-xl px-2 font-medium mt-12 self-center">- {data.name}</h4>

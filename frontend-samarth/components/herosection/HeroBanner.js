@@ -5,7 +5,7 @@ import {TbPhysotherapist} from "react-icons/tb"
 
 const HeroBanner = () => {
   return (
-    <div className="static md:absolute top-[90%] flex md:flex-row flex-col left-10 right-10 bg-white p-6 py-10 border [&>div]:gap-y-4 
+    <div className="static  top-[90%] flex md:flex-row flex-col left-10 right-10 bg-white p-6 py-10 border [&>div]:gap-y-4 
 [&>div>svg]:text-6xl [&>div]:items-center rounded-lg  shadow-sm gap-16 [&>div]:text-center [&>div>svg]:text-teal-500
 [&>div>h3]:text-2xl [&>div>h3]:font-bold [&>div>h3]:text-slate-600 [&>div>p]:text-slate-500 z-10 [&>div>p]:text-lg">
         <div className="flex flex-col">

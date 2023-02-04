@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer className=" bg-cover relative bg-center after:content-[''] after:absolute after:inset-0 after:bg-black/70">
-    <div className="grid md:grid-cols-6 p-12 gap-4 py-16 z-10">
+    <div className="grid md:grid-cols-6  px-4 md:p-12 gap-4 py-16 z-10">
     <div className="col-span-2 flex flex-col gap-4 z-10">
         <h1 className="text-3xl text-white font-bold ">SAMARTH</h1>
         <p className="text-gray-300">We here at Samarth – The best Physiotherapy in Nagpur will help you take those little steps by making you go through a detailed examination conducted by our Certified Healthcare Professionals. </p>

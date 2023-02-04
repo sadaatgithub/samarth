@@ -52,7 +52,7 @@ export const team = [
 
 const OurTeam = () => {
   return (
-    <div className="h-fit lg:px-20 px-2 flex flex-col items-center mt-10 md:mt-20">
+    <div className="h-fit lg:px-20 px-2 flex flex-col items-center mt-4 md:mt-20">
       {/* <p className="mt-12 text-rose-500 font-semibold">OUR TEAM</p> */}
       <div className="mt-20  self-start flex gap-3">
            <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold">Our Team</h2>
