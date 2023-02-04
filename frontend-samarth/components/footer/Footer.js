@@ -1,5 +1,5 @@
 
-const footer = () => {
+const Footer = () => {
     const today = new Date()
 
 
@@ -52,4 +52,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Footer
