@@ -3,7 +3,7 @@ import { TfiEmail,TfiLocationPin } from "react-icons/tfi";
 
 const contactUs = () => {
   return (
-    <div name="contact-us" className="min-h-screen md:px-10 flex justify-center w-full md:flex-row flex-col bg-gray-100  rounded-md overflow-hidden p-12">
+    <div name="contact-us" className="min-h-screen md:px-10 flex justify-center w-full md:flex-row flex-col bg-gray-100  rounded-md overflow-hidden p-4 ">
     <div className="w-full md:w-5/12 lg:w-4/12 flex flex-col gap-y-4 relative after:content-[''] after:absolute after:inset-0 after:bg-teal-900/80 after:backdrop-blur-sm bg-[url('../public/dumbels.jpg')] bg-no-repeat bg-cover py-6  text-gray-200 justify-between md:rounded-l-lg px-8 font-hindGuntur shadow-lg">
       <h3 className="text-xl md:text-2xl font-semibold font-monteserrat mt-4 z-[1]">Book an appointement</h3>
       

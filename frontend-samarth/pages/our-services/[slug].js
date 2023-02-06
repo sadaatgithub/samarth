@@ -1,6 +1,6 @@
 import PageBanner from "@/components/banners/PageBanner";
 import { useRouter } from "next/router";
-
+import { useEffect } from "react";
 const eachService = [
   {
     id: 1,
@@ -67,6 +67,10 @@ const Services = () => {
   const router = useRouter();
   const { query } = router;
   const result = query.slug
+
+  useEffect(() =>{
+
+  },[query.slug])
 //   const result = eachService.filter((service) => service.slug == query.slug);
 //   console.log(result);
   return (
@@ -85,7 +89,7 @@ const Services = () => {
                   {service.desc.split("/n").map((desc, index) => {
                     return (
                     
-                        <p className="" key={index}>{desc}</p>
+                        <p className="text-justify" key={index}>{desc}</p>
                       
                     );
                   })}

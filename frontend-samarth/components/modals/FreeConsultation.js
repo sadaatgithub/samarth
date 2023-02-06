@@ -11,7 +11,7 @@ const submitHandler =(e) =>{
 
     <FaTimes onClick={()=> setOpen(false)} className="cursor-pointer absolute right-3 top-4 text-white text-3xl"/>
 
-        <form className=" w-5/6 lg:w-2/5 bg-white px-16 py-12 flex flex-col gap-2 md:gap-6 rounded-md overflow-y-scroll md:overflow-auto" onSubmit={submitHandler}>
+        <form className=" w-5/6 lg:w-2/5 bg-white px-8 md:px-16 py-12 flex flex-col gap-2 md:gap-6 rounded-md overflow-y-scroll md:overflow-y-clip" onSubmit={submitHandler}>
             <div className="flex gap-4 sm:flex-row flex-col">
             <div className="flex flex-col w-full gap-1">
             <label htmlFor="">Name</label>
@@ -32,7 +32,7 @@ const submitHandler =(e) =>{
             </div>
             <div className="flex flex-col w-full gap-1">
             <label htmlFor="">Address</label>
-            <input type="text" name="" id="" className="border p-2 rounded-sm focus:outline-[1px] outline-teal-300"/>
+            <textarea type="text" name="" id="" className="border p-2 rounded-sm focus:outline-[1px] outline-teal-300"/>
 
             <div className="ml-auto flex gap-2 [&>input]:rounded-sm">
                 <input type="reset" value="Clear" className="px-3 py-2 cursor-pointer border mt-4"/>

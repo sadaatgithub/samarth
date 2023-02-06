@@ -3,34 +3,34 @@ import Link from "next/link"
 import { useState } from "react"
 import { FaPlus } from "react-icons/fa"
 
+
 const MobileMenu = ({setBurgerMenu})=>{
 
     const [mobileSubmenuOpen,setMobileSubmenuOpen] = useState(false)
 
+
+   
+
     return(
     <>
-        <div className="fixed inset-0 h-full flex  items-center z-[101] 
+        <div className="fixed inset-0 h-full flex  items-center z-[101] backdrop-blur-sm
         bg-black/70">
-            <ul className="flex flex-col gap-6 text-white  text-2xl bg-teal-700 w-5/6 h-full justify-center">
-           {menuLink.map((link,index) =>{
-            const isSublink = typeof link.sublink === "object"
+            <ul className="flex flex-col gap-6 text-white  text-2xl bg-teal-700/80 w-5/6 h-full justify-center [&>li]:pl-8">
+           {menuLink.map((menulink) =>{
+            const isSublink = typeof menulink.sublink === "object"
 
             return(
-                <> 
-            <li key={index} onClick={()=> isSublink? setMobileSubmenuOpen(!mobileSubmenuOpen):setBurgerMenu(false)} className="relative ml-8">
-                <Link href={link.href} className={`${isSublink? "flex gap-2 items-center":""}`}>
-                {link.title} {isSublink? <FaPlus className="text-xs"/>:""}
-                </Link>
-                {mobileSubmenuOpen && isSublink? <ul className="ml-6 font-light mt-2 absolute left-[25%] top-10 -translate-y-[50px]  text-lg flex flex-col gap-2
-                p-6 rounded-md bg-teal-500">
-               { link.sublink.map((sublink,index) =>{
-                    
-                    return(<li key={index} onClick={()=> setBurgerMenu(false)}><Link href={`/our-services/${sublink.split(" ").join("-").toLowerCase()}`}>{sublink}</Link></li>)
-                })}
-                </ul>:""}
-            
-            </li>
-            </>
+                isSublink? <li key={menulink.id} className="flex gap-2 group items-center relative cursor-pointer" onClick={()=>setMobileSubmenuOpen(!mobileSubmenuOpen)}>{menulink.title}  <FaPlus className="text-xs"/>
+                <ul className={`${mobileSubmenuOpen? "flex":"hidden"}   flex-col text-base absolute top-0 -right-[0%] w-fit bg-teal-800 p-3 rounded-sm space-y-3`}>
+                    {menulink.sublink.map(link =>{
+                        return(<Link href={`/our-services/${link.split(" ").join("-").toLowerCase()}`} onClick={()=> setBurgerMenu(false)}>{link}</Link>)
+                    })}
+                </ul>
+                </li>
+                :<li key={menulink.id} onClick={()=> setBurgerMenu(false)}><Link href={menulink.href}>{menulink.title}</Link></li>
+                 
+          
+        
 )
            })}
            </ul>

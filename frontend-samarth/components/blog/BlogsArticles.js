@@ -7,6 +7,7 @@ import Bone from "../../public/bones.jpg"
 import { MdArrowRightAlt } from "react-icons/md"
 import imageUrlBuilder from '@sanity/image-url'
 import client from "@/sanity/client"
+import DivHeading from "../headings/DivHeading"
 
 function urlFor(source){
   return imageUrlBuilder(client).image(source)
@@ -46,11 +47,9 @@ export const blogs = [
 
 const BlogsArticles = ({post}) => {
   return (
-    <div className="min-h-screen  md:mt-12 mb-10 flex flex-col items-center gap-4 py-10 px-2 lg:px-10 xl:px-20">
-        <div className="mt-20  self-start flex gap-3">
-           <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold">Blogs and Articles</h2>
-           <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
-            </div>
+    <div className="min-h-screen  md:mt-32 mb-10 flex flex-col items-center gap-4 py-10 px-2 lg:px-10 xl:px-20 ">
+      <DivHeading title="Blogs & Articles"/>
+        
 
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 md:gap-8 md:mt-12 relative">
             {post.map(post =>(

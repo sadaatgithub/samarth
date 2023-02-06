@@ -10,17 +10,15 @@ import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import SwiperButtonLeft from "../buttons/SwiperButtonLeft";
 import SwiperButtonRight from "../buttons/SwiperButtonRight";
+import DivHeading from "../headings/DivHeading";
 
 const Testimonials = () => {
   return (
     <div className="flex flex-col justify-center items-center mt-20">
       {/* <p className="mt-20 text-rose-500 font-semibold">OUR TESTIMONIALS</p> */}
-
-      <div className="mt-20  self-start flex gap-3 md:px-20 px-2">
-           <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold">What Our Patients Says</h2>
-           <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
-            </div>
-
+<div className="w-full md:px-20 px-2">
+<DivHeading title="What Our Patients Says"/>
+</div>
         <Swiper
         slidesPerView={1}
         spaceBetween={20}

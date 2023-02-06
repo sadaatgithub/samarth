@@ -48,8 +48,10 @@ const Navbar = () => {
           <span className="flex items-center gap-2"><BiTime className="text-teal-500"/>Mon to Fri 9:00am to 6:00pm</span>
         </div>
       </div>
-      <div className={`py-6 logo px-6 lg:px-20  grid md:grid-cols-6 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2`}>
+      <div className={`py-4 md:py-6 logo px-6 lg:px-20  grid md:grid-cols-6 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2 relative`}>
           <Logo/>
+       <FaBars className={`${animateNav? "fixed top-2 left-2 z-[103] transition-all duration-300":"absolute"}   left-5 text-teal-400 z-[102] md:hidden w-8 h-8 p-1 cursor-pointer`} onClick={()=> setBurgerMenu(!burgerMenu)}/>
+
           <div className="md:col-span-4 w-full hidden md:flex  flex-wrap justify-center md:justify-end font-medium text-slate-800 text-base md:text-lg gap-x-6">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10  p-2 rounded-full bg-slate-100 flex justify-center items-center">
@@ -69,7 +71,6 @@ const Navbar = () => {
       <Navlink animateNav={animateNav}/>
        <AnimatedNav visible={animateNav}/>
 
-       <FaBars className="fixed top-5 left-5 text-teal-400 z-[102] md:hidden" onClick={()=> setBurgerMenu(!burgerMenu)}/>
        {burgerMenu?<Portal>
         <MobileMenu setBurgerMenu={setBurgerMenu}/>
        </Portal>:null}

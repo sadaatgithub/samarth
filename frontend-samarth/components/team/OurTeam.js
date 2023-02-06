@@ -5,6 +5,7 @@ import Team2 from "@/public/team2.jpg"
 import Team3 from "@/public/team3.jpg"
 import {BsTwitter,BsFacebook} from "react-icons/bs"
 import {AiFillInstagram} from "react-icons/ai"
+import DivHeading from "../headings/DivHeading"
 export const team = [
     {
       id: 1,
@@ -53,10 +54,7 @@ export const team = [
 const OurTeam = () => {
   return (
     <div className="h-fit lg:px-20 px-2 flex flex-col items-center mt-4 md:mt-20">
-      <div className="mt-20  self-start flex gap-3">
-           <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold">Our Team</h2>
-           <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
-            </div>
+     <DivHeading title="Our Team"/>
 
       <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-8">
         {team.map((member) => (
@@ -75,7 +73,7 @@ const OurTeam = () => {
             </div>
             
           </Link>
-          <div className="flex gap-4 justify-center text-2xl text-slate-400 [&>svg]:cursor-pointer [&>svg:hover]:text-rose-300 [&>svg]:transition-all [&>svg]:duration-150">
+          <div className="flex gap-4 justify-center text-2xl text-slate-400 [&>svg]:cursor-pointer [&>svg:hover]:text-rose-500 [&>svg]:transition-all [&>svg]:duration-150">
           <BsTwitter/>
           <BsFacebook/>
           <AiFillInstagram/>
