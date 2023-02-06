@@ -46,16 +46,16 @@ export const blogs = [
 
 const BlogsArticles = ({post}) => {
   return (
-    <div className="min-h-screen  md:mt-12 flex flex-col items-center gap-4 py-10 px-2 lg:px-10 xl:px20">
+    <div className="min-h-screen  md:mt-12 mb-10 flex flex-col items-center gap-4 py-10 px-2 lg:px-10 xl:px-20">
         <div className="mt-20  self-start flex gap-3">
            <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold">Blogs and Articles</h2>
            <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
             </div>
 
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 md:gap-4 md:mt-12 relative">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 md:gap-8 md:mt-12 relative">
             {post.map(post =>(
-              <div key={post._id} className="md:cols-span-2 max-w-xl flex w-full md:flex-row flex-col gap-2 place-items-center group">
-                <div className="w-full md:w-1/2 h-44 rounded-md overflow-hidden relative">
+              <div key={post._id} className="max-w-md md:max-w-xl  flex w-full md:flex-row flex-col gap-2  group">
+                <div className="w-full md:w-1/2 h-52 md:h-44 md:rounded-md overflow-hidden relative">
                 <img
             src={urlFor(post.mainImage)
               .width(320)
@@ -63,23 +63,23 @@ const BlogsArticles = ({post}) => {
               className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
           />
                 {/* <Image src={post.image} alt="" className="object-cover h-full group-hover:scale-110 transition-transform duration-500"/> */}
-                <div className="absolute right-0 top-0  z-10 text-white bg-teal-500 p-2 rounded-sm uppercase text-xs">
+                <div className="absolute right-0 top-0  z-10 text-white bg-gradient-to-r from-teal-500  to-teal-500/90 p-2 rounded-sm uppercase text-xs">
                 {new Date(post._createdAt).toDateString()}
                 </div>
                 </div>
-                <div className=" md:w-1/2">
-                <div className="flex flex-col gap-2 p-4">
-                  <h3 className="text-base font-bold text-slate-600">{post.title}</h3>
-                  <p className="text-gray-500">{post.description}</p>
-                  <Link href={`/blog/${post.slug}`}className="text-rose-500 flex gap-2 items-center font-semibold">Read More <MdArrowRightAlt/> </Link>
+                <div className="md:w-1/2">
+                <div className="flex flex-col md:gap-1 sm:gap-4 gap-2 md:p-2 h-full">
+                  <h3 className="font-bold text-slate-600">{post.title}</h3>
+                  <p className="text-gray-400">{post.description.slice(0,100)} ...</p>
+                  <Link href={`/blog/${post.slug}`}className="text-rose-500 flex gap-2 items-center font-semibold mt-auto">Read More <MdArrowRightAlt/> </Link>
                 </div>
                 </div>
                 
                 
               </div>
             ))}
-            <button className="absolute bottom-1 right-0 text-lg text-rose-600 bg-transparent border border-rose-600 p-2 
-            rounded-sm hover:text-white hover:bg-rose-600 transition-all duration-200 ease-linear"><Link href="/blogs-and-articles">View More</Link></button>
+            <button className="absolute -bottom-14 right-0 text-lg  bg-transparent border border-rose-600 p-2 
+            rounded-sm text-white bg-rose-600 transition-all duration-200 ease-linear hover:bg-rose-700"><Link href="/blogs-and-articles">View More</Link></button>
         </div>
 
     </div>

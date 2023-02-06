@@ -49,7 +49,7 @@ const Testimonials = () => {
             <div className="relative flex h-full m-auto flex-col-reverse  max-w-4xl rounded-xl  p-2 py-12 justify-center
                             items-center gap-4 md:gap-8">
               
-              <div className="flex flex-col  text-white w-full">
+              <div className="flex flex-col  text-white w-full px-4">
               <div className="px-2 text-base md:text-xl text-center flex gap-2  relative">
                 <span className="font-serif text-7xl  absolute -top-5 -left-5 ">&ldquo;</span>
 

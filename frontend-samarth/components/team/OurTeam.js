@@ -53,15 +53,14 @@ export const team = [
 const OurTeam = () => {
   return (
     <div className="h-fit lg:px-20 px-2 flex flex-col items-center mt-4 md:mt-20">
-      {/* <p className="mt-12 text-rose-500 font-semibold">OUR TEAM</p> */}
       <div className="mt-20  self-start flex gap-3">
            <h2 className="text-2xl lg:text-4xl text-slate-700 font-semibold">Our Team</h2>
            <div className="w-12 h-[3px] bg-rose-500 mt-auto mb-1 rounded-lg"></div>
             </div>
 
-      <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-4">
+      <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-8">
         {team.map((member) => (
-          <div className="flex flex-col gap-8" key={member.id}>
+          <div className="flex flex-col gap-4 md:gap-8" key={member.id}>
           <Link 
             href={`/our-team/${member.id}`} className="flex flex-col justify-center rounded-md items-center relative overflow-hidden"
           >
@@ -70,7 +69,7 @@ const OurTeam = () => {
               alt=""
               className="w-64 h-72  object-cover rounded-md hover:scale-110 transition-transform duration-300"
             />
-            <div className="flex flex-col items-center gap-1 absolute bg-white bottom-5 p-2 px-3 min-w-2/6 sm:w-5/6 shadow-sm rounded-sm border-b-4 border-teal-300">
+            <div className="flex flex-col items-center gap-1 absolute bg-white bottom-5 p-2 px-3 w-60 min-w-4/6 sm:w-5/6 shadow-sm rounded-sm border-b-4 border-teal-300">
               <p className="font-bold">{member.member}</p>
               <p className="text-gray-700">{member.designation}</p>
             </div>
