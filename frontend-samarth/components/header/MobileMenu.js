@@ -22,8 +22,8 @@ const MobileMenu = ({setBurgerMenu})=>{
             return(
                 isSublink? <li key={menulink.id} className="flex gap-2 group items-center relative cursor-pointer" onClick={()=>setMobileSubmenuOpen(!mobileSubmenuOpen)}>{menulink.title}  <FaPlus className="text-xs"/>
                 <ul className={`${mobileSubmenuOpen? "flex":"hidden"}   flex-col text-base absolute top-0 -right-[0%] w-fit bg-teal-800 p-3 rounded-sm space-y-3`}>
-                    {menulink.sublink.map(link =>{
-                        return(<Link href={`/our-services/${link.split(" ").join("-").toLowerCase()}`} onClick={()=> setBurgerMenu(false)}>{link}</Link>)
+                    {menulink.sublink.map((link,index) =>{
+                        return(<Link href={`/our-services/${link.split(" ").join("-").toLowerCase()}`} onClick={()=> setBurgerMenu(false)} key={index}>{link}</Link>)
                     })}
                 </ul>
                 </li>
