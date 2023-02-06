@@ -11,7 +11,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { EffectFade, Navigation, Autoplay, Lazy } from "swiper";
+import { EffectFade, Navigation, Autoplay, Lazy,Pagination } from "swiper";
 import HeroBanner from "./HeroBanner";
 import SwiperButtonRight from "../buttons/SwiperButtonRight";
 import SwiperButtonLeft from "../buttons/SwiperButtonLeft";
@@ -41,7 +41,7 @@ const HeroSlider = () => {
         }}
         loop={true}
         lazy={true}
-        modules={[EffectFade, Navigation, Autoplay, Lazy]}
+        modules={[EffectFade, Navigation, Autoplay, Lazy,Pagination]}
         className="mySwiper  h-[50vh] sm:h-[400px] lg:h-[600px] group"
         style={{
           "--swiper-navigation-color": "#fff",
