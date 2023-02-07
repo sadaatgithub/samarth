@@ -19,17 +19,30 @@ nav>ul>li::after{
 transform: scaleX(0);
 transform-origin: right;
   transition: transform 0.2s ease-in-out;
-  @apply bg-rose-500 rounded-full
+  @apply bg-rose-400 rounded-full
 }
-nav>ul>li:hover::after{
+nav>ul>li.active{
+  @apply text-rose-500 
+}
+nav>ul>li:hover::after
+{
   transform: scaleX(1);
 transform-origin: left;
 
 
 }
-form label{
-  @apply text-slate-600 font-medium
+form  .input-text{
+  @apply text-slate-500 font-medium
 }
 body{
   @apply font-sourceSansPro transition-all duration-300 scroll-smooth
+}
+
+input[type="text"]:focus ~ .input-text,
+input[type="email"]:focus ~ .input-text,
+input[type="number"]:focus ~ .input-text,
+textarea[type="text"]:focus ~ .input-text,
+input:valid ~ .input-text
+{
+  @apply text-blue-600 -translate-y-8 scale-75 -translate-x-2 bg-white 
 }

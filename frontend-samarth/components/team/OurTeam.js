@@ -6,6 +6,8 @@ import Team3 from "@/public/team3.jpg"
 import {BsTwitter,BsFacebook} from "react-icons/bs"
 import {AiFillInstagram} from "react-icons/ai"
 import DivHeading from "../headings/DivHeading"
+
+
 export const team = [
     {
       id: 1,
@@ -58,7 +60,9 @@ const OurTeam = () => {
 
       <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-8">
         {team.map((member) => (
-          <div className="flex flex-col gap-4 md:gap-8" key={member.id}>
+          <div 
+         
+          className="flex flex-col gap-4 md:gap-8" key={member.id}>
           <Link 
             href={`/our-team/${member.id}`} className="flex flex-col justify-center rounded-md items-center relative overflow-hidden"
           >

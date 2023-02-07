@@ -18,9 +18,9 @@ import SwiperButtonLeft from "../buttons/SwiperButtonLeft";
 
 
 const data = [
-    { image: Slide1, desc: " Best Physiotherapy service you can get in Nagpur " },
-    { image: Slide2, desc: " Expert Care for Your Pain and Injuries" },
-    { image: Slide3, desc: " Transform Your Health and Well-Being with Us " },
+    { image: Slide1, desc: " Best physiotherapy service you can get in Nagpur " },
+    { image: Slide2, desc: "Regain Your Mobility with Expert Physiotherapy" },
+    { image: Slide3, desc: "Say Goodbye to Pain with Personalized Treatment Plans" },
   ];
 
 
@@ -69,11 +69,13 @@ const HeroSlider = () => {
                       isActive
                         ? "-translate-y-12  opacity-100 delay-500 duration-500 active"
                         : "duration-200 opacity-0"
-                    }  w-full absolute z-10 rounded-sm left-1/2 -translate-x-1/2 top-[50%]  md:w-2/3 
+                    }  w-full absolute left-1/2 -translate-x-1/2 top-1/2 z-10  md:w-2/3 
                 text-white  p-5  flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-linear`}
                   >
-                    <p className="text-xl text-gray-100 rounded-md sm:text-3xl md:text-4xl font-bold text-center font-serif tracking-wide drop-shadow-xl  p-8">
-                      <span className="text-teal-400">&ldquo;</span>{slide.desc} <span className="text-teal-400">&rdquo;</span>
+                    <p className="text-xl text-gray-100 rounded-md sm:text-3xl md:text-5xl font-bold text-center tracking-wide drop-shadow-xl  p-8">
+                      {/* <span className="text-teal-400">&ldquo;</span> */}
+                      {slide.desc} 
+                      {/* <span className="text-teal-400">&rdquo;</span> */}
                     </p>
                   </div>
                 </div>
@@ -84,7 +86,6 @@ const HeroSlider = () => {
         <SwiperButtonRight/>
         <SwiperButtonLeft/>
       </Swiper>
-        <HeroBanner/>
       </div>
     </>
   )

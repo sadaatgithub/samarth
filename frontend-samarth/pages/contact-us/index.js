@@ -1,10 +1,14 @@
 import { FiPhoneCall } from "react-icons/fi";
 import { TfiEmail,TfiLocationPin } from "react-icons/tfi";
+import FormsInput from "@/components/forms/FormsInput";
 
 const contactUs = () => {
   return (
-    <div name="contact-us" className="min-h-screen md:px-10 flex justify-center w-full md:flex-row flex-col bg-gray-100  rounded-md overflow-hidden p-4 ">
-    <div className="w-full md:w-5/12 lg:w-4/12 flex flex-col gap-y-4 relative after:content-[''] after:absolute after:inset-0 after:bg-teal-900/80 after:backdrop-blur-sm bg-[url('../public/dumbels.jpg')] bg-no-repeat bg-cover py-6  text-gray-200 justify-between md:rounded-l-lg px-8 font-hindGuntur shadow-lg">
+    <div 
+   
+
+     name="contact-us" className="min-h-screen border  flex justify-center w-full md:flex-row flex-col bg-gray-100  rounded-md overflow-hidden p-6">
+    <div className="w-full md:w-5/12 lg:w-4/12 flex flex-col gap-y-4 relative after:content-[''] after:absolute after:inset-0 after:bg-teal-700/80 after:backdrop-blur-sm bg-[url('../public/dumbels.jpg')] bg-no-repeat bg-cover py-6  text-gray-200 justify-between md:rounded-l-lg px-6 font-hindGuntur shadow-lg">
       <h3 className="text-xl md:text-2xl font-semibold font-monteserrat mt-4 z-[1]">Book an appointement</h3>
       
 
@@ -41,26 +45,28 @@ const contactUs = () => {
       </div>
 
 
-    <div className="w-full md:w-7/12 lg:w-7/12 bg-white p-4 shadow-lg md:rounded-r-lg">
+    <div className="w-full md:w-7/12 lg:w-7/12 bg-white p-4 md:shadow-lg md:rounded-r-lg">
 
-      <form className="w-full lg:w-8/12 flex pl-8 flex-col gap-y-4 py-1 [&>div>label]:text-sm [&>div]:gap-y-1 [&>div>label]:text-gray-600">
+      <form className="w-full lg:w-8/12 flex md:pl-8 flex-col gap-y-6 py-1 [&>div>label]:text-sm [&>div]:gap-y-1 [&>div>label]:text-gray-600">
         <h2 className="text-xl first-letter:md:text-2xl font-semibold text-secondary py-2 font-monteserrat">Enter Details</h2>
-        <div className="flex flex-col">
-          <label htmlFor="name">Full Name</label>
-          <input type="text" name="" id="" className="p-2 rounded-sm border caret-amarnath"/>
+        <div className="flex flex-col mt-12">
+      
+          <FormsInput type={"text"} name="full_name" label="Full Name"/>
         </div>
         <div className="flex flex-col">
-          <label htmlFor="email">Email Id</label>
-          <input type="email" name="email" id="" className="p-2 rounded-sm border"/>
+          
+          
+          <FormsInput type={"email"} name="email" label="Email"/>
         </div>
         <div className="flex flex-col">
-          <label htmlFor="mobile">Mobile</label>
-          <input type="number" name="mobile" id="" className="p-2 rounded-sm border appearance-none"/>
+        
+          <FormsInput type={"number"} name="contact" label="Mobile No."/>
+
         </div>
 
         <div className="flex flex-col">
-          <label htmlFor="message">Message</label>
-          <textarea name="message" id="" cols="60" rows="5" className="border"></textarea>
+          <FormsInput type={"textarea"} name="message" label="Message"/>
+
         </div>
         <button className="mt-1 bg-teal-500 p-4 text-white rounded-sm">SUBMIT</button>
       </form>

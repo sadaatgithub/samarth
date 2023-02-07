@@ -1,61 +1,77 @@
-import Link from "next/link"
-import { AiOutlineCaretDown } from "react-icons/ai"
-import BookAppointement from "../buttons/BookAppointement"
-import DesktopSubmenus from "./DesktopSubmenus"
+"use client"
+import Link from "next/link";
+import { AiOutlineCaretDown } from "react-icons/ai";
+import BookAppointement from "../buttons/BookAppointement";
+import DesktopSubmenus from "./DesktopSubmenus";
+import {useRouter} from "next/router";
 
-
-export const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
+export const link = [
+  "Orthopedic Physiotherapy",
+  "Neuro Physiotherapy",
+  "Sports Physiotherapy & Fitness",
+  "Hydrotherapy",
+];
 
 export const menuLink = [
   {
-    id:1,
-    title:"Home",
-    href:"/"
+    id: 1,
+    title: "Home",
+    href: "/",
   },
   {
-    id:2,
-    title:"About Us",
-    href:"/about"
+    id: 2,
+    title: "About Us",
+    href: "/about",
   },
   {
-    id:3,
-    title:"Services",
-    href:"",
-    sublink:link,
+    id: 3,
+    title: "Services",
+    href: "",
+    sublink: link,
   },
   {
-    id:4,
-    title:"Blogs",
-    href:"/blogs-and-articles"
+    id: 4,
+    title: "Blogs",
+    href: "/blogs-and-articles",
   },
   {
-    id:5,
-    title:"Contact Us",
-    href:"/contact-us"
-  }
+    id: 5,
+    title: "Contact Us",
+    href: "/contact-us",
+  },
+];
 
-]
-
-const Navlink = ({visible}) => {
+const Navlink = ({ visible }) => {
+  const { pathname } = useRouter();
+  // console.log(pathname);
   return (
     <nav className="flex flex-grow  w-full lg:px-20 px-6  text-slate-600 font-medium ">
-        
-        <ul className={` ${visible? "justify-end":""}  hidden w-full md:flex gap-8 [&>li]:cursor-pointer items-center navlink font-semibold [&>li]:relative [&>li]:py-3`}>
-          {menuLink.map(link => {
-            const isSublink = typeof link.sublink === "object"
-            
-            return (isSublink? <li className="group flex gap-2" key={link.id}>{link.title} <DesktopSubmenus sublink={link.sublink}/><AiOutlineCaretDown className="text-sm self-center"/></li>:<li key={link.id}><Link href={link.href} className="py-3">{link.title}</Link></li>)
-          })}
-          
-          
-        
-        </ul>
-      </nav>
-  )
-}
+      <ul
+        className={` ${
+          visible ? "justify-end" : ""
+        }  hidden w-full md:flex gap-8 [&>li]:cursor-pointer items-center navlink font-semibold [&>li]:relative [&>li]:py-3`}
+      >
+        {menuLink.map((link) => {
+          const isSublink = typeof link.sublink === "object";
+          const isLinkActive = link.href === pathname
 
-export default Navlink
+          return isSublink ? (
+            <li className={`${isLinkActive? "active":""} group flex gap-2`} key={link.id}>
+              {link.title} <DesktopSubmenus sublink={link.sublink} />
+              <AiOutlineCaretDown className="text-sm self-center" />
+            </li>
+          ) : (
+            <li key={link.id} className={`${isLinkActive? "active":""} group flex`}>
+              <Link href={link.href} className="relative">
+                {link.title}
+                
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+};
 
-
-
- 
+export default Navlink;

@@ -3,7 +3,6 @@ import Link from "next/link"
 import { useState } from "react"
 import { FaPlus } from "react-icons/fa"
 
-
 const MobileMenu = ({setBurgerMenu,menuState})=>{
 
     const [mobileSubmenuOpen,setMobileSubmenuOpen] = useState(false)
@@ -13,10 +12,12 @@ const MobileMenu = ({setBurgerMenu,menuState})=>{
 
     return(
     <>
+    {/*  */}
         <div className="fixed inset-0 h-full flex  items-center z-[101] backdrop-blur-sm
         bg-black/70">
-            <div className="h-full bg-teal-700/80 w-5/6">
-            <ul className={`${menuState? "animate-slideInLeft":"-translate-x-full"} flex flex-col gap-6 mt-[30%] text-white transition-all duration-500  text-xl  h-full  [&>li]:pl-8`}>
+            <div  
+            className={`${menuState? "animate-slideInLeft":"-translate-x-full"} h-full bg-teal-700/80 w-5/6`}>
+            <ul className={` flex flex-col gap-6 mt-[30%] text-white transition-all duration-500  text-xl  h-full  [&>li]:pl-8`}>
            {menuLink.map((menulink) =>{
             const isSublink = typeof menulink.sublink === "object"
 

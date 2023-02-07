@@ -1,9 +1,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import Food from "../../public/food.jpg"
-import Theraband from "../../public/theraband.jpg"
-import Bone from "../../public/bones.jpg"
+
 import { MdArrowRightAlt } from "react-icons/md"
 import imageUrlBuilder from '@sanity/image-url'
 import client from "@/sanity/client"
@@ -12,42 +10,14 @@ import DivHeading from "../headings/DivHeading"
 function urlFor(source){
   return imageUrlBuilder(client).image(source)
 }
-export const blogs = [
-  {
-    id:1,
-    title:"Why Your Bones Become More and More Brittle as You Age",
-    desc:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laboriosam?",
-    image:Bone,
-    date:"12, JAN, 2023"
-  },
-  {
-    id:2,
-    title:"Do This Activity and Exercise To Avoid A BAd Posture",
-    desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, in.",
-    image:Theraband,
-    date:"05, Jan, 2021"
-  },
-  {
-    id:3,
-    title:"Pro Tips:Maintain Your Bones Strength With This Food and Drink",
-    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, sunt.",
-    image:Food,
-    date:"22, Apr, 2022"
-  },
-  {
-    id:4,
-    title:"This New Item Will Help You to Adjust Your Body",
-    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, reiciendis.",
-    image:Theraband,
-    date:"15, Aug, 2021"
-  }
-]
+
 
 
 
 const BlogsArticles = ({post}) => {
   return (
-    <div className="min-h-screen  md:mt-32 mb-10 flex flex-col items-center gap-4 py-10 px-2 lg:px-10 xl:px-20 ">
+    <div
+     className="min-h-screen  md:mt-32 mb-10 flex flex-col items-center gap-4 py-10 px-2 lg:px-10 xl:px-20 ">
       <DivHeading title="Blogs & Articles"/>
         
 
@@ -55,7 +25,7 @@ const BlogsArticles = ({post}) => {
             {post.map(post =>(
               <div key={post._id} className="max-w-md md:max-w-xl  flex w-full md:flex-row flex-col gap-2  group">
                 <div className="w-full md:w-1/2 h-52 md:h-44 md:rounded-md overflow-hidden relative">
-                <img
+                <img alt=""
             src={urlFor(post.mainImage)
               .width(320)
               .url()}
