@@ -75,6 +75,6 @@ import { FaUserCircle } from "react-icons/fa";
       );
       return {
         paths,
-        fallback: false,
+        fallback: true,
       };
     };
