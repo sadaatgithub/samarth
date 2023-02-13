@@ -48,7 +48,7 @@ const Navbar = () => {
       </div>
       <div className={`py-4 md:py-6 logo px-6 lg:px-20  grid md:grid-cols-6 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2 relative`}>
           <Logo/>
-       <FaBars className="absolute left-3 text-teal-400 z-[102] md:hidden w-8 h-8 p-2 cursor-pointer" onClick={()=> setBurgerMenu(!burgerMenu)}/>
+       <FaBars className="absolute left-3 text-teal-400 z-[102] md:hidden w-8 h-8 p-1 cursor-pointer bg-white border-2 border-teal-300 rounded-sm" onClick={()=> setBurgerMenu(!burgerMenu)}/>
 
           <div className="md:col-span-4 w-full hidden md:flex  flex-wrap justify-center md:justify-end font-medium text-slate-500 text-base md:text-lg gap-x-6">
                 <div className="flex items-center gap-4">

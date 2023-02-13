@@ -10,7 +10,7 @@ function urlFor(source){
 
 const EachBlog = ({post}) => {
   return (
-    <Link href={`/blog/${post.slug}`} className="w-full border rounded-md shadow-sm hover:border-rose-300 overflow-hidden">
+    <Link href={`/blog/${post.slug}`} className="w-full  rounded-md shadow-sm border border-transparent hover:shadow-md overflow-hidden">
     <div className="max-w-md md:max-w-xl   flex w-full md:flex-row flex-col gap-2  group bg-white">
                 <div className="w-full md:w-5/12 h-52 md:h-44 md:rounded-l-md overflow-hidden relative">
                 <img alt=""

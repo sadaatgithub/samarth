@@ -21,6 +21,7 @@ const FormsInput = ({name,type,label,setFormData}) => {
     <input
       type={type}
       name={name}
+      
       required
       id=""
       className="border h-10 w-full px-2 rounded-sm focus:outline-[1px] outline-blue-400"
