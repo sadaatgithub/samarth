@@ -7,7 +7,7 @@ import { useState,useEffect } from "react";
 const initialFormValue = {name:'',email:'',contact:'',message:''}
 
 
-const contactUs = () => {
+const ContactUs = () => {
   const [formData,setFormData] = useState({subject:"Book Appointment"})
   const [isLoading, setIsLoading] = useState(false)
 
@@ -116,4 +116,4 @@ const contactUs = () => {
   )
 }
 
-export default contactUs
+export default ContactUs
