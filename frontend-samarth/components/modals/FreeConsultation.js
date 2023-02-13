@@ -1,12 +1,40 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import FormsInput from "../forms/FormsInput";
+import { useState } from "react";
 
 
 
-const FreeConsultation = ({ setOpen,open }) => {
+const initialFormValue = {name:'',email:'',contact:'',message:''}
+
+const FreeConsultation = ({ setOpen }) => {
+
+  const [formData,setFormData] = useState({subject:"Free Consultation"})
+  const [isLoading, setIsLoading] = useState(false)
   const submitHandler = (e) => {
     e.preventDefault();
+    setIsLoading(true)
+  // console.log(formData)
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  }
+  
+  ).then((res) => {
+    // console.log('Response received')
+    if (res.status === 200) {
+      console.log('Email Sent!')
+      setIsLoading(false)
+      setFormData(initialFormValue)
+      
+    }
+  })
+
+
   };
 
   return (
@@ -25,34 +53,33 @@ const FreeConsultation = ({ setOpen,open }) => {
 
         <div className="flex gap-4 sm:flex-row flex-col">
           <div className="flex flex-col w-full gap-1">
-          <FormsInput type={"text"} name="f_name" label="First Name"/>
+          <FormsInput type={"text"} name="name" label="Full Name" setFormData={setFormData}/>
           </div>
 
-          <div className="flex flex-col w-full gap-1">
-          <FormsInput type={"text"} name="l_name" label="Last Name"/>
-          </div>
+          
         </div>
         <div className="flex flex-col w-full gap-1">
        
-          <FormsInput type={"email"} name="email" label="Email"/>
+          <FormsInput type={"email"} name="email" label="Email" setFormData={setFormData}/>
         </div>
         <div className="flex flex-col w-full gap-1">
          
-          <FormsInput type={"number"} name="contact" label="Mobile No."/>
+          <FormsInput type={"number"} name="contact" label="Mobile No." setFormData={setFormData}/>
         </div>
         <div className="flex flex-col w-full gap-1">
          
-          <FormsInput type={"textarea"} name="address" label="Address"/>
+          <FormsInput type={"textarea"} name="message" label="Message" setFormData={setFormData}/>
 
           <div className="ml-auto flex gap-2 [&>input]:rounded-sm text-rose-500">
             <input
               type="reset"
               value="Clear"
               className="px-3 py-2 cursor-pointer border mt-4 rounded-sm w-20 border-rose-500"
+              onClick={()=> setFormData({})}
             />
             <input
               type="submit"
-              value="Submit"
+              value={`${isLoading? "Sending":"Submit"}`}
               className="px-3 py-2 cursor-pointer border mt-4 w-20 bg-rose-500 rounded-sm text-white"
             />
           </div>

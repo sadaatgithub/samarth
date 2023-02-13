@@ -24,8 +24,8 @@ export default function Home({post}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroSlider/>
-      <HeroBanner/>
       <Introduction/>
+      <HeroBanner/>
 
       <OurServices/>
       <OurTeam/>
@@ -35,7 +35,8 @@ export default function Home({post}) {
   )
 }
 export async function getStaticProps() {
-  const post = await sanityClient.fetch(`*[_type=="post" && defined(slug.current) && !(_id in path("drafts.**"))]{_id,title,description,mainImage,_createdAt, "slug":slug.current}[0..4]`)
+  const post = await sanityClient.fetch(`*[_type=="post" && defined(slug.current) && !(_id in path("drafts.**"))] 
+  | order(_createdAt desc) {_id,title,description,mainImage,_createdAt, "slug":slug.current}[0...4]`)
   return {
     props: {
       post

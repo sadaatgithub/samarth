@@ -6,10 +6,10 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 const Introduction = () => {
   const [open, setOpen] = useState(false);
-
+// md:bg-[url('../public/slide2.jpg')]
   return (
     <div
-      className="intro-div mt-8 overflow-hidden  md:min-h-screen md:bg-[url('../public/slide2.jpg')]  bg-cover bg-center  md:bg-right bg-no-repeat flex flex-col justify-center items-center 
+      className="intro-div overflow-hidden  md:min-h-screen   bg-cover bg-center  md:bg-right bg-no-repeat flex flex-col justify-center items-center 
       md:justify-start md:items-start py-20 md:px-20 px-3 lg:gap-12 sm:gap-8 gap-6 relative after:content-['']
     after:absolute after:inset-0 after:bg-gradient-to-l after:from-teal-600/50 after:to-transparent  text-center md:text-left"
     >

@@ -3,8 +3,6 @@ import {BiTime} from "react-icons/bi"
 
 import {GrMail} from "react-icons/gr"
 import {MdPhoneInTalk} from "react-icons/md"
-import Link from "next/link";
-import { AiOutlineCaretDown } from "react-icons/ai";
 import { useState,useEffect } from "react";
 import Navlink from "./Navlink";
 import BookAppointement from "../buttons/BookAppointement";
@@ -52,7 +50,7 @@ const Navbar = () => {
           <Logo/>
        <FaBars className="absolute left-3 text-teal-400 z-[102] md:hidden w-8 h-8 p-2 cursor-pointer" onClick={()=> setBurgerMenu(!burgerMenu)}/>
 
-          <div className="md:col-span-4 w-full hidden md:flex  flex-wrap justify-center md:justify-end font-medium text-slate-800 text-base md:text-lg gap-x-6">
+          <div className="md:col-span-4 w-full hidden md:flex  flex-wrap justify-center md:justify-end font-medium text-slate-500 text-base md:text-lg gap-x-6">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10  p-2 rounded-full bg-slate-100 flex justify-center items-center">
                     <MdPhoneInTalk className="text-teal-500"/>

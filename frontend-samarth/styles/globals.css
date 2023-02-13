@@ -5,7 +5,9 @@
 /* main{
   background-image: url('../public/hero.jpg');
 } */
-
+body{
+  @apply scroll-smooth
+}
 footer{
   background-image: url('../public/slide1.jpg');
 }

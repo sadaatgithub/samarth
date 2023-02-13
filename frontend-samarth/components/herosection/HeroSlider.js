@@ -41,7 +41,7 @@ const HeroSlider = () => {
         }}
         loop={true}
         lazy={true}
-        modules={[EffectFade, Navigation, Autoplay, Lazy,Pagination]}
+        modules={[EffectFade, Navigation, Lazy,Pagination]}
         className="mySwiper  h-[50vh] sm:h-[400px] lg:h-[600px] group"
         style={{
           "--swiper-navigation-color": "#fff",
@@ -67,9 +67,9 @@ const HeroSlider = () => {
                   <div
                     className={`${
                       isActive
-                        ? "-translate-y-12  opacity-100 delay-500 duration-500 active"
+                        ? "-translate-y-1/2 opacity-100 delay-500 duration-500 active"
                         : "duration-200 opacity-0"
-                    }  w-full absolute left-1/2 -translate-x-1/2 top-1/2 z-10  md:w-2/3 
+                    }  w-full absolute left-1/2 -translate-x-1/2  top-1/2 z-10  md:w-2/3 
                 text-white  p-5  flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-linear`}
                   >
                     <p className="text-xl text-gray-100 rounded-md sm:text-3xl md:text-5xl font-bold text-center tracking-wide drop-shadow-xl  p-8">

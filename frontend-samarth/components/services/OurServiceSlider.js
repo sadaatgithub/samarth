@@ -98,7 +98,7 @@ const [autoSlider, setAutoSlider] = useState(true)
           },
         }}
         navigation={false}
-        modules={[Pagination,Autoplay]}
+        modules={[Pagination]}
         className="mySwiper w-full flex mt-8 md:mt-16 relative overflow-visible group" 
       >
         <SwiperButtonLeft/>

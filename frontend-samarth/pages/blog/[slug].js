@@ -41,7 +41,7 @@ import { FaUserCircle } from "react-icons/fa";
         <span className="z-10 absolute top-0 right-0 p-2 bg-rose-500 text-white">{new Date(_createdAt).toDateString('en-US')}</span>
     </div>
     <div className="mt-10 flex items-center gap-4 text-gray-500">
-    <FaUserCircle className=""/><span>By Admin</span>
+    <FaUserCircle className=""/><span>By {post.author}</span> <span>Category - {post.categories?.map(category => {return(<>{category}</>)})}</span>
     </div>
 
 
@@ -60,10 +60,9 @@ import { FaUserCircle } from "react-icons/fa";
     export const getStaticProps = async (context) => {
       const { slug } = context.params;
       const post = await client.fetch(
-        '*[_type=="post" && defined(slug.current) && !(_id in path("drafts.**")) && slug.current == $slug][0]{..., "slug":slug.current}',
+        '*[_type=="post" && defined(slug.current) && !(_id in path("drafts.**")) && slug.current == $slug][0]{...,"author": author->name,"categories": categories[]->title,"slug":slug.current}',
         { slug }
       );
-    
       return {
         props: { post },
       };

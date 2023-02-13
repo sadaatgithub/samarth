@@ -1,39 +1,62 @@
-import React from "react";
+import Link from "next/link";
+
 
 const About = () => {
   return (
-    <div className="md:px-20 flex items-center justify-center flex-col text-center [&>p]:text-slate-500">
+    <div className="md:px-24 flex items-center justify-center flex-col text-center [&>p]:text-slate-500 gap-y-8">
       <h2 className="text-4xl font-bold text-slate-500 mt-16">
         Everything About &nbsp;
         <span className="text-slate-700">
           Samarth <span className="text-teal-500">Physio</span>
         </span>
       </h2>
-      <p className="mt-10 leading-8 md:px-20 px-2 md:text-lg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta minima
-        possimus eaque mollitia dignissimos quam enim non nostrum quisquam
-        consectetur earum voluptate, cupiditate a officia quae cum in? Aperiam
-        alias neque fugit distinctio in eaque voluptatum vero harum doloremque
-        aut deleniti debitis, sequi necessitatibus cumque quo consectetur
-        recusandae facere aliquam labore commodi veritatis qui ex, dolore quasi?
-        Officiis odit, necessitatibus repellendus corporis distinctio facilis
-        ipsum esse impedit magni consectetur ipsam, nesciunt excepturi sed,
-        omnis magnam veritatis optio. Esse porro dolore magnam delectus, nobis
-        incidunt nam ducimus. Rem, rerum quibusdam? Optio delectus quam
-        voluptates vel laboriosam libero, vitae similique maxime rerum, iusto
-        aut quo magni vero impedit nam suscipit, esse amet autem quasi nisi
-        voluptatem ea porro unde.
+      
+
+      <p class="mt-10 leading-8 md:px-24 px-4 md:text-lg ">
+        
+        <strong> Samarth Physio</strong> is a leading provider of physiotherapy services in the
+        community. Our mission is to help patients of all ages and abilities
+        regain their health and mobility through expert care and personalized
+        attention.
       </p>
-      <p className="leading-8 md:px-20 px-2 mt-5 md:text-lg"> Molestiae impedit consectetur inventore
-        deserunt doloribus nulla quaerat eligendi blanditiis minima, natus
-        similique numquam sapiente voluptatum atque iste culpa non suscipit?
-        Consectetur ipsam tenetur quis, harum a, obcaecati velit distinctio
-        doloremque aliquam esse odit laboriosam officia perspiciatis quos
-        quisquam aut dolore iusto praesentium eaque eligendi! Id consectetur
-        odio suscipit debitis aliquam molestiae ducimus voluptas nostrum
-        dignissimos totam aut, mollitia nihil incidunt et repellat numquam
-        officia commodi doloribus sunt minima! Autem qui enim quod nulla! Cum
-        nostrum deleniti molestiae, iste culpa autem eum sequi!</p>
+
+      <p class="leading-8 md:px-24 px-4 md:text-lg">
+      
+        Founded by a team of highly skilled and experienced physiotherapists,
+        <strong> Samarth Physio</strong> has quickly become known for its state-of-the-art
+        facilities, advanced treatments, and compassionate care. Our therapists
+        are dedicated to providing the highest quality physiotherapy services to
+        our patients and are committed to helping them achieve their best
+        possible outcomes.
+      </p>
+
+      <p class="leading-8 md:px-24 px-4 md:text-lg">
+        
+        At <strong> Samarth Physio</strong>, we believe in the power of physiotherapy to transform
+        lives. That&apos;s why we use the latest techniques and evidence-based
+        methods to deliver effective care that is tailored to each patient&apos;s
+        unique needs and goals. From chronic pain to sports injuries, our
+        therapists work with patients to develop a comprehensive treatment plan
+        that addresses their specific health concerns and helps them regain
+        their strength, flexibility, and mobility.
+      </p>
+
+      <p class="leading-8 md:px-24 px-4 md:text-lg">
+        
+        At <strong> Samarth Physio</strong>, we understand the importance of trust and
+        transparency in the healthcare industry. That&apos;s why we are committed to
+        providing our patients with the highest standards of care, as well as
+        the information and support they need to make informed decisions about
+        their health.
+      </p>
+
+      <p class="leading-8 md:px-24 px-4 md:text-lg">
+        
+        If you&apos;re looking for a trusted provider of physiotherapy services, look
+        no further than <strong> Samarth Physio</strong>. <Link href="/contact-us" className="text-blue-600 font-semibold">Contact us</Link> today to learn more about how
+        we can help you transform your life through expert care and personalized
+        attention.
+      </p>
     </div>
   );
 };
