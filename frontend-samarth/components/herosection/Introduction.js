@@ -55,7 +55,7 @@ const Introduction = () => {
         </Portal>
       ) : null}
       </div>
-      <div className=" hidden lg:flex md:w-1/5 border h-[300px] lg:w-2/5 aspect-square rounded-md  z-10 relative self-center grow">
+      <div className=" hidden lg:flex md:w-1/5  h-[300px] lg:w-2/5 aspect-square rounded-md  z-10 relative self-center grow">
         <Image src={heroImage} width={640} height={480} className="w-full object-cover shadow-2xl  rounded-md"/>
         <Image src={heroImage2} width={320} height={240} className="absolute hidden lg:block -left-28 shadow-2xl object-right -bottom-20 w-1/3 z-[1] h-1/3 object-cover rounded-xl  shadow-green-900/20"/>
         <Image src={heroImage2} width={320} height={240} className="absolute hidden lg:block -left-10 z-[1] shadow-2xl h-1/3 object-cover shadow-green-900/20 -top-16 w-1/3 rounded-xl"/>

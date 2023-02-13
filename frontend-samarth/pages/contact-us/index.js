@@ -1,50 +1,51 @@
 import { FiPhoneCall } from "react-icons/fi";
 import { TfiEmail,TfiLocationPin } from "react-icons/tfi";
 import FormsInput from "@/components/forms/FormsInput";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 
 
-const initialFormValue = {name:'',email:'',contact:'',message:''}
+const initialFormValue = { name: "", email: "", subject:"Book Appointment",contact: "", message: "" }
+
+const initialState = {isLoading:false, error:"", values:initialFormValue}
 
 
 const ContactUs = () => {
-  const [formData,setFormData] = useState({subject:"Book Appointment"})
-  const [isLoading, setIsLoading] = useState(false)
+  const [state, setState] = useState(initialState)
+  const [isSuccess,setIsSuccess] = useState(false)
+
+  const {isLoading, values,error} = state
 
 
 
-
-  const submitHandler = (e) => {
-   
+  const submitHandler = async (e) => {
     e.preventDefault();
-    setIsLoading(true)
-  // console.log(formData)
-  fetch('/api/contact', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  }
-  
-  ).then((res) => {
-    // console.log('Response received')
-    if (res.status === 200) {
-      console.log('Email Sent!')
-      setIsLoading(false)
-      setFormData(initialFormValue)
-      
+    setState((prev) => ({
+      ...prev,isLoading:true,
+     
+
+    }));
+
+    try {
+      await submitContactForm(values)
+      console.log(state)
+      setState(initialState)
+      setIsSuccess(true)
+
+    } catch (error) {
+      console.log(error)
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: error.message,
+      }));
     }
-  })
+
+  
 
 
   };
 
-  useEffect(() => {
-    
-  
-  }, [isLoading])
+ 
   
 
   return (
@@ -88,27 +89,34 @@ const ContactUs = () => {
 
     <div className="w-full md:w-7/12 lg:w-7/12 bg-white p-4 md:shadow-lg md:rounded-r-lg flex justify-center">
 
-      <form onSubmit={submitHandler} className="w-full  lg:w-8/12 flex md:pl-8 flex-col gap-y-6 py-1 [&>div>label]:text-sm [&>div]:gap-y-1 [&>div>label]:text-gray-600">
+      <form onSubmit={submitHandler} className="w-full  lg:w-10/12 flex md:pl-8 flex-col gap-y-8 py-1 [&>div>label]:text-sm [&>div]:gap-y-1 [&>div>label]:text-gray-600">
         <h2 className="text-xl first-letter:md:text-2xl font-semibold text-secondary py-2 font-monteserrat">Enter Details</h2>
-        <div className="flex flex-col mt-12">
+        <div className="flex flex-col">
       
-          <FormsInput type={"text"} name="name" label="Full Name" setFormData={setFormData}/>
+          <FormsInput value={values?.name} type={"text"} name="name" label="Full Name" setState={setState}/>
         </div>
         <div className="flex flex-col">
           
           
-          <FormsInput type={"email"} name="email" label="Email" setFormData={setFormData}/>
+          <FormsInput value={values?.email} type={"email"} name="email" label="Email" setState={setState}/>
         </div>
         <div className="flex flex-col">
         
-          <FormsInput type={"number"} name="contact" label="Mobile No." setFormData={setFormData}/>
+          <FormsInput value={values?.contact} type={"number"} name="contact" label="Mobile No." setState={setState}/>
 
         </div>
 
         <div className="flex flex-col">
-          <FormsInput type={"textarea"} name="message" label="Message" setFormData={setFormData}/>
+          <FormsInput value={values?.message} type={"textarea"} name="message" label="Message" setState={setState}/>
 
         </div>
+        <input
+              type="reset"
+              value="Clear"
+              disabled={isLoading}
+              className={`${isLoading? "hidden":"block"} px-3 py-2 cursor-pointer border mt-4 rounded-sm w-20 border-rose-500`}
+              onClick={()=> setState(initialState)}
+            />
         <button className="mt-1 bg-teal-500 p-4 text-white rounded-sm">{isLoading? "Sending":"Submit"}</button>
       </form>
     </div>

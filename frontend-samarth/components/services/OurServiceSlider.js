@@ -106,7 +106,7 @@ const [autoSlider, setAutoSlider] = useState(true)
         {services.map((data) =>{
           return(
           <SwiperSlide key={data.id} >
-            <div className="flex h-fit flex-col gap-4 border rounded-md overflow-hidden hover:shadow-lg max-w-sm mx-auto">
+            <div className="flex h-fit flex-col gap-4 border rounded-md overflow-hidden hover:shadow-lg max-w-sm mx-auto self-stretch">
               <div className="h-60 overflow-hidden">
             <Image src={data.image} alt="" width="480px" height="320px" className="w-full h-full object-cover"/>
             </div>
