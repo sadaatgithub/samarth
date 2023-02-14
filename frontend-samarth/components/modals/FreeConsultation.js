@@ -33,6 +33,9 @@ const FreeConsultation = ({ setOpen }) => {
       console.log(state)
       setState(initialState)
       setIsSuccess(true)
+      setTimeout(() => {
+        setIsSuccess(false)
+      }, 5000);
 
     } catch (error) {
       console.log(error)
@@ -58,7 +61,7 @@ const FreeConsultation = ({ setOpen }) => {
       />
  
       <form  
-        className="relative w-5/6 lg:w-2/5 bg-white px-8 md:px-16 py-12 flex flex-col gap-6 md:gap-6 rounded-md overflow-y-auto"
+        className="relative w-5/6 lg:w-2/5 bg-white px-4 md:px-16 py-12 flex flex-col gap-6 md:gap-6 rounded-md overflow-y-auto"
         onSubmit={submitHandler}
       >
         {error? <div className={` ${error? "top-0 transition-all duration-300":"-top-12 "} absolute right-0 left-0 flex items-center justify-center p-3 bg-red-400 backdrop-blur-sm z-10 `}>
@@ -92,14 +95,13 @@ const FreeConsultation = ({ setOpen }) => {
             <input
               type="reset"
               value="Clear"
-              disabled={isLoading}
-              className={`${isLoading? "hidden":"block"} px-3 py-2 cursor-pointer border mt-4 rounded-sm w-20 border-rose-500`}
+              className={`${isLoading? "hidden":"block"}  px-3 py-2 h-10 cursor-pointer border mt-4 rounded-sm w-20 border-rose-500`}
               onClick={()=> setState(initialState)}
             />
             <button
               type="submit"
-              className="px-3 py-2 cursor-pointer border mt-4 w-20 bg-rose-500 rounded-sm text-white flex items-center"
-            >{isLoading? <ImSpinner8 className="animate-spin"/>:"Submit"}</button> 
+              className="px-3 py-2 cursor-pointer border mt-4 w-20 h-10 bg-rose-500 rounded-sm text-white flex items-center justify-center"
+            >{isLoading? <ImSpinner8 className="animate-spin self-center"/>:"Submit"}</button> 
           </div>
         </div>
       </form>

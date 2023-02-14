@@ -55,7 +55,7 @@ export const team = [
 
 const OurTeam = () => {
   return (
-    <div className="h-fit lg:px-20 px-2 flex flex-col items-center mt-4 md:mt-20">
+    <div className="h-fit lg:px-10 xl:px-20 px-2 flex flex-col items-center mt-4 md:mt-20">
      <DivHeading title="Our Team"/>
 
       <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-8">

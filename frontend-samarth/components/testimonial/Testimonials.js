@@ -57,7 +57,7 @@ const testimonial = [
 const Testimonials = () => {
   return (
     <div className="flex flex-col justify-center items-center mt-20">
-      <div className="w-full md:px-20 px-2">
+      <div className="w-full lg:px-10 xl:px-20 px-2">
         <DivHeading title="What Our Patients Says" />
       </div>
       <Swiper
@@ -110,9 +110,9 @@ const Testimonials = () => {
                     {data.designation}
                   </p>
                 </div>
-                <Image
+                <Image 
                   src={data.image}
-                  alt={data.name}
+                  alt={data.patient}
                   className="w-20 h-20 object-cover rounded-full"
                 />
               </div>

@@ -1,7 +1,6 @@
 "use client"
 import Link from "next/link";
 import { AiOutlineCaretDown } from "react-icons/ai";
-import BookAppointement from "../buttons/BookAppointement";
 import DesktopSubmenus from "./DesktopSubmenus";
 import {useRouter} from "next/router";
 
@@ -45,11 +44,11 @@ const Navlink = ({ visible }) => {
   const { pathname } = useRouter();
   // console.log(pathname);
   return (
-    <nav className="flex flex-grow  w-full lg:px-20 px-6  text-slate-600 font-medium ">
+    <nav className="flex flex-grow  w-full lg:px-10 xl:px-20 px-6  text-gray-600 font-semibold ">
       <ul
         className={` ${
           visible ? "justify-end" : ""
-        }  hidden w-full md:flex gap-8 [&>li]:cursor-pointer items-center navlink font-semibold [&>li]:relative [&>li]:py-3`}
+        }  hidden w-full md:flex gap-8 [&>li]:cursor-pointer items-center navlink  [&>li]:relative [&>li]:py-3`}
       >
         {menuLink.map((link) => {
           const isSublink = typeof link.sublink === "object";

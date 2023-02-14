@@ -110,14 +110,18 @@ const ContactUs = () => {
           <FormsInput value={values?.message} type={"textarea"} name="message" label="Message" setState={setState}/>
 
         </div>
+
+
+        <div className="flex gap-4 w-full ">
         <input
               type="reset"
               value="Clear"
               disabled={isLoading}
-              className={`${isLoading? "hidden":"block"} px-3 py-2 cursor-pointer border mt-4 rounded-sm w-20 border-rose-500`}
+              className={`${isLoading? "hidden":"block"} px-3 shadow-md py-2 ml-auto cursor-pointer border rounded-sm w-20 border-teal-500 text-teal-500`}
               onClick={()=> setState(initialState)}
             />
-        <button className="mt-1 bg-teal-500 p-4 text-white rounded-sm">{isLoading? "Sending":"Submit"}</button>
+        <button className="bg-teal-500 px-3 py-2 shadow-md text-white rounded-sm">{isLoading? "Sending":"Submit"}</button>
+        </div>
       </form>
     </div>
     </div>

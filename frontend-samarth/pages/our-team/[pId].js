@@ -22,7 +22,7 @@ const MyTeam = () => {
           <div className="flex flex-col md:flex-row gap-10 mt-8 mb-10" key={index}>
 
           <div className="md:w-1/2  flex flex-col justify-center items-center">
-        <Image src={data.image} className="aspect-square object-cover w-5/6 rounded-md"/>
+        <Image src={data.image} alt={data.member} className="aspect-square object-cover w-5/6 rounded-md"/>
         
         </div>
         <div className="flex flex-col md:w-1/2  text-lg ">

@@ -4,26 +4,7 @@ import RichTextComponent from "../../components/richtext/RichTextComponent"
 import urlFor from "@/lib/urlFor";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
-// function urlFor (source) {
-//     return imageUrlBuilder(client).image(source)
-//   }
 
-  // const ptComponents = {
-  //   types: {
-  //     image: ({ value }) => {
-  //       if (!value?.asset?._ref) {
-  //         return null
-  //       }
-  //       return (
-  //         <Image
-  //           alt={value.alt || ' '}
-  //           loading="lazy"
-  //           src={urlFor(value).width(320).height(240).fit('max').auto('format')}
-  //         />
-  //       )
-  //     }
-  //   },
-  // }
 
   const Post = ({post}) => {
 
@@ -32,7 +13,7 @@ import { FaUserCircle } from "react-icons/fa";
       return (
         <div className="min-h-screen md:px-20 mb-10 px-2 md:w-2/3 mt-12">
           <div className="md:h-[420px] overflow-hidden relative shadow-lg">
-          {mainImage? <img className="w-full"
+          {mainImage? <Image className="w-full" width={480} height={320} alt={post.title}
                 src={urlFor(mainImage).width(480).height(320)
                   .url()}
               />:""}
@@ -41,7 +22,7 @@ import { FaUserCircle } from "react-icons/fa";
         <span className="z-10 absolute top-0 right-0 p-2 bg-rose-500 text-white">{new Date(_createdAt).toDateString('en-US')}</span>
     </div>
     <div className="mt-10 flex items-center gap-4 text-gray-500">
-    <FaUserCircle className=""/><span>By {post.author}</span> <span>Category - {post.categories?.map(category => {return(<>{category}</>)})}</span>
+    <FaUserCircle className=""/><span>By {post.author}</span> <span>Category - {post.categories?.map(category => {return(<span key={category}>{category}</span>)})}</span>
     </div>
 
 

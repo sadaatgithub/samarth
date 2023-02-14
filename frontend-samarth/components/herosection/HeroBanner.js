@@ -5,11 +5,11 @@ import { TbPhysotherapist } from "react-icons/tb";
 const HeroBanner = () => {
   return (
     <div
-      className="flex md:flex-row flex-col bg-gray-50 px-2 py-10  [&>div]:gap-y-4 [&>div>svg]:text-5xl [&>div]:max-w-xl  items-center
+      className="flex lg:flex-row flex-col px-2 py-10  [&>div]:gap-y-4 [&>div>svg]:text-5xl [&>div]:max-w-xl  items-center
 md:[&>div>svg]:text-6xl [&>div]:items-center rounded-lg   gap-8 md:gap-12 [&>div]:text-center [&>div>svg]:text-teal-500
-[&>div>h3]:text-2xl [&>div>h3]:font-bold [&>div>h3]:text-slate-600 [&>div>p]:text-slate-400 [&>div>p]:text-base md:px-20 text-justify md:[&>div]:w-1/3"
+[&>div>h3]:text-2xl [&>div>h3]:font-bold [&>div>h3]:text-slate-600 [&>div>p]:text-gray-500 [&>div>p]:text-base md:px-20 text-justify lg:[&>div]:w-1/3"
     >
-      <div className="flex flex-col  self-stretch ">
+      <div className="flex flex-col  lg:self-stretch ">
         <MdOutlineHealthAndSafety className="" />
         <h3>Health Guarantee</h3>
         <p className="">

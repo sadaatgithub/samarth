@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <header className={` flex flex-col border-b bg-white`}>
-      <div className="hidden md:flex bg-[#17234D] text-gray-200 lg:px-20 px-6 justify-between items-center flex-col md:flex-row py-2 md:py-2 text-xs md:text-base font-light">
+      <div className="hidden md:flex bg-[#17234D] text-gray-200 lg:px-10 xl:px-20 px-6 justify-between items-center flex-col md:flex-row py-2 md:py-2 text-xs md:text-base font-light">
         <div className=" md:w-1/3  lg:w-2/4">
           <h4 className="">Welcome to Samarth Physiotherapy!</h4>
         </div>
@@ -46,11 +46,11 @@ const Navbar = () => {
           <span className="flex items-center gap-2"><BiTime className="text-teal-500"/>Mon to Fri 9:00am to 6:00pm</span>
         </div>
       </div>
-      <div className={`py-4 md:py-6 logo px-6 lg:px-20  grid md:grid-cols-6 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2 relative`}>
+      <div className={`py-4 md:py-6 logo px-6 xl:px-20 lg:px-10 grid md:grid-cols-6 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2 relative`}>
           <Logo/>
        <FaBars className="absolute left-3 text-teal-400 z-[102] md:hidden w-8 h-8 p-1 cursor-pointer bg-white border-2 border-teal-300 rounded-sm" onClick={()=> setBurgerMenu(!burgerMenu)}/>
 
-          <div className="md:col-span-4 w-full hidden md:flex  flex-wrap justify-center md:justify-end font-medium text-slate-500 text-base md:text-lg gap-x-6">
+          <div className="md:col-span-4 w-full hidden md:flex  flex-wrap justify-center md:justify-end font-medium text-slate-700 text-base md:text-lg gap-x-6">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10  p-2 rounded-full bg-slate-100 flex justify-center items-center">
                     <MdPhoneInTalk className="text-teal-500"/>
