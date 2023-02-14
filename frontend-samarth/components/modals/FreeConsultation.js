@@ -61,7 +61,7 @@ const FreeConsultation = ({ setOpen }) => {
       />
  
       <form  
-        className="relative w-5/6 lg:w-2/5 bg-white px-4 md:px-16 py-12 flex flex-col gap-6 md:gap-6 rounded-md overflow-y-auto"
+        className="relative w-[90%] lg:w-2/5 bg-white px-4 md:px-16 py-12 flex flex-col gap-6 md:gap-6 rounded-md overflow-y-auto"
         onSubmit={submitHandler}
       >
         {error? <div className={` ${error? "top-0 transition-all duration-300":"-top-12 "} absolute right-0 left-0 flex items-center justify-center p-3 bg-red-400 backdrop-blur-sm z-10 `}>

@@ -49,7 +49,7 @@ const ContactUs = () => {
   
 
   return (
-    <div  name="contact-us" className="min-h-screen border  flex justify-center w-full md:flex-row flex-col bg-gray-50  rounded-md overflow-hidden px-20 py-8">
+    <div  name="contact-us" className="min-h-screen border  flex justify-center w-full md:flex-row flex-col bg-gray-50  rounded-md overflow-hidden px-4 md:px-10 xl:px-20 py-8">
     <div className="w-full md:w-5/12 lg:w-5/12 flex flex-col gap-y-4 relative after:content-[''] after:absolute after:inset-0 after:bg-teal-700/80 after:backdrop-blur-sm bg-[url('../public/dumbels.jpg')] bg-no-repeat bg-cover py-6  text-gray-200 justify-between md:rounded-l-lg px-10 font-hindGuntur shadow-lg">
       <h3 className="text-xl md:text-2xl font-semibold font-monteserrat mt-4 z-[1]">Book an appointement</h3>
       
@@ -68,8 +68,7 @@ const ContactUs = () => {
                 123, Swawalambi Nagar, Abc Road, Nagpur <br/>
                 Dist Nagpur 440022 MS
             </address>
-            {/* <p>9876543210</p> */}
-            {/* <p>contact@email.com</p> */}
+           
           </div>
         <div className="mt-2 rounded-sm overflow-hidden z-[1]">
           <iframe
@@ -90,7 +89,7 @@ const ContactUs = () => {
     <div className="w-full md:w-7/12 lg:w-7/12 bg-white p-4 md:shadow-lg md:rounded-r-lg flex justify-center">
 
       <form onSubmit={submitHandler} className="w-full  lg:w-10/12 flex md:pl-8 flex-col gap-y-8 py-1 [&>div>label]:text-sm [&>div]:gap-y-1 [&>div>label]:text-gray-600">
-        <h2 className="text-xl first-letter:md:text-2xl font-semibold text-secondary py-2 font-monteserrat">Enter Details</h2>
+        <h2 className="text-xl md:text-3xl font-semibold text-secondary py-2 text-slate-600">Enter Details</h2>
         <div className="flex flex-col">
       
           <FormsInput value={values?.name} type={"text"} name="name" label="Full Name" setState={setState}/>
@@ -102,7 +101,7 @@ const ContactUs = () => {
         </div>
         <div className="flex flex-col">
         
-          <FormsInput value={values?.contact} type={"number"} name="contact" label="Mobile No." setState={setState}/>
+          <FormsInput value={values?.contact} type={"number"} name="contact" label="Mobile No" setState={setState}/>
 
         </div>
 

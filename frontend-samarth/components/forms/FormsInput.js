@@ -21,12 +21,12 @@ const handleChange = (e) =>{
       name={name}
       required
       value={value}
-      id=""
+      id={name}
       rows="5"
       onChange={handleChange}
       className="border w-full  px-2 rounded-sm focus:outline-[1px] outline-blue-400"
     />
-    <span className="input-text text-gray-600 absolute left-0 top-5  ml-3 transition duration-200">
+    <span className="input-text text-gray-600 absolute left-0 top-5 scale-105 ml-3 transition duration-200">
       {label}
     </span>
   </label>:
@@ -36,11 +36,11 @@ const handleChange = (e) =>{
       name={name}
       value={value}
       required
-      id=""
-      className={`border h-10 w-full px-2 rounded-sm focus:outline-[1px] outline-blue-400 bg-transparent `}
+      id={name}
+      className={`border h-10 w-full px-2 rounded-md focus:outline-[1px] outline-blue-400 bg-transparent `}
       onChange={handleChange}
     />
-    <span className="input-text  text-gray-600 absolute left-0 top-1/2 -translate-y-1/2 ml-3 transition duration-200">
+    <span className="input-text  text-gray-600 absolute left-0 scale-105 top-1/2 p-1 -translate-y-1/2 ml-3 transition duration-200">
       {label}
     </span>
   </label>

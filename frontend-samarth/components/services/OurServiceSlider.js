@@ -111,8 +111,8 @@ const [autoSlider, setAutoSlider] = useState(true)
             <Image src={data.image} alt="" width="480px" height="320px" className="w-full h-full object-cover"/>
             </div>
             <div className="h-1/2 flex flex-col gap-4 py-6 px-2 mt-1">
-            <h4 className="text-xl font-bold px-2 text-slate-900">{data.name} </h4>
-            <p className="text-slate-600 px-2">{data.content}</p>
+            <h4 className="text-xl font-bold px-2 text-slate-600">{data.name} </h4>
+            <p className="text-gray-400 px-2">{data.content}</p>
                     <button className="self-end mr-2 mb-2 text-rose-500 font-semibold"><Link href={`/our-services/${data.name.split(" ").join("-").toLowerCase()}`}>Read More</Link></button>
                     </div>
             </div>

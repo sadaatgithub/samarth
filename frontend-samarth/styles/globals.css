@@ -24,7 +24,7 @@ transform-origin: right;
   @apply bg-rose-400 rounded-full
 }
 nav>ul>li.active{
-  @apply text-rose-500 
+  @apply text-rose-500 font-semibold
 }
 nav>ul>li:hover::after
 {
@@ -44,7 +44,7 @@ input[type="text"]:focus ~ .input-text,
 input[type="email"]:focus ~ .input-text,
 input[type="number"]:focus ~ .input-text,
 textarea[type="text"]:focus ~ .input-text,
-input:valid ~ .input-text
+input:valid ~ .input-text,textarea:valid ~ .input-text
 {
-  @apply text-blue-600 -translate-y-8 scale-75 -translate-x-2 bg-white 
+  @apply text-blue-600 -translate-y-9 scale-[0.8] -translate-x-1 bg-white 
 }
