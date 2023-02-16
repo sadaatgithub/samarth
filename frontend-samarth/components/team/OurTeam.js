@@ -55,32 +55,34 @@ export const team = [
 
 const OurTeam = () => {
   return (
-    <div className="h-fit lg:px-10 xl:px-20 px-2 flex flex-col items-center mt-4 md:mt-20">
+    <div className="h-fit lg:px-10 xl:px-20 px-4 flex flex-col items-center mt-4 md:mt-20">
      <DivHeading title="Our Team"/>
 
-      <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-8">
+      <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-4 lg:gap-16 items-center">
         {team.map((member) => (
           <div 
          
-          className="flex flex-col gap-4 md:gap-8" key={member.id}>
+          className="flex flex-col gap-4 md:gap-8  w-full max-w-sm " key={member.id}>
           <Link 
             href={`/our-team/${member.id}`} className="flex flex-col justify-center rounded-md items-center relative overflow-hidden"
           >
             <Image
               src={member.image}
+              width={320}
+              height={240}
               alt=""
-              className="w-64 h-72  object-cover rounded-md hover:scale-110 transition-transform duration-300"
+              className="w-full h-72 xl:h-96  object-cover rounded-md hover:scale-110 transition-transform duration-300"
             />
-            <div className="flex flex-col items-center gap-1 absolute bg-white bottom-5 p-2 px-3 w-60 min-w-4/6 sm:w-5/6 shadow-sm rounded-sm border-b-4 border-teal-300">
+            <div className="flex flex-col items-center gap-1 absolute bg-white bottom-5 p-2 px-3 w-60 min-w-4/6 sm:w-5/6 shadow-xl rounded-sm border-b-8 border-teal-300">
               <p className="font-bold">{member.member}</p>
               <p className="text-gray-700">{member.designation}</p>
             </div>
             
           </Link>
-          <div className="flex gap-4 justify-center text-2xl text-slate-400 [&>svg]:cursor-pointer [&>svg:hover]:text-rose-500 [&>svg]:transition-all [&>svg]:duration-150">
-          <BsTwitter/>
-          <BsFacebook/>
-          <AiFillInstagram/>
+          <div className="flex gap-4 justify-center text-2xl text-gray-400 [&>svg]:cursor-pointer  [&>svg]:transition-all [&>svg]:duration-150">
+          <BsTwitter className="hover:text-sky-400"/>
+          <BsFacebook className="hover:text-blue-600"/>
+          <AiFillInstagram className="hover:text-rose-600"/>
           </div>
       </div>
         ))}

@@ -57,7 +57,7 @@ const testimonial = [
 const Testimonials = () => {
   return (
     <div className="flex flex-col justify-center items-center mt-20">
-      <div className="w-full lg:px-10 xl:px-20 px-2">
+      <div className="w-full lg:px-10 xl:px-20 px-2 flex flex-col items-center ">
         <DivHeading title="What Our Patients Says" />
       </div>
       <Swiper

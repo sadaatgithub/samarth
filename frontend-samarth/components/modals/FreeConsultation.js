@@ -91,16 +91,16 @@ const FreeConsultation = ({ setOpen }) => {
          
           <FormsInput  value={values?.message} type={"textarea"} name="message" label="Message" setState={setState}/>
 
-          <div className="ml-auto flex gap-2 [&>input]:rounded-sm text-rose-500">
+          <div className="ml-auto flex gap-2 [&>input]:rounded-sm text-teal-600">
             <input
               type="reset"
               value="Clear"
-              className={`${isLoading? "hidden":"block"}  px-3 py-2 h-10 cursor-pointer border mt-4 rounded-sm w-20 border-rose-500`}
+              className={`${isLoading? "hidden":"block"} shadow-md px-3 py-2 h-10 cursor-pointer border mt-4 rounded-sm w-20 border-teal-500`}
               onClick={()=> setState(initialState)}
             />
             <button
               type="submit"
-              className="px-3 py-2 cursor-pointer border mt-4 w-20 h-10 bg-rose-500 rounded-sm text-white flex items-center justify-center"
+              className="px-3 py-2 cursor-pointer border shadow-md mt-4 w-20 h-10 bg-teal-500 rounded-sm text-white flex items-center justify-center"
             >{isLoading? <ImSpinner8 className="animate-spin self-center"/>:"Submit"}</button> 
           </div>
         </div>

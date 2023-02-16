@@ -7,7 +7,8 @@ const HeroBanner = () => {
     <div
       className="flex lg:flex-row flex-col px-2 py-10  [&>div]:gap-y-4 [&>div>svg]:text-5xl [&>div]:max-w-xl  items-center
 md:[&>div>svg]:text-6xl [&>div]:items-center rounded-lg   gap-8 md:gap-12 [&>div]:text-center [&>div>svg]:text-teal-500
-[&>div>h3]:text-2xl [&>div>h3]:font-bold [&>div>h3]:text-slate-600 [&>div>p]:text-gray-500 [&>div>p]:text-base md:px-20 text-justify lg:[&>div]:w-1/3"
+md:[&>div>h3]:text-2xl [&>div>h3]:text-lg [&>div>h3]:font-bold [&>div>h3]:text-slate-600 [&>div>p]:text-gray-500 [&>div>p]:text-base md:px-20 text-justify lg:[&>div]:w-1/3
+border mt-6 border-gray-200"
     >
       <div className="flex flex-col  lg:self-stretch ">
         <MdOutlineHealthAndSafety className="" />

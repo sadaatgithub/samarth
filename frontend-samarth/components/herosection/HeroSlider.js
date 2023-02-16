@@ -73,7 +73,7 @@ const HeroSlider = () => {
                     }  w-full absolute left-1/2 -translate-x-1/2  top-[40%] z-10 md:w-3/4   lg:w-2/3
                 text-white   flex justify-center items-center flex-col  overflow-hidden transition-all  ease-linear`}
                   >
-                    <p className="text-xl text-white  rounded-md sm:text-3xl lg:text-5xl font-bold text-center tracking-wide drop-shadow-xl shadow-teal-300 p-8">
+                    <p className="text-2xl text-white  rounded-md sm:text-3xl lg:text-5xl font-bold text-center tracking-wide drop-shadow-xl shadow-teal-300 p-8">
                       {/* <span className="text-teal-400">&ldquo;</span> */}
                       {slide.desc} 
                       {/* <span className="text-teal-400">&rdquo;</span> */}
