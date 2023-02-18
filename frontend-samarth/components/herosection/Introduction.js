@@ -6,27 +6,40 @@ import { MdArrowRightAlt } from "react-icons/md";
 import Image from "next/image";
 import heroImage from "../../public/slide2.jpg"
 import heroImage2 from "../../public/banner1.jpg"
+import FormsInput from "../forms/FormsInput";
+import HeroBanner from "./HeroBanner";
+import { ImSpinner8 } from "react-icons/im";
 
+
+const initialFormValue = { name: "", email: "", subject:"Free Consultation",contact: "", message: "" }
+const initialState = {isLoading:false, error:"", values:initialFormValue}
 
 const Introduction = () => {
+
+  const [state, setState] = useState(initialState)
+  const [isSuccess,setIsSuccess] = useState(false)
+
+  const {isLoading, values,error} = state
+
   const [open, setOpen] = useState(false);
 // md:bg-[url('../public/slide2.jpg')] after:bg-gradient-to-l after:from-teal-600/50 after:to-transparent
   return (
     <div
-      className="intro-div overflow-hidden md:mt-10 mt-4 bg-gradient-to-t from-teal-400/40 to-transparent lg:bg-none
-       min-h-screen flex-col lg:flex-row  flex justify-center items-center 
-      md:justify-start md:items-start  lg:p-10 xl:p-20 p-6 gap-12 relative   text-center md:text-left"
+      className="intro-div bg-[url('../public/slide2.jpg')] bg-cover bg-center
+       min-h-screen flex-col lg:flex-row  flex justify-center items-center gap-y-6
+      md:justify-start md:items-start  lg:p-10 xl:p-20 p-6 lg:gap-12 relative after:content-[''] 
+      after:absolute after:inset-0   text-center md:text-left after:bg-gradient-to-l after:from-teal-800/90 lg:after:to-transparent after:to-teal-900/50 "
     >
-      <div className="flex flex-col gap-8 w-full lg:w-3/5 justify-center  items-center lg:items-start mt-8 lg:mt-0 ">
-      <h2 className="text-3xl  lg:text-4xl font-black text-slate-600 z-[1] lg:leading-[52px] drop-shadow-md">
+      <div className="flex flex-col gap-8 w-full lg:w-2/3 justify-center items-center text-center lg:text-left  lg:items-start mt-8 lg:mt-0 z-10">
+      <h1 className="text-2xl md:text-4xl  lg:text-5xl font-black  text-white lg:text-gray-700 z-[1] lg:leading-[52px]">
         Welcome to Samarth Physiotherapy & Rehabilitition clinic
-      </h2>
-      <h3 className="text-xl  font-semibold z-[1] text-gray-500 lg:w-3/4 sm:w-2/3 w-full text-center lg:text-left first-letter:text-2xl">
-        We care about you and your health and  will do everything we can
+      </h1>
+      <h2 className="text-xl  font-semibold z-[1] text-white lg:text-slate-700 w-full first-letter:text-2xl">
+        We care about you and your health and  will do everything <br/>we can 
         to ensure your treatment and 
         recovery is successful.
-      </h3>
-      <ul className="text-lg  text-slate-600 z-[1] flex flex-col gap-2 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-500 text-left">
+      </h2>
+      <ul className="text-lg  text-white lg:text-slate-700 z-[1] flex flex-col gap-2 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-500 text-left">
         <li>
           <FaCheckCircle />
           Personalised Treatment
@@ -55,11 +68,36 @@ const Introduction = () => {
         </Portal>
       ) : null}
       </div>
-      <div className=" hidden lg:flex md:w-1/5  h-[300px] lg:w-2/5 aspect-square rounded-md  z-10 relative self-center grow">
-        <Image src={heroImage} width={640} height={480} alt="" className="w-full object-cover shadow-2xl  rounded-md"/>
-        <Image src={heroImage2} width={320} height={240} alt="" className="absolute hidden lg:block -left-28 shadow-2xl object-right -bottom-16 w-1/3 z-[1] h-1/3 object-cover rounded-xl  shadow-gray-600/60"/>
-        <Image src={heroImage2} width={320} height={240} alt="" className="absolute hidden lg:block -left-10 z-[1] shadow-2xl h-1/3 object-cover shadow-gray-600/60 -top-16 w-1/3 rounded-xl"/>
+
+      <div className="hidden lg:flex w-full lg:w-1/3 border max-w-sm rounded-md shadow-2xl z-10 relative self-center grow bg-white  flex-col items-center pt-6">
+        <h2 className="text-2xl text-slate-600">Book a <span className="font-medium text-teal-500">FREE</span> Appointement</h2>
+<form className=" flex flex-col gap-4 w-full p-8">
+          <div className="flex flex-col w-full gap-1">
+          <FormsInput  value={values?.name} type={"text"} name="name" label="Full Name" setState={setState}/>
+          </div>
+          
+
+          
+        <div className="flex flex-col w-full gap-1">
+       
+       <FormsInput  value={values?.email} type={"email"} name="email" label="Email" setState={setState}/>
+     </div>
+     <div className="flex flex-col w-full gap-1">
+         
+          <FormsInput  value={values?.contact} type={"number"} name="contact" label="Mobile No." setState={setState}/>
+        </div>
+
+        <button
+              type="submit"
+              className="self-end px-3 py-2 cursor-pointer border  mt-4 w-full h-10 bg-teal-500 rounded-md text-white flex items-center justify-center"
+            >{isLoading? <ImSpinner8 className="animate-spin self-center"/>:"Submit"}
+            </button> 
+</form>
+
+        
       </div>
+
+      {/* <HeroBanner/> */}
     </div>
   );
 };
