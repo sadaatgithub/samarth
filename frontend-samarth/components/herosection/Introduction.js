@@ -3,11 +3,8 @@ import { FaCheckCircle } from "react-icons/fa";
 import FreeConsultation from "../modals/FreeConsultation";
 import Portal from "../portal/Portal";
 import { MdArrowRightAlt } from "react-icons/md";
-import Image from "next/image";
-import heroImage from "../../public/slide2.jpg"
-import heroImage2 from "../../public/banner1.jpg"
+
 import FormsInput from "../forms/FormsInput";
-import HeroBanner from "./HeroBanner";
 import { ImSpinner8 } from "react-icons/im";
 
 
