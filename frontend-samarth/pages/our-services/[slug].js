@@ -1,6 +1,7 @@
 import PageBanner from "@/components/banners/PageBanner";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import BookAppointement from "@/components/buttons/BookAppointement";
 
 const eachService = [
   {
@@ -71,12 +72,12 @@ const Services = () => {
   return (
     <div className="">
       <PageBanner />
-      <div className="flex mt-10  md:flex-row flex-col xl:px-20  px-6 mb-10">
+      <div className="flex mt-10 md:divide-x-2 divide-slate-200 divide-y md:divide-y-0 md:flex-row flex-col">
       {eachService
         .filter((service) => service.slug == query.slug)
         .map((service) => {
           return ( 
-              <div className="  md:px-20 px-4 w-full" key={service.id}>
+              <div className="  md:px-20 px-4 md:w-2/3" key={service.id}>
                 <div className="capitalize text-2xl md:text-4xl font-bold text-slate-600">
                   {service.slug.split("-").join(" ").toUpperCase()}
                 </div>
@@ -85,9 +86,12 @@ const Services = () => {
                     return (
                     
                         <p className="text-justify" key={index}>{desc}</p>
+
                       
                     );
                   })}
+                  <div class="">
+                  <BookAppointement/></div>
                 </div>
               </div> 
             
@@ -95,8 +99,8 @@ const Services = () => {
         })}
 
 
-        {/* 
-        <div className=" flex-col p-6  md:w-1/3 sticky top-4 left-0 hidden">
+        
+        <div className="flex flex-col p-6  md:w-1/3 sticky top-4 left-0 ">
           <h4 className="text-xl text-rose-400 font-bold mt-10">Other Services</h4>
           <ul className=" flex flex-col gap-2 text-slate-600 mt-4 list-disc list-inside">
             {eachService.filter(service => service.slug != query.slug).map(service =>{
@@ -106,7 +110,7 @@ const Services = () => {
               )
             })}
           </ul>
-        </div> */}
+        </div>
       </div>
     </div>
   );
