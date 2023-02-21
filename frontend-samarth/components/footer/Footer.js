@@ -17,7 +17,7 @@ const Footer = () => {
         <ul className="text-gray-400 cursor-pointer [&>a:hover]:underline text-base [&>a:hover]:text-gray-200 [&>a]:transition-all duration-500">
             {services.map(service =>{
                 return(
-                    <Link key={service} href={`/our-services/${service.name.split(" ").join("-").toLowerCase()}`}>
+                    <Link key={service.name} href={`/our-services/${service.name.split(" ").join("-").toLowerCase()}`}>
                     <li >{service.name}</li>
                     </Link>
                     // `/our-services/${sublink.split(" ").join("-").toLowerCase()}`

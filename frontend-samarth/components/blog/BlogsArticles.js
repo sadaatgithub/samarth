@@ -17,7 +17,7 @@ const BlogsArticles = ({post}) => {
         <BlogGrid>
             {post.map(post =>(
       
-          <EachBlog post={post} key={post._id}/>
+          <EachBlog post={post} key={post._id} w="max-w-lg"/>
             ))}
             <button className="absolute -bottom-14 right-0 text-lg  bg-transparent border border-rose-600 p-2 
             rounded-sm text-white bg-rose-600 transition-all duration-200 ease-linear hover:bg-rose-700"><Link href="/blogs-and-articles">View More</Link></button>

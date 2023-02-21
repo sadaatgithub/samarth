@@ -71,7 +71,7 @@ const OurTeam = () => {
               width={320}
               height={240}
               alt=""
-              className="w-full h-72 xl:h-96  object-cover rounded-md hover:scale-110 transition-transform duration-300"
+              className="w-full h-72 xl:h-96  object-cover  rounded-md hover:scale-110 transition-transform duration-300"
             />
             <div className="flex flex-col items-center gap-1 absolute bg-white bottom-5 p-2 px-3 w-60 min-w-4/6 sm:w-5/6 shadow-xl rounded-sm border-b-8 border-teal-300">
               <p className="font-bold">{member.member}</p>

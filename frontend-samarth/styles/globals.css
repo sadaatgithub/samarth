@@ -46,5 +46,5 @@ input[type="number"]:focus ~ .input-text,
 textarea[type="text"]:focus ~ .input-text,
 input:valid ~ .input-text,textarea:valid ~ .input-text
 {
-  @apply text-blue-600 -translate-y-9 scale-[0.8] -translate-x-1 bg-white 
+  @apply text-blue-600 -translate-y-9 scale-[0.8] -translate-x-2 bg-white 
 }

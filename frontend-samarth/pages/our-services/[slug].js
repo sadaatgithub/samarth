@@ -76,10 +76,12 @@ const Services = () => {
       {eachService
         .filter((service) => service.slug == query.slug)
         .map((service) => {
+          const title = service.slug.split("-").join(" ")
+          const capitalTitle = title.charAt(0).toUpperCase() + title.slice(1)
           return ( 
-              <div className="  md:px-20 px-4 md:w-2/3" key={service.id}>
+              <div className="  md:px-20 px-4 md:w-3/4" key={service.id}>
                 <div className="capitalize text-2xl md:text-4xl font-bold text-slate-600">
-                  {service.slug.split("-").join(" ").toUpperCase()}
+                {capitalTitle}
                 </div>
                 <div className=" mt-8 flex flex-col gap-6 mb-10 text-slate-500 text-lg">
                   {service.desc.split("/n").map((desc, index) => {
@@ -100,16 +102,20 @@ const Services = () => {
 
 
         
-        <div className="flex flex-col p-6  md:w-1/3 sticky top-4 left-0 ">
-          <h4 className="text-xl text-rose-400 font-bold mt-10">Other Services</h4>
-          <ul className=" flex flex-col gap-2 text-slate-600 mt-4 list-disc list-inside">
+        <div className="flex flex-col p-6  md:w-1/4 left-0 relative grow">
+          <div className="sticky top-14 ">
+          <h4 className="text-xl text-gray-600 font-semibold mt-10">Other Services</h4>
+          <ul className=" flex flex-col gap-2 text-slate-500 mt-4 list-disc list-inside">
             {eachService.filter(service => service.slug != query.slug).map(service =>{
+              const title = service.slug.split("-").join(" ")
+              const capitalTitle = title.charAt(0).toUpperCase() + title.slice(1)
               return(
-              <li key={service.id} className="hover:underline hover:text-rose-300">
-                <Link href={`/our-services/${service.slug.split(" ").join("-").toLowerCase()}`}>{service.slug.split("-").join(" ").toUpperCase()}</Link></li>
+              <li key={service.id} className="hover:underline hover:text-gray-900">
+                <Link href={`/our-services/${service.slug.split(" ").join("-").toLowerCase()}`}>{capitalTitle}</Link></li>
               )
             })}
           </ul>
+          </div>
         </div>
       </div>
     </div>

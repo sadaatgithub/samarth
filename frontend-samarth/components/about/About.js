@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-
+import aboutImage from "../../public/slide1.jpg"
 
 const About = () => {
   return (
@@ -11,18 +12,18 @@ const About = () => {
         </span>
       </h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center text-left">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center text-left mt-16">
       <div>
-        <h3 className="text-2xl font-bold mb-4">Our History</h3>
+        <h3 className="text-2xl font-bold mb-4 text-slate-600">Our History</h3>
         <p className="text-gray-600 leading-relaxed mb-4">XYZ Physiotherapy was founded in 2010 by Dr. Jane Smith, a highly experienced physiotherapist with over 20 years of experience in the field. Dr. Smith saw the need for a physiotherapy practice that provided personalized care in a comfortable and supportive environment, and she set out to create a place where patients could receive the highest quality of care.</p>
         <p className="text-gray-600 leading-relaxed mb-4">Since our founding, we have helped thousands of patients overcome injuries and conditions that limit their mobility and quality of life. Our team of skilled therapists is committed to providing personalized care to each patient, using the latest techniques and technology to help them achieve their goals.</p>
       </div>
       <div>
-        <img src="https://via.placeholder.com/500x300" alt="Our Company" className="rounded-lg"/>
+        <Image src={aboutImage} width={500} height={300} alt="Our Company" className="rounded-lg"/>
       </div>
     </div>
     <div className="mt-12 text-left">
-      <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+      <h3 className="text-2xl font-bold mb-4 text-slate-600">Our Mission</h3>
       <p className="text-gray-600 leading-relaxed mb-4">At XYZ Physiotherapy, our mission is to help our patients regain their strength, mobility, and confidence. We believe that every patient is unique, and we work with them to develop personalized treatment plans that address their specific needs and goals. We strive to provide a comfortable and supportive environment where patients can feel empowered to take an active role in their own recovery.</p>
       <p className="text-gray-600 leading-relaxed mb-4">We are committed to staying up-to-date with the latest advancements in physiotherapy, and we are dedicated to providing the highest quality of care to each and every patient. Our goal is to help our patients achieve long-lasting results and a better quality of life.</p>
     </div>

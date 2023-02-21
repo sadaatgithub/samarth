@@ -37,7 +37,7 @@ import urlFor from "@/lib/urlFor"
         h2: ({children}) => <h2 className="text-4xl font-bold text-slate-700 py-10">{children}</h2>,
         h3: ({children}) => <h3 className="text-3xl font-bold py-8">{children}</h3>,
         h4: ({children}) => <h4 className="text-2xl font-bold py-2">{children}</h4>,
-        p:({children}) =><p className="text-gray-600">{children}</p>,
+        p:({children}) =><p className="text-gray-500">{children}</p>,
         blockquote: ({children}) => <blockquote className="border-l-teal-500 border-l-2 pl-5 my-5">{children}</blockquote>,
     
         // Ex. 2: rendering custom styles
