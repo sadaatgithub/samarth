@@ -3,8 +3,9 @@ import { FaCheckCircle } from "react-icons/fa";
 import FreeConsultation from "../modals/FreeConsultation";
 import Portal from "../portal/Portal";
 import { MdArrowRightAlt } from "react-icons/md";
-
+import heroImage from "../../public/slide1.jpg"
 import AppointmentContactForm from "../forms/AppointmentContactForm";
+import Image from "next/image";
 
 
 
@@ -18,14 +19,14 @@ const Introduction = () => {
 // gradient-to-l md:after:from-teal-800/50  after:to-teal-600/80 after:from-teal-600/80 
   return (
     <div
-      className="intro-div bg-[url('../public/banner1.jpg')] bg-cover md:bg-center bg-[70%]
+      className="intro-div  bg-cover md:bg-center bg-[70%]
        min-h-screen flex-col md:flex-row  flex justify-center items-center gap-y-6 lg:p-14 
-       lg:gap-12 relative after:content-[''] 
-      after:absolute after:inset-0  text-center md:text-left after:bg-gradient-to-l md:after:from-teal-500/80  after:to-teal-500/40 after:from-teal-600/80"
+      
+      "
     >
-      <div className="flex flex-col gap-10 w-full lg:w-2/3 py-20 md:py-10 px-6 lg:px-0 justify-center items-center text-center md:text-left  md:items-start z-10
+      <div className="flex flex-col gap-10 w-full md:w-2/3 py-20 md:py-10 px-6 lg:px-0 justify-center items-center text-center md:text-left  md:items-start z-10
        bg-white/70 md:bg-transparent">
-      <h1 className="text-3xl md:text-4xl  lg:text-5xl font-black text-slate-600 lg:text-gray-700 z-[1] lg:leading-[52px] relative">
+      <h1 className="text-3xl md:text-4xl  lg:text-5xl font-black text-slate-600 lg:text-gray-600 z-[1] lg:leading-[52px] relative">
        <span className="text-xl text-rose-500 font-semibold absolute top-3 left-0 w-full"> Welcome to</span> <br />Samarth Physiotherapy & Rehabilitition clinic
       </h1>
       <h2 className="text-xl  font-semibold z-[1] text-slate-700 w-full first-letter:text-2xl">
@@ -63,7 +64,11 @@ const Introduction = () => {
       ) : null}
       </div>
 
-      <AppointmentContactForm/>
+      {/* <AppointmentContactForm/> */}
+      <div className="md:w-1/3 bg-cover bg-center grow  h-[400px] shadow-sm md:shadow-2xl rounded-sm overflow-hidden px-6 md:px-0">
+        <Image src={heroImage} width={640} height={480} alt="" className="w-full h-full object-cover object-right"/>
+
+      </div>
 
       {/* <HeroBanner/> */}
     </div>

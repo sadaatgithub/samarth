@@ -8,6 +8,7 @@ import OurTeam from '@/components/team/OurTeam'
 
 import sanityClient from "../sanity/client"
 import HeroBanner from '@/components/herosection/HeroBanner'
+import HeroSlider from '@/components/herosection/HeroSlider'
 
 
 export default function Home({post}) {
@@ -20,6 +21,8 @@ export default function Home({post}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+<HeroSlider/>
+      
       <Introduction/>
       <HeroBanner/>
 

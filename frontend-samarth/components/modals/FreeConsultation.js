@@ -53,7 +53,7 @@ const FreeConsultation = ({ setOpen }) => {
 
   return (
     
-    <div className="fixed top-0 w-full h-full flex flex-col  justify-center items-center bg-black/60 z-[103] py-12">
+    <div className="fixed top-0 w-full h-full flex flex-col  justify-center items-center bg-black/60 z-[1000] py-12">
 
       <FaTimes
         onClick={() => setOpen(false)}
