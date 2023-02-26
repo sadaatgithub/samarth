@@ -2,6 +2,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { TfiEmail,TfiLocationPin } from "react-icons/tfi";
 import FormsInput from "@/components/forms/FormsInput";
 import { useState } from "react";
+import PageBanner from "@/components/banners/PageBanner";
 
 
 const initialFormValue = { name: "", email: "", subject:"Book Appointment",contact: "", message: "" }
@@ -49,6 +50,8 @@ const ContactUs = () => {
   
 
   return (
+    <>
+    <PageBanner/>
     <div  name="contact-us" className="min-h-screen border  flex justify-center w-full md:flex-row flex-col bg-gray-50  rounded-md overflow-hidden px-4 md:px-10 xl:px-20 py-8">
     <div className="w-full md:w-5/12 lg:w-5/12 flex flex-col gap-y-4 relative after:content-[''] after:absolute after:inset-0 after:bg-teal-700/80 after:backdrop-blur-sm bg-[url('../public/dumbels.jpg')] bg-no-repeat bg-cover py-6  text-gray-200 justify-between md:rounded-l-lg px-10 font-hindGuntur shadow-lg">
       <h3 className="text-xl md:text-2xl font-semibold font-monteserrat mt-4 z-[1]">Book an appointement</h3>
@@ -124,6 +127,7 @@ const ContactUs = () => {
       </form>
     </div>
     </div>
+    </>
   )
 }
 

@@ -12,13 +12,14 @@ import { FaBars } from "react-icons/fa";
 
 import Portal from "../portal/Portal";
 import MobileMenu from "./MobileMenu";
+import BurgerMenu from "./BurgerMenu";
 const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
 
 
 const Navbar = () => {
 
   const [animateNav, setAnimateNav] = useState(false)
-  const [burgerMenu, setBurgerMenu] = useState(false)
+  const [burgerMenuState, setBurgerMenuState] = useState(false)
 
   const navbarOnScroll = () =>{
     if(window.scrollY >=250){
@@ -37,7 +38,7 @@ const Navbar = () => {
 
   return (
     <header className={` flex flex-col border-b bg-white`}>
-      <div className="hidden md:flex bg-[#17234D] text-gray-200 lg:px-10 xl:px-20 px-6 justify-between items-center flex-col md:flex-row py-2 md:py-2 text-xs md:text-base font-light">
+      <div className="hidden md:flex bg-[#17234D] text-gray-200 lg:px-14 px-6 justify-between items-center flex-col md:flex-row py-2 md:py-2 text-xs md:text-base font-light">
         <div className=" md:w-1/3  lg:w-2/4">
           <h4 className="">Welcome to Samarth Physiotherapy!</h4>
         </div>
@@ -46,10 +47,9 @@ const Navbar = () => {
           <span className="flex items-center gap-2"><BiTime className="text-teal-500"/>Mon to Fri 9:00am to 6:00pm</span>
         </div>
       </div>
-      <div className={` md:py-2 logo px-6 xl:px-20 lg:px-10 grid md:grid-cols-12 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2 relative`}>
+      <div className={` md:py-2 logo px-6  lg:px-14 grid md:grid-cols-12 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2 relative`}>
           <Logo/>
-       <FaBars className="absolute left-3 text-teal-400 z-[102] md:hidden w-8 h-8 p-1 cursor-pointer bg-white border-2 border-teal-300 rounded-sm" onClick={()=> setBurgerMenu(!burgerMenu)}/>
-
+       <FaBars className="absolute left-3 text-teal-400 z-[999] md:hidden w-8 h-8 p-1 cursor-pointer bg-white border-2 border-teal-300 rounded-sm" onClick={()=> setBurgerMenuState(!burgerMenuState)}/>
           <div className="md:col-span-7 lg:col-span-8 w-full hidden md:flex  flex-wrap justify-center md:justify-end font-medium text-slate-700 text-base md:text-lg gap-x-6">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10  p-2 rounded-full bg-slate-100 flex justify-center items-center">
@@ -67,10 +67,11 @@ const Navbar = () => {
           </div>
         </div>
       <Navlink animateNav={animateNav}/>
-       <AnimatedNav visible={animateNav} closeMenu={setBurgerMenu} menuState={burgerMenu}/>
+       <AnimatedNav visible={animateNav} setBurgerMenuState={setBurgerMenuState} burgerMenuState={burgerMenuState}/>
+       {/* <BurgerMenu animateNav={animateNav} burgerMenuState={burgerMenuState} setBurgerMenuState={setBurgerMenuState}/> */}
 
-       {burgerMenu?<Portal>
-        <MobileMenu setBurgerMenu={setBurgerMenu} menuState={burgerMenu}/>
+       {burgerMenuState?<Portal>
+        <MobileMenu setBurgerMenu={setBurgerMenuState} menuState={burgerMenuState}/>
        </Portal>:null}
     </header>
   )

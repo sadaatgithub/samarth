@@ -58,7 +58,7 @@ const OurTeam = () => {
     <div className="h-fit lg:px-10 xl:px-20 px-4 flex flex-col items-center mt-4 md:mt-20">
      <DivHeading title="Our Team"/>
 
-      <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-4 lg:gap-16 items-center">
+      <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-12 lg:gap-16 items-center">
         {team.map((member) => (
           <div 
          

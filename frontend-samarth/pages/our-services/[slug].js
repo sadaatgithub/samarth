@@ -74,7 +74,7 @@ const Services = () => {
       <PageBanner />
       <div className="flex mt-10 md:divide-x-2 divide-slate-200 divide-y md:divide-y-0 md:flex-row flex-col">
       {eachService
-        .filter((service) => service.slug == query.slug)
+        .filter((service) => service.slug === query.slug)
         .map((service) => {
           const title = service.slug.split("-").join(" ")
           const capitalTitle = title.charAt(0).toUpperCase() + title.slice(1)

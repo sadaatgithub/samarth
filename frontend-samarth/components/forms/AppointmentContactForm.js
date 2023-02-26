@@ -41,7 +41,7 @@ const AppointmentContactForm = () => {
   };
 
   return (
-    <div className="hidden lg:flex w-full lg:w-1/3 border max-w-sm rounded-xl shadow-2xl z-10 relative self-center grow bg-white  flex-col items-center pt-6 p-8">
+    <div className="hidden md:flex w-full lg:w-1/3 border max-w-sm rounded-xl shadow-2xl z-10 relative self-center grow bg-white  flex-col items-center pt-6 p-8 mr-6">
      {isSuccess? <div className="flex items-center justify-center text-gray-500 h-full w-full">
 <p>Form submitted successfully, we will contact you soon</p>
      </div>:<div className="w-full flex flex-col items-center">

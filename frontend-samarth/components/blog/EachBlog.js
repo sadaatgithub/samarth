@@ -8,7 +8,7 @@ function urlFor(source){
     return imageUrlBuilder(client).image(source)
   }
 
-const EachBlog = ({post,w="max-w-md"}) => {
+const EachBlog = ({post,w="max-w-lg"}) => {
   return (
     <Link href={`/blog/${post.slug}`} className={`w-full ${w} rounded-md shadow-sm border border-transparent hover:shadow-md overflow-hidden`}>
     <div className="flex w-full md:flex-row flex-col gap-2  group bg-white">
@@ -19,7 +19,6 @@ const EachBlog = ({post,w="max-w-md"}) => {
               .url()}
               className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
           />
-                {/* <Image src={post.image} alt="" className="object-cover h-full group-hover:scale-110 transition-transform duration-500"/> */}
                 <div className="absolute right-0 top-0  z-10 text-white bg-gradient-to-r from-teal-500  to-teal-500/90 p-2 rounded-sm uppercase text-xs">
                 {new Date(post._createdAt).toDateString()}
                 </div>

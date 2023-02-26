@@ -15,16 +15,18 @@ const Introduction = () => {
 
   const [open, setOpen] = useState(false);
 // md:bg-[url('../public/slide2.jpg')] after:bg-gradient-to-l after:from-teal-600/50 after:to-transparent
+// gradient-to-l md:after:from-teal-800/50  after:to-teal-600/80 after:from-teal-600/80 
   return (
     <div
-      className="intro-div md:bg-[url('../public/slide2.jpg')] bg-cover bg-center bg-none
-       min-h-screen flex-col lg:flex-row  flex justify-center items-center gap-y-6
-      md:justify-start md:items-start  lg:p-10 xl:p-20 p-6 lg:gap-12 relative after:content-[''] 
-      after:absolute after:inset-0   text-center md:text-left after:bg-gradient-to-l md:after:from-teal-800/50  after:to-teal-500/10 after:from-teal-600/60 "
+      className="intro-div bg-[url('../public/banner1.jpg')] bg-cover md:bg-center bg-[70%]
+       min-h-screen flex-col md:flex-row  flex justify-center items-center gap-y-6 lg:p-14 
+       lg:gap-12 relative after:content-[''] 
+      after:absolute after:inset-0  text-center md:text-left after:bg-gradient-to-l md:after:from-teal-500/80  after:to-teal-500/40 after:from-teal-600/80"
     >
-      <div className="flex flex-col gap-8 w-full lg:w-2/3 justify-center items-center text-center lg:text-left  lg:items-start mt-8 lg:mt-0 z-10">
-      <h1 className="text-2xl md:text-4xl  lg:text-5xl font-black  lg:text-gray-700 z-[1] lg:leading-[52px]">
-        Welcome to Samarth Physiotherapy & Rehabilitition clinic
+      <div className="flex flex-col gap-10 w-full lg:w-2/3 py-20 md:py-10 px-6 lg:px-0 justify-center items-center text-center md:text-left  md:items-start z-10
+       bg-white/70 md:bg-transparent">
+      <h1 className="text-3xl md:text-4xl  lg:text-5xl font-black text-slate-600 lg:text-gray-700 z-[1] lg:leading-[52px] relative">
+       <span className="text-xl text-rose-500 font-semibold absolute top-3 left-0 w-full"> Welcome to</span> <br />Samarth Physiotherapy & Rehabilitition clinic
       </h1>
       <h2 className="text-xl  font-semibold z-[1] text-slate-700 w-full first-letter:text-2xl">
         We care about you and your health and  will do everything <br/>we can 
@@ -48,7 +50,7 @@ const Introduction = () => {
 
       
       <button
-        className="mt-10 md:mt-6 flex max-w-xs justify-center items-center  gap-4 tracking-wide  text-lg bg-teal-500 z-[1] group text-white px-9 py-4 rounded-full shadow-xl  hover:bg-teal-600 focus:bg-teal-800 transition-all duration-100"
+        className="mt-10 md:mt-6 flex max-w-xs justify-center items-center  gap-4 tracking-wide  text-lg bg-teal-500 z-[1] group text-white px-9 py-4 rounded-md shadow-xl  hover:bg-teal-600 focus:bg-teal-800 transition-all duration-100"
         onClick={() => setOpen(!open)}
       >
         Get Free Consultation

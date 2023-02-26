@@ -44,7 +44,7 @@ const Navlink = ({ visible }) => {
   const { pathname } = useRouter();
   // console.log(pathname);
   return (
-    <nav className="flex flex-grow  w-full lg:px-10 xl:px-20 px-6  text-gray-600 font-medium">
+    <nav className="flex flex-grow  w-full lg:px-14 px-6  text-gray-600 font-medium">
       <ul
         className={` ${
           visible ? "justify-end" : ""

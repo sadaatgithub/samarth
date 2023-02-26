@@ -9,7 +9,7 @@ html{
   scroll-behavior: smooth;
 }
 footer{
-  background-image: url('../public/slide1.jpg');
+  background-image: url('../public/banner1.jpg');
 }
 nav>ul>li::after{
   content: '';
@@ -21,10 +21,10 @@ nav>ul>li::after{
 transform: scaleX(0);
 transform-origin: right;
   transition: transform 0.2s ease-in-out;
-  @apply bg-rose-400 rounded-full
+  @apply bg-teal-400 rounded-full
 }
 nav>ul>li.active{
-  @apply text-rose-500 font-semibold
+  @apply text-teal-500 font-semibold
 }
 nav>ul>li:hover::after
 {
@@ -47,4 +47,33 @@ textarea[type="text"]:focus ~ .input-text,
 input:valid ~ .input-text,textarea:valid ~ .input-text
 {
   @apply text-blue-600 -translate-y-9 scale-[0.8] -translate-x-2 bg-white 
+}
+
+.button-one {
+  --button-color: rgb(50, 185, 179);
+  --button-color-dark:rgb(64, 204, 197);
+}
+.button-one .line {
+  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  transform-origin: center;
+}
+
+.button-one[aria-expanded="true"] .line {
+  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+}
+
+.button-one[aria-expanded="true"] :is(.top, .bottom) {
+  y: 45;
+}
+
+.button-one[aria-expanded="true"] .top {
+  rotate: 45deg;
+}
+
+.button-one[aria-expanded="true"] .middle {
+  opacity: 0;
+}
+
+.button-one[aria-expanded="true"] .bottom {
+  rotate: -45deg;
 }

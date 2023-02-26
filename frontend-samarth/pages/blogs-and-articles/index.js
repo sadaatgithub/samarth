@@ -27,14 +27,14 @@ const blogSearchHandler = (e) =>{
     return (
       <>
       <PageBanner/>
-      <div className="sm:mt-10 px-2 md:px-10 mb-20 lg:px-20 flex min-h-screen sm:divide-x flex-col-reverse sm:flex-row gap-6">
+      <div className="sm:mt-10 px-2 md:px-14 mb-20  flex min-h-screen sm:divide-x flex-col-reverse sm:flex-row gap-6">
 
-      {filteredData.length===0? <p className="text-center text-4xl w-full text-gray-500 mt-24">No Blogs Found</p>:
+      {filteredData.length===0? <p className="text-center text-4xl w-full text-gray-500 mt-24 grow">No Blogs Found , Please try another keyword</p>:
       <div className="w-full">
-        <div className="col-span-full w-full flex px-2 mb-10">
-        <p className="md:text-2xl font-bold text-slate-700">Recent Blogs</p>
+        <div className="col-span-full w-full flex mb-10">
+        <p className="md:text-2xl font-bold text-slate-700 px-2 md:px-0">Recent Blogs</p>
       </div> 
-      <BlogGrid cols={2} >
+      <BlogGrid cols="2" >
         
         {filteredData.map((post) =>{
           return (

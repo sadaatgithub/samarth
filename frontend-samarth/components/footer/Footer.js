@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 import { services } from "../services/OurServiceSlider"
 
 const Footer = () => {
@@ -6,11 +7,14 @@ const Footer = () => {
 
 
   return (
-    <footer className=" bg-cover relative bg-center after:content-[''] after:absolute after:inset-0 after:bg-black/70">
+    <footer className="mt-auto bg-cover relative bg-center after:content-[''] after:absolute after:inset-0 after:bg-black/80">
     <div className="grid md:grid-cols-6  px-4 md:p-12 gap-4 py-16 z-10">
     <div className="col-span-2 flex flex-col gap-4 z-10">
         <h1 className="text-3xl text-gray-200 font-bold ">SAMARTH</h1>
         <p className="text-gray-300">We here at Samarth – The best Physiotherapy in Nagpur will help you take those little steps by making you go through a detailed examination conducted by our Certified Healthcare Professionals. </p>
+        <div className="flex gap-4 text-white/50 [&>svg:hover]:text-white [&>svg]:cursor-pointer">
+            <FaInstagram/> <FaYoutube/> <FaTwitter/>
+        </div>
     </div>
     <div className="flex flex-col text-gray-200 gap-4 z-10">
         <h5 className="font-semibold">What We Offer</h5>
