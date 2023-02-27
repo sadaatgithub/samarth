@@ -21,10 +21,10 @@ nav>ul>li::after{
 transform: scaleX(0);
 transform-origin: right;
   transition: transform 0.2s ease-in-out;
-  @apply bg-teal-400 rounded-full
+  @apply bg-rose-400 rounded-full
 }
 nav>ul>li.active{
-  @apply text-teal-500 font-semibold
+  @apply text-rose-500 font-semibold
 }
 nav>ul>li:hover::after
 {

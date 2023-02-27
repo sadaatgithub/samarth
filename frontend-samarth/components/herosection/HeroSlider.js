@@ -54,7 +54,7 @@ const HeroSlider = () => {
           loop={true}
           lazy={true}
           modules={[EffectFade, Navigation, Autoplay, Lazy, Pagination]}
-          className="mySwiper  h-screen sm:h-[80vh] md:h-[600px] group"
+          className="mySwiper  h-[80vh] md:h-[600px] group"
           style={{
             "--swiper-navigation-color": "#fff",
             // "--swiper-pagination-color": "#fff",
@@ -72,7 +72,7 @@ const HeroSlider = () => {
                 {({ isActive }) => (
                   <div
                     className="relative after:content-[''] after:absolute object-cover h-full
-        after:inset-0 after:bg-teal-900/60"
+        after:inset-0 after:bg-black/50"
                   >
                     <Image
                       src={slide.image}
@@ -86,23 +86,23 @@ const HeroSlider = () => {
                       className={` md:w-2/3 absolute inset-0 z-10 xl:p-20 p-6 md:p-10
                 text-white   flex  flex-col md:items-start items-center justify-center md:justify-start`}
                     >
-                      <div className="text-xl  text-white  md:mt-6 sm:text-3xl  font-bold shadow-xl ">
+                      <div className="text-xl  text-white  md:mt-6 sm:text-3xl  font-bold">
                         <p
                           className={`${
                             isActive
-                              ? "translate-x-0 opacity-100 duration-1000"
-                              : "-translate-x-10 opacity-0 duration-200"
+                              ? "translate-x-0  opacity-100 duration-1000"
+                              : "-translate-x-10 opacity-0 duration-200 "
                           } p-4 overflow-hidden bg-white transition-all  ease-in-out text-teal-500 `}
                         >
                           {" "}
                           {firstDesc}{" "}
                         </p>
                       </div>
-                      <div className="text-xl text-white font-semibold sm:text-3xl  md:font-bold shadow-xl ">
+                      <div className="text-xl text-white font-semibold sm:text-3xl  md:font-bold ">
                         <p
                           className={`${
                             isActive
-                              ? "translate-x-0 opacity-100 duration-1000"
+                              ? "translate-x-0 opacity-100 duration-1000 delay-300"
                               : "translate-x-10 opacity-0 duration-200"
                           } p-4 overflow-hidden transition-all  ease-in-out text-white bg-teal-500`}
                         >
@@ -110,12 +110,12 @@ const HeroSlider = () => {
                           {secondDesc}
                         </p>
                       </div>
-                    <p className={`${isActive? "translate-x-0 opacity-100 transition-all duration-1000 delay-500 ease-in-out":"-translate-x-8 opacity-0"} mt-6 md:text-xl xl:w-2/3 text-center md:text-left`}>{slide.detail}</p>
+                    <p className={`${isActive? "translate-x-0 opacity-100 transition-all duration-1000 delay-500 ":"-translate-x-8 opacity-0"} mt-10 md:text-xl xl:w-2/3 text-center  md:text-left`}>{slide.detail}</p>
                     <Link href="/contact-us">
                       <button
                         className={`
-                          ${isActive? "translate-x-0 opacity-100 transition-all duration-1000 delay-700 ease-in-out":"-translate-x-8 opacity-0"} 
-                text-white p-2 md:py-4 md:px-8 border-2 rounded-sm mt-6 flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-linear`}
+                          ${isActive? "translate-x-0 opacity-100 transition-all duration-1000 delay-700 ":"translate-x-8 opacity-0"} 
+                text-white  p-2 px-4 bg-slate-800 rounded-full mt-10 flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out `}
                       >
                         Start Your Recovery
                       </button>

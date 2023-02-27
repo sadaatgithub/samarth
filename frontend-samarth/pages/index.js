@@ -25,7 +25,6 @@ export default function Home({post}) {
       
       <Introduction/>
       <HeroBanner/>
-
       <OurServices/>
       <OurTeam/>
       <Testimonials/>

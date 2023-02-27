@@ -55,14 +55,14 @@ export const team = [
 
 const OurTeam = () => {
   return (
-    <div className="h-fit lg:px-10 xl:px-20 px-4 flex flex-col items-center mt-4 md:mt-20">
+    <div className="h-fit lg:px-10 xl:px-20 px-4 flex flex-col items-center mt-4 md:mt-20 ">
      <DivHeading title="Our Team"/>
 
       <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-12 lg:gap-16 items-center">
         {team.map((member) => (
           <div 
          
-          className="flex flex-col gap-4 md:gap-8  w-full max-w-sm " key={member.id}>
+          className="flex flex-col gap-4 md:gap-8  w-full max-w-xs " key={member.id}>
           <Link 
             href={`/our-team/${member.id}`} className="flex flex-col justify-center rounded-md items-center relative overflow-hidden"
           >
