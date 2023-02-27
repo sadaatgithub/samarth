@@ -8,11 +8,11 @@ import Navlink from "./Navlink";
 import BookAppointement from "../buttons/BookAppointement";
 import Logo from "./Logo";
 import AnimatedNav from "./AnimatedNav";
-import { FaBars } from "react-icons/fa";
+import { FaBars ,FaTimes} from "react-icons/fa";
 
 import Portal from "../portal/Portal";
 import MobileMenu from "./MobileMenu";
-import BurgerMenu from "./BurgerMenu";
+
 const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
 
 
@@ -49,7 +49,7 @@ const Navbar = () => {
       </div>
       <div className={` md:py-2 logo px-6  lg:px-14 grid md:grid-cols-12 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2 relative`}>
           <Logo/>
-       <FaBars className="absolute left-3 text-teal-400 z-[999] md:hidden w-8 h-8 p-1 cursor-pointer bg-white border-2 border-teal-300 rounded-sm" onClick={()=> setBurgerMenuState(!burgerMenuState)}/>
+       <FaBars className="absolute right-3 text-[#485170] z-[9] md:hidden w-8 h-8 p-1 cursor-pointer bg-white  rounded-sm" onClick={()=> setBurgerMenuState(!burgerMenuState)}/>
           <div className="md:col-span-7 lg:col-span-8 w-full hidden md:flex  flex-wrap justify-center md:justify-end font-medium text-slate-700 text-base md:text-lg gap-x-6">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10  p-2 rounded-full bg-slate-100 flex justify-center items-center">
@@ -68,7 +68,6 @@ const Navbar = () => {
         </div>
       <Navlink animateNav={animateNav}/>
        <AnimatedNav visible={animateNav} setBurgerMenuState={setBurgerMenuState} burgerMenuState={burgerMenuState}/>
-       {/* <BurgerMenu animateNav={animateNav} burgerMenuState={burgerMenuState} setBurgerMenuState={setBurgerMenuState}/> */}
 
        {burgerMenuState?<Portal>
         <MobileMenu setBurgerMenu={setBurgerMenuState} menuState={burgerMenuState}/>

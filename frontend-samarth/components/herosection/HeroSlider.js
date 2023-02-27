@@ -91,7 +91,7 @@ const HeroSlider = () => {
                             isActive
                               ? "translate-x-0  opacity-100 duration-1000"
                               : "-translate-x-10 opacity-0 duration-200 "
-                          } p-4 overflow-hidden bg-white transition-all  ease-in-out text-teal-500 `}
+                          } px-4 py-2 md:p-4 overflow-hidden bg-white transition-all  ease-in-out text-teal-500 `}
                         >
                           {" "}
                           {firstDesc}{" "}
@@ -103,24 +103,37 @@ const HeroSlider = () => {
                             isActive
                               ? "translate-x-0 opacity-100 duration-1000 delay-300"
                               : "translate-x-10 opacity-0 duration-200"
-                          } p-4 overflow-hidden transition-all  ease-in-out text-white bg-teal-500`}
+                          } px-4 py-2 md:p-4 overflow-hidden transition-all  ease-in-out text-white bg-teal-500`}
                         >
                           {" "}
                           {secondDesc}
                         </p>
                       </div>
-                    <p className={`${isActive? "translate-x-0 opacity-100 transition-all duration-1000 delay-500 ":"-translate-x-8 opacity-0"} mt-10 md:text-xl xl:w-2/3 text-center  md:text-left`}>{slide.detail}</p>
-                    <Link href="/contact-us">
-                      <button
-                        className={`
-                          ${isActive? "translate-x-0 opacity-100 transition-all duration-1000 delay-700 ":"translate-x-8 opacity-0"} 
-                text-white  p-2 px-4 bg-slate-800 rounded-full mt-10 flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out `}
+                      <p
+                        className={`${
+                          isActive
+                            ? "translate-x-0 opacity-100 transition-all duration-1000 delay-500 "
+                            : "-translate-x-8 opacity-0"
+                        } mt-6 md:mt-10 md:text-xl xl:w-2/3 text-center  md:text-left text-base leading-5`}
                       >
-                        Start Your Recovery
-                      </button>
-                    </Link>
-                    </div>
+                        {slide.detail}
+                      </p>
 
+
+                      <Link href="/contact-us">
+                        <button
+                          className={`
+                          ${
+                            isActive
+                              ? "translate-x-0 opacity-100 transition-all duration-1000 delay-700 "
+                              : "translate-x-8 opacity-0"
+                          } 
+                text-white  p-2 px-4 bg-slate-800 rounded-full mt-6 md:mt-10 flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out `}
+                        >
+                          Start Your Recovery
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 )}
               </SwiperSlide>
