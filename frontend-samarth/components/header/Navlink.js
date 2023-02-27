@@ -42,7 +42,6 @@ export const menuLink = [
 
 const Navlink = ({ visible }) => {
   const { pathname } = useRouter();
-  // console.log(pathname);
   return (
     <nav className="flex flex-grow  w-full lg:px-14 px-6  text-gray-600 font-medium">
       <ul

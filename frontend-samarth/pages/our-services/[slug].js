@@ -66,9 +66,6 @@ const eachService = [
 const Services = () => {
   const router = useRouter();
   const { query } = router;
-
-  //   const result = eachService.filter((service) => service.slug == query.slug);
-  //   console.log(result);
   return (
     <div className="">
       <PageBanner />

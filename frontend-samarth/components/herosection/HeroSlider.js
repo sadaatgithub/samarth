@@ -65,7 +65,6 @@ const HeroSlider = () => {
             const descLength = desc.length / 2;
             const firstDesc = desc.slice(0, descLength).join(" ");
             const secondDesc = desc.slice(descLength).join(" ");
-            console.log(firstDesc, secondDesc);
 
             return (
               <SwiperSlide key={index}>

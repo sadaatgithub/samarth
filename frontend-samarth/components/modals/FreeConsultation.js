@@ -30,7 +30,6 @@ const FreeConsultation = ({ setOpen }) => {
 
     try {
       await submitContactForm(values)
-      console.log(state)
       setState(initialState)
       setIsSuccess(true)
       setTimeout(() => {
