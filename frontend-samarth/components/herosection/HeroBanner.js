@@ -5,7 +5,7 @@ import { TbPhysotherapist } from "react-icons/tb";
 const HeroBanner = () => {
   return (
     <>
-    <h3 className="mt-16 text-center text-xl md:text-3xl font-semibold text-slate-700">Why People Choose Us</h3>
+    <h3 className="mt-16 text-center text-xl md:text-3xl font-semibold text-slate-500">Why People Choose Us</h3>
     <div
       className="flex lg:flex-row  flex-col px-2 py-10  [&>div]:gap-y-4 [&>div>svg]:text-5xl [&>div]:max-w-xl  items-center
 md:[&>div>svg]:text-6xl [&>div]:items-center rounded-lg   gap-8 md:gap-12 [&>div]:text-center [&>div>svg]:text-teal-500

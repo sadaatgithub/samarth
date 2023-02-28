@@ -125,5 +125,6 @@ const Testimonials = () => {
     </div>
   );
 };
+// bg-[url('../public/flipped-diamonds.svg')]
 
 export default Testimonials;

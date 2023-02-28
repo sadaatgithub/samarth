@@ -20,6 +20,7 @@ nav>ul>li::after{
   height: 2px;
 transform: scaleX(0);
 transform-origin: right;
+color: #ff4a72ef;
   transition: transform 0.2s ease-in-out;
   @apply bg-rose-400 rounded-full
 }
@@ -49,31 +50,3 @@ input:valid ~ .input-text,textarea:valid ~ .input-text
   @apply text-blue-600 -translate-y-9 scale-[0.8] -translate-x-2 bg-white 
 }
 
-.button-one {
-  --button-color: rgb(50, 185, 179);
-  --button-color-dark:rgb(64, 204, 197);
-}
-.button-one .line {
-  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
-  transform-origin: center;
-}
-
-.button-one[aria-expanded="true"] .line {
-  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
-}
-
-.button-one[aria-expanded="true"] :is(.top, .bottom) {
-  y: 45;
-}
-
-.button-one[aria-expanded="true"] .top {
-  rotate: 45deg;
-}
-
-.button-one[aria-expanded="true"] .middle {
-  opacity: 0;
-}
-
-.button-one[aria-expanded="true"] .bottom {
-  rotate: -45deg;
-}

@@ -1,7 +1,7 @@
 import { menuLink } from "./Navlink"
 import Link from "next/link"
 import { useState } from "react"
-import { FaPlus, FaTimes } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaPlus, FaTimes, FaTwitter } from "react-icons/fa"
 
 const MobileMenu = ({setBurgerMenu,menuState})=>{
 
@@ -15,9 +15,9 @@ const MobileMenu = ({setBurgerMenu,menuState})=>{
         <div className="fixed inset-0 h-full flex  items-center z-[104]  backdrop-blur-sm
         bg-black/70">
             <div  
-            className={`${menuState? "animate-slideInLeft":"-translate-x-full"} h-full bg-teal-700/80 w-5/6`}>
+            className={`${menuState? "animate-slideInLeft":"-translate-x-full"} h-full bg-teal-700/80 w-5/6 flex flex-col justify-between`}>
                 <FaTimes className="absolute right-1 top-1 md:hidden w-8 h-8 p-1 cursor-pointer text-white" onClick={()=> setBurgerMenu(false)}/>
-            <ul className={` flex flex-col gap-6 mt-[30%] text-white transition-all duration-500  text-xl  h-full  [&>li]:pl-8`}>
+            <ul className={`flex flex-col gap-6 mt-[30%]  text-white transition-all duration-500  text-xl   [&>li]:pl-8`}>
            {menuLink.map((menulink) =>{
             const isSublink = typeof menulink.sublink === "object"
 
@@ -36,6 +36,9 @@ const MobileMenu = ({setBurgerMenu,menuState})=>{
 )
            })}
            </ul>
+<div className="mt-auto p-6 pl-8 flex gap-2 text-xl text-gray-300">
+           <FaTwitter/><FaFacebook/><FaInstagram/>
+           </div>
            </div>
         </div>
     </>)

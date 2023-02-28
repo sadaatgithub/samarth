@@ -9,6 +9,7 @@ import OurTeam from '@/components/team/OurTeam'
 import sanityClient from "../sanity/client"
 import HeroBanner from '@/components/herosection/HeroBanner'
 import HeroSlider from '@/components/herosection/HeroSlider'
+import AppointmentBanner from '@/components/banners/AppointmentBanner'
 
 
 export default function Home({post}) {
@@ -28,6 +29,7 @@ export default function Home({post}) {
       <OurServices/>
       <OurTeam/>
       <Testimonials/>
+      <AppointmentBanner/>
       <BlogsArticles post={post}/>
     </>
   )

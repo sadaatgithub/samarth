@@ -1,74 +1,76 @@
-import { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
-import FreeConsultation from "../modals/FreeConsultation";
-import Portal from "../portal/Portal";
-import { MdArrowRightAlt } from "react-icons/md";
-import heroImage from "../../public/slide1.jpg"
-import AppointmentContactForm from "../forms/AppointmentContactForm";
+import heroImage from "../../public/slide1.jpg";
 import Image from "next/image";
-
-
-
+import Link from "next/link";
+import Underline from "../headings/Underline";
 
 const Introduction = () => {
 
-
-
-  const [open, setOpen] = useState(false);
- 
   return (
     <div
-      className="intro-div bg-gray-50 
-       min-h-screen flex-col md:flex-row  flex justify-center items-center  lg:p-14"
+      className="intro-div  
+       min-h-screen flex-col md:flex-row  flex justify-center items-center  lg:p-14 md:gap-10"
     >
       <div className="flex flex-col relative gap-4 w-full md:w-4/6 py-20  md:py-10 px-6 lg:px-0 justify-center items-center text-center md:text-left  md:items-start ">
-      <h1 className="text-3xl md:text-4xl  lg:text-4xl font-black text-slate-600 lg:text-gray-600 z-[1] lg:leading-[52px] relative">
-       Welcome to Samarth Physiotherapy <br/> & Rehabilitition clinic
-      </h1>
-      <h2 className="text-xl  font-medium mt-4 text-slate-700 w-full first-letter:text-2xl">
-        We care about you and your health and  will do everything <br/>we can 
-        to ensure your treatment and 
-        recovery is successful.
+        <h1 className="text-3xl md:text-4xl  lg:text-4xl font-bold text-slate-600 lg:text-slate-700 z-[1] drop-shadow-sm">
+          Welcome to<br className="hidden md:block" />  Samarth Physiotherapy & 
+          Rehabilitition clinic
+        </h1>
+        <div className="w-2/3  flex justify-center">
+        <Underline/>
+        </div>
+        <h2 className="text-xl  font-medium mt-4 text-slate-700 md:w-11/12 first-letter:text-2xl">
+          We care about you and your health and will do everything we can to
+          ensure your treatment and recovery is successful.
+        </h2>
+        <p className="text-lg text-gray-700 mt-4 md:w-11/12">
+          Samarth Physio is a leading provider of physiotherapy services in the
+          community. Our mission is to help patients of all ages and abilities
+          regain their health and mobility through expert care and personalized
+          attention.
+        </p>
+
+        
+
+        <p className="hidden text-xl text-teal-500 font-bold mt-6">
+          Our Features
+        </p>
+        <ul className="hidden text-lg text-slate-700 z-[1]  flex-col gap-2 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-500 text-left">
+          <li>
+            <FaCheckCircle />
+            Personalised Treatment
+          </li>
+          <li>
+            <FaCheckCircle />
+            Professional and Certified Therapists
+          </li>
+          <li>
+            <FaCheckCircle />
+            Experienced staff
+          </li>
+        </ul>
+
        
-      </h2>
-      <p className="text-xl text-teal-500 font-bold mt-6">Our Features</p>
-      <ul className="text-lg text-slate-700 z-[1]  flex-col gap-2 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-500 text-left">
-        <li>
-          <FaCheckCircle />
-          Personalised Treatment
-        </li>
-        <li>
-          <FaCheckCircle />
-          Professional and Certified Therapists
-        </li>
-        <li>
-          <FaCheckCircle />
-          Experienced staff
-        </li>
-      </ul>
-
-      
-      <button
-        className="mt-10 md:mt-8 flex max-w-xs justify-center items-center  gap-4 tracking-wide  text-lg bg-teal-500 z-[1] group text-white px-9 py-4 rounded-sm shadow-xl  hover:bg-teal-600 focus:bg-teal-800 transition-all duration-100"
-        onClick={() => setOpen(!open)}
-      >
-        Get Free Consultation
-        <MdArrowRightAlt className="md:text-xl -translate-x-3 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-200 hidden sm:block" />
-      </button>
-      {open ? (
-        <Portal>
-          <FreeConsultation setOpen={setOpen} open={open} />
-        </Portal>
-      ) : null}
+        <div className="flex gap-4 mt-6">
+          <button className="bg-teal-500 text-white shadow-md rounded-sm px-6 py-3 hover:bg-white hover:text-teal-500 border hover:border-teal-500 transition-all duration-100">
+            <Link href="/about" className="p-2 font-semibold">
+              Know More
+            </Link>
+          </button>
+        </div>
+       
       </div>
 
-      {/* <AppointmentContactForm/> */}
-      <div className="md:w-3/6 w-full bg-cover bg-center grow h-80  md:h-[400px] shadow-sm md:shadow-2xl rounded-sm overflow-hidden px-2 md:px-0">
-        <Image src={heroImage} width={640} height={480} alt="" className="w-full h-full object-cover object-right"/>
-
+      <div className="md:w-2/6 w-full bg-cover bg-center grow h-80  md:h-[370px] shadow-sm  rounded-tl-full px-2 md:px-0 relative z-[2]">
+        <Image
+          src={heroImage}
+          width={640}
+          height={480}
+          alt=""
+          className="w-full h-full object-cover object-right rounded-tl-[100px] rounded-md shadow-xl"
+        />
+        <div className="bg-[url('../public/polka-dots.svg')]  absolute w-16 h-16 -left-6 -bottom-5 z-[-1] "></div>
       </div>
-
-      {/* <HeroBanner/> */}
     </div>
   );
 };
