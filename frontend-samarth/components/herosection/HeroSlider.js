@@ -21,7 +21,7 @@ const data = [
   {
     image: Slide1,
     desc: " Best physiotherapy service you can get in Nagpur ",
-    detail: `Samarth Physio is a well-known physiotherapy center in Nagpur, committed to providing top-notch care to its clients through a team of experienced therapists and state-of-the-art equipment.`,
+    detail: `We are a well-known physiotherapy center in Nagpur, committed to providing top-notch care to its clients through a team of experienced therapists and state-of-the-art equipment.`,
     href:
       {
         text:"Know More",
@@ -32,7 +32,7 @@ const data = [
   {
     image: Slide2,
     desc: "Regain Your Mobility with Expert Physiotherapy",
-    detail: `Samarth Physio offers expert physiotherapy services personalized to each patient's specific needs, aiming to achieve optimal physical health and wellness.`,
+    detail: `We offers expert physiotherapy services personalized to each patient's specific needs, aiming to achieve optimal physical health and wellness.`,
     href:
       {
         text:"Book Now",
@@ -43,7 +43,7 @@ const data = [
   {
     image: Slide3,
     desc: "Say Goodbye to Pain with Personalized Treatment Plans",
-    detail: `Samarth Physio provides personalised treatment plans tailored to each patient's specific needs to ensure the highest quality care and optimal physical health and wellness.`,
+    detail: `We provides personalised treatment plans tailored to each patient's specific needs to ensure the highest quality care and optimal physical health and wellness.`,
     href:
       {
         text:"Our Services",
@@ -83,13 +83,13 @@ const HeroSlider = () => {
             const descLength = desc.length / 2;
             const firstDesc = desc.slice(0, descLength).join(" ");
             const secondDesc = desc.slice(descLength).join(" ");
-
+// after:bg-gradient-to-tl after:from-transparent after:to-teal-500
             return (
               <SwiperSlide key={index}>
                 {({ isActive }) => (
                   <div
                     className="relative after:content-[''] after:absolute object-cover h-full
-        after:inset-0 after:bg-black/50"
+        after:inset-0 after:bg-gradient-to-r after:from-slate-900/50 "
                   >
                     <Image
                       src={slide.image}
@@ -103,7 +103,7 @@ const HeroSlider = () => {
                       className={` md:w-2/3 absolute inset-0 z-10 xl:p-20 p-6 md:p-10
                 text-white   flex  flex-col md:items-start items-center justify-center md:justify-start`}
                     >
-                      <div className="text-xl  text-white  md:mt-6 sm:text-3xl  font-bold">
+                      <div className="text-2xl  text-white  md:mt-6 sm:text-4xl  font-bold">
                         <p
                           className={`${
                             isActive
@@ -115,7 +115,7 @@ const HeroSlider = () => {
                           {firstDesc}{" "}
                         </p>
                       </div>
-                      <div className="text-xl text-white font-semibold sm:text-3xl  md:font-bold ">
+                      <div className="text-2xl text-white font-semibold sm:text-4xl  md:font-bold ">
                         <p
                           className={`${
                             isActive
@@ -132,7 +132,7 @@ const HeroSlider = () => {
                           isActive
                             ? "translate-x-0 opacity-100 transition-all duration-1000 delay-500 "
                             : "-translate-x-8 opacity-0"
-                        } mt-6 md:mt-10 md:text-xl xl:w-2/3 text-center  md:text-left text-base leading-5`}
+                        } mt-6 md:mt-10 md:text-xl xl:w-2/3 text-center  md:text-left text-lg text-white  leading-5`}
                       >
                         {slide.detail}
                       
@@ -147,7 +147,7 @@ const HeroSlider = () => {
                               ? "translate-x-0 opacity-100 transition-all duration-1000 delay-700 "
                               : "translate-x-8 opacity-0"
                           } 
-                text-white  py-2 px-4 bg-slate-800 rounded-full mt-6 md:mt-10 flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out `}
+                text-white  py-3 px-6 bg-slate-800 rounded-full mt-8 md:mt-10 font-semibold flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out `}
                         >
                          {slide.href.text}
                         </button>

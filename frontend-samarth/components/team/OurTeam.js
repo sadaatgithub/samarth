@@ -55,8 +55,9 @@ export const team = [
 
 const OurTeam = () => {
   return (
-    <div className="h-fit lg:px-10 xl:px-20 px-4 flex flex-col items-center mt-4 md:mt-20 ">
+    <div className="h-fit lg:px-10 xl:px-20 px-4 flex flex-col items-center mt-4 md:mt-20  py-16">
      <DivHeading title="Our Team"/>
+     <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center">No matter your needs, our team is here to help you on your path to recovery and better physical health.</p>
 
       <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-12 lg:gap-16 items-center">
         {team.map((member) => (

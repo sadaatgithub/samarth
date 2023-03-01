@@ -52,11 +52,12 @@ const ContactUs = () => {
     <>
     <PageBanner/>
     <div  name="contact-us" className="min-h-screen border  flex justify-center w-full md:flex-row flex-col bg-gray-50  rounded-md overflow-hidden px-4 md:px-10 xl:px-20 py-8">
-    <div className="w-full md:w-5/12 lg:w-5/12 flex flex-col gap-y-4 relative after:content-[''] after:absolute after:inset-0 after:bg-teal-700/80 after:backdrop-blur-sm bg-[url('../public/dumbels.jpg')] bg-no-repeat bg-cover py-6  text-gray-200 justify-between md:rounded-l-lg px-10 font-hindGuntur shadow-lg">
-      <h3 className="text-xl md:text-2xl font-semibold font-monteserrat mt-4 z-[1]">Book an appointement</h3>
+    <div className="w-full md:w-5/12 lg:w-5/12 flex flex-col gap-y-4 relative after:content-[''] after:absolute after:inset-0 after:bg-teal-700/80 after:backdrop-blur-sm bg-[url('../public/dumbels.jpg')] bg-no-repeat bg-cover py-6  text-gray-100  md:rounded-l-lg px-10 font-hindGuntur shadow-lg">
+      <h3 className="text-xl md:text-4xl font-semibold font-monteserrat mt-4 z-[1]">Have Any Queries?</h3>
+      <p className="z-[1]">Wish to get a free consultation or a quick checkup to identify the kind of treatment you need? Just give us a call or submit the form here.</p>
       
 
-      <ul className="flex gap-4 flex-col divide-y-[1px] divide-gray-200 mt-5 z-[1]">
+      <ul className="flex gap-4 flex-col divide-y-[1px] divide-gray-200 mt-5 z-[1] text-xl">
        <li className="flex gap-4"> <FiPhoneCall className="my-auto"/> <p>9823598235</p></li>
        <li className="flex gap-4"> <FiPhoneCall className="my-auto"/> <p>9823598235</p></li>
        <li className="flex gap-4"> <FiPhoneCall className="my-auto"/> <p>9823598235</p></li>
@@ -64,7 +65,7 @@ const ContactUs = () => {
       </ul>
      
       
-      <div className="flex gap-4  flex-col z-[1]">
+      <div className="flex gap-4  flex-col z-[1] mt-4">
         <address className="flex">
         <TfiLocationPin className="text-xl"/>
                 123, Swawalambi Nagar, Abc Road, Nagpur <br/>
@@ -72,19 +73,7 @@ const ContactUs = () => {
             </address>
            
           </div>
-        <div className="mt-2 rounded-sm overflow-hidden z-[1]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.3527285104383!2d79.07790911253058!3d21.144842442857172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bff90e72306f%3A0x192616fc50e41145!2sLata%20Mangeshkar%20Hospital!5e0!3m2!1sen!2sin!4v1670243702439!5m2!1sen!2sin"
-            width="350"
-            height="200"
-            style={{border:0}}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          >
-
-          </iframe>
-        </div>
+        
       </div>
 
 
@@ -126,6 +115,19 @@ const ContactUs = () => {
       </form>
     </div>
     </div>
+    <div className="mt-2 rounded-sm overflow-hidden z-[1] w-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.3527285104383!2d79.07790911253058!3d21.144842442857172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bff90e72306f%3A0x192616fc50e41145!2sLata%20Mangeshkar%20Hospital!5e0!3m2!1sen!2sin!4v1670243702439!5m2!1sen!2sin"
+            width="1440"
+            height="400"
+            style={{border:0}}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          >
+
+          </iframe>
+        </div>
     </>
   )
 }

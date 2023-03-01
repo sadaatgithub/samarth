@@ -45,8 +45,8 @@ const blogSearchHandler = (e) =>{
         })} 
             </BlogGrid></div>}
         
-            <div className="pl-2 lg:mt-12">
-              <div className="sticky top-[80px] right-0 flex flex-col gap-2 mt-6 md:mt-0">
+            <div className="pl-2 lg:mt-12 ">
+              <div className="sticky top-[80px] right-0 flex flex-col gap-2 mt-6 md:mt-0 bg-gray-100 p-2">
               <p className="text-xl font-semibold text-slate-600">Search Blogs</p>
               <input type="text" name="" id="" className="border p-1 focus:outline-none rounded-sm " onChange={blogSearchHandler}/>
             </div></div>

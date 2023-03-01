@@ -7,7 +7,7 @@ const SwiperButtonRight = ({ pos }) => {
   return (
     <button aria-label="Right Slider Button"
       onClick={() => swiper.slideNext()}
-      className={`absolute top-1/2 -right-12 -translate-y-1/2 text-2xl text-teal-400 group-hover:right-2 bg-black/20 hover:bg-black/50 p-3 z-20 transition-all duration-200 rounded-full`}
+      className={`absolute top-1/2 -right-12 -translate-y-1/2 text-2xl text-white group-hover:right-2 bg-black/40 hover:bg-black/50 p-3 z-20 transition-all duration-200 rounded-full`}
     >
       <FaChevronRight />
     </button>
