@@ -56,7 +56,7 @@ const testimonial = [
 
 const Testimonials = () => {
   return (
-    <div className="flex flex-col justify-center items-center md:mt-20  py-16">
+    <div className="flex flex-col justify-center items-center md:mt-20  py-16 ">
       <div className="w-full lg:px-10 xl:px-20 px-2 flex flex-col items-center ">
         <DivHeading title="What Our Patients Says" />
         <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center">Expert Care and Personalized Attention: Our Clients Share Their Experiences</p>

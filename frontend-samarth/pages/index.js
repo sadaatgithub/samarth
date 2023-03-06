@@ -24,8 +24,8 @@ export default function Home({post}) {
       </Head>
 <HeroSlider/>
       
+      {/* <HeroBanner/> */}
       <Introduction/>
-      <HeroBanner/>
       <OurServices/>
       <OurTeam/>
       <Testimonials/>

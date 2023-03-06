@@ -5,44 +5,41 @@ import { TbPhysotherapist } from "react-icons/tb";
 const HeroBanner = () => {
   return (
     <>
-    <h3 className="mt-16 text-center text-xl md:text-3xl font-semibold text-slate-500">Why People Choose Us</h3>
-    <div
-      className="flex lg:flex-row  flex-col px-2 py-10  [&>div]:gap-y-4 [&>div>svg]:text-5xl [&>div]:max-w-xl  items-center
-md:[&>div>svg]:text-6xl [&>div]:items-center rounded-lg   gap-8 md:gap-12 [&>div]:text-center [&>div>svg]:text-teal-500
-md:[&>div>h3]:text-2xl [&>div>h3]:text-lg [&>div>h3]:font-bold [&>div>h3]:text-slate-600 [&>div>p]:text-gray-500 [&>div>p]:text-base md:px-14 text-justify lg:[&>div]:w-1/3
+      {/* <h3 className="text-center text-xl md:text-3xl font-semibold text-slate-500">Why People Choose Us</h3> */}
+      <div
+        className="static lg:absolute  -bottom-[250px] left-0 z-[20] flex md:flex-row  flex-col px-2 [&>div]:gap-y-2 [&>div>svg]:text-5xl [&>div]:max-w-xl items-center lg:items-start
+md:[&>div>svg]:text-5xl [&>div]:items-center  [&>div]:p-8 lg:gap-10 [&>div]:text-center [&>div>svg]:text-white [&>div>h3]:text-xl 
+md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:mt-3 [&>div>h3]:text-slate-800 [&>div>p]:text-gray-500 [&>div>p]:font-normal lg:px-12 text-justify lg:[&>div]:w-1/3
   "
-    >
-      <div className="flex flex-col  lg:self-stretch  ">
-        <MdOutlineHealthAndSafety className="" />
-        <h3>Health Guarantee</h3>
-        <p className="">
-          At Samarth, we are dedicated to improving the health and well-being of
-          our patients. If you are not satisfied with your progress after the
-          completion of a full course of treatment, we will offer additional
-          sessions at no charge.
-        </p>
+      >
+        <div className="flex flex-col  lg:self-stretch bg-white rounded-xl lg:shadow-md group border-b-2 border-emerald-500">
+          <MdOutlineHealthAndSafety className="bg-emerald-500 rounded-full p-2 font-thin shadow-lg shadow-teal-100 group-hover:-translate-y-2 transition-all duration-500" />
+          <h3>Health Guarantee</h3>
+          <p className="">
+            Your health and well-being are our top priority, and we guarantee to
+            provide the highest quality care and personalized attention to help
+            you achieve optimal physical health and wellness.
+          </p>
+        </div>
+        <div className="flex flex-col bg-white  rounded-xl lg:shadow-md lg:self-stretch group border-b-2 border-rose-500">
+          <BiClinic className="bg-rose-500 rounded-full p-2 font-thin shadow-rose-100 shadow-lg group-hover:-translate-y-2 transition-all duration-500 "/>
+          <h3>Trusted Clinic</h3>
+          <p className="">
+            Samarth Physio is a trusted clinic with a team of experienced
+            physiotherapists dedicated to providing personalized care and
+            effective solutions for your physical health and wellness needs.
+          </p>
+        </div>
+        <div className="flex flex-col bg-white rounded-xl lg:shadow-md lg:self-stretch group border-b-2 border-sky-900">
+          <TbPhysotherapist className="bg-sky-900 rounded-full p-2 font-thin shadow-sky-100 shadow-lg group-hover:-translate-y-2 transition-all duration-500 "/>
+          <h3>Expert Therapist</h3>
+          <p className="">
+            At Samarth Physio, our team of expert therapists are highly trained
+            and specialized in various areas of physiotherapy, ensuring you
+            receive the best possible care for your unique needs.
+          </p>
+        </div>
       </div>
-      <div className="flex flex-col ">
-        <BiClinic />
-        <h3>Trusted Clinic</h3>
-        <p className="">
-          At Samarth, we have built a reputation as the most trusted provider of
-          physiotherapy services in the community. Our team of highly skilled
-          and experienced therapists is dedicated to providing personalized and
-          effective care to each and every patient.
-        </p>
-      </div>
-      <div className="flex flex-col ">
-        <TbPhysotherapist />
-        <h3>Expert Therapist</h3>
-        <p className="">
-          Our team of expert therapists at Samarth is dedicated to providing the
-          highest quality physiotherapy services to our patients. With a focus
-          on personalized treatment plans and hands-on care, our therapists are
-          committed to helping patients achieve their best possible outcomes.
-        </p>
-      </div>
-    </div>
     </>
   );
 };

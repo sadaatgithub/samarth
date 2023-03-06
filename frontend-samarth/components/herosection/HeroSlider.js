@@ -89,7 +89,7 @@ const HeroSlider = () => {
                 {({ isActive }) => (
                   <div
                     className="relative after:content-[''] after:absolute object-cover h-full
-        after:inset-0 after:bg-gradient-to-r after:from-slate-900/50 "
+        after:inset-0 after:bg-teal-800/50 "
                   >
                     <Image
                       src={slide.image}
@@ -100,7 +100,7 @@ const HeroSlider = () => {
                     />
                     <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     <div
-                      className={` md:w-2/3 absolute inset-0 z-10 xl:p-20 p-6 md:p-10
+                      className={` md:w-2/3 absolute inset-0 z-[1] xl:p-20 p-6 md:p-10
                 text-white   flex  flex-col md:items-start items-center justify-center md:justify-start`}
                     >
                       <div className="text-2xl  text-white  md:mt-6 sm:text-4xl  font-bold">
@@ -109,7 +109,7 @@ const HeroSlider = () => {
                             isActive
                               ? "translate-x-0  opacity-100 duration-1000"
                               : "-translate-x-10 opacity-0 duration-200 "
-                          } px-4 py-2 md:p-4 overflow-hidden bg-white transition-all  ease-in-out text-teal-500 `}
+                          } px-4 py-2 md:p-4 overflow-hidden bg-white transition-all  ease-in-out text-teal-500 capitalize `}
                         >
                           {" "}
                           {firstDesc}{" "}
@@ -121,7 +121,7 @@ const HeroSlider = () => {
                             isActive
                               ? "translate-x-0 opacity-100 duration-1000 delay-300"
                               : "translate-x-10 opacity-0 duration-200"
-                          } px-4 py-2 md:p-4 overflow-hidden transition-all  ease-in-out text-white bg-teal-500`}
+                          } px-4 py-2 md:p-4 overflow-hidden transition-all  ease-in-out text-white bg-teal-500 capitalize`}
                         >
                           {" "}
                           {secondDesc}
@@ -161,6 +161,8 @@ const HeroSlider = () => {
           <SwiperButtonRight />
           <SwiperButtonLeft />
         </Swiper>
+
+        <HeroBanner/>
       </div>
     </>
   );

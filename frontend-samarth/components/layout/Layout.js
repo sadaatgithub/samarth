@@ -4,9 +4,9 @@ import Footer from "../../components/footer/Footer"
 export default function Layout({ children }) {
   return (
     <>
-    <div className="max-w-[1440px] mx-auto">
+    <div className="max-w-[1440px]">
       <Navbar />
-      <main>{children}</main>
+      <main className="bg-none">{children}</main>
       <Footer />
       </div>
     </>

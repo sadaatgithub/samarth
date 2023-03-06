@@ -20,7 +20,7 @@ nav>ul>li::after{
   height: 2px;
 transform: scaleX(0);
 transform-origin: right;
-color: #ff4a72ef;
+/* color: #f3f3f3ef; */
   transition: transform 0.2s ease-in-out;
   @apply bg-rose-400 rounded-full
 }

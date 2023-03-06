@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { Source_Sans_3, Source_Sans_Pro } from "@next/font/google";
+import {  Source_Sans_Pro } from "@next/font/google";
 import Layout from "../components/layout/Layout";
 
 const sourceSansPro = Source_Sans_Pro({
