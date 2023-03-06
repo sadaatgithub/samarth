@@ -8,7 +8,7 @@ const Introduction = () => {
 // from-blue-900  to-teal-600 bg-gradient-to-tl from-blue-900  to-teal-600
   return (
     <div
-      className="lg:mt-80 intro-div  bg-white
+      className="lg:mt-72 mt-8 intro-div  bg-white
        min-h-screen flex-col-reverse md:flex-row  flex justify-center items-center  lg:p-14 md:gap-10"
     >
       <div className="flex flex-col relative gap-4 w-full md:w-4/6 py-20  md:py-10 px-6 lg:px-0 justify-center text-left  md:items-start ">

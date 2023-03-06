@@ -12,7 +12,7 @@ md:[&>div>svg]:text-5xl [&>div]:items-center  [&>div]:p-8 lg:gap-10 [&>div]:text
 md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:mt-3 [&>div>h3]:text-slate-800 [&>div>p]:text-gray-500 [&>div>p]:font-normal lg:px-12 text-justify lg:[&>div]:w-1/3
   "
       >
-        <div className="flex flex-col  lg:self-stretch bg-white rounded-xl lg:shadow-md group border-b-2 border-emerald-500">
+        <div className="flex flex-col  lg:self-stretch bg-white rounded-xl lg:shadow-md group ">
           <MdOutlineHealthAndSafety className="bg-emerald-500 rounded-full p-2 font-thin shadow-lg shadow-teal-100 group-hover:-translate-y-2 transition-all duration-500" />
           <h3>Health Guarantee</h3>
           <p className="">
@@ -21,7 +21,7 @@ md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:mt-3 [&>div>h3]:text
             you achieve optimal physical health and wellness.
           </p>
         </div>
-        <div className="flex flex-col bg-white  rounded-xl lg:shadow-md lg:self-stretch group border-b-2 border-rose-500">
+        <div className="flex flex-col bg-white  rounded-xl lg:shadow-md lg:self-stretch group ">
           <BiClinic className="bg-rose-500 rounded-full p-2 font-thin shadow-rose-100 shadow-lg group-hover:-translate-y-2 transition-all duration-500 "/>
           <h3>Trusted Clinic</h3>
           <p className="">
@@ -30,7 +30,7 @@ md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:mt-3 [&>div>h3]:text
             effective solutions for your physical health and wellness needs.
           </p>
         </div>
-        <div className="flex flex-col bg-white rounded-xl lg:shadow-md lg:self-stretch group border-b-2 border-sky-900">
+        <div className="flex flex-col bg-white rounded-xl lg:shadow-md lg:self-stretch group ">
           <TbPhysotherapist className="bg-sky-900 rounded-full p-2 font-thin shadow-sky-100 shadow-lg group-hover:-translate-y-2 transition-all duration-500 "/>
           <h3>Expert Therapist</h3>
           <p className="">
