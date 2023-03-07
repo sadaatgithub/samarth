@@ -6,6 +6,7 @@ import Team3 from "@/public/team3.jpg"
 import {BsTwitter,BsFacebook} from "react-icons/bs"
 import {AiFillInstagram} from "react-icons/ai"
 import DivHeading from "../headings/DivHeading"
+import Container from "../container/Container"
 
 
 export const team = [
@@ -55,7 +56,8 @@ export const team = [
 
 const OurTeam = () => {
   return (
-    <div className="h-fit lg:px-10 xl:px-20 px-4 flex flex-col items-center mt-4 md:mt-20  py-16  relative
+    <Container>
+    <div className="h-fit flex flex-col items-center  relative
     after:content-[''] after:absolute after:inset-0 after:bg-white/50">
      <DivHeading title="Our Team"/>
      <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center z-[1]">No matter your needs, our team is here to help you on your path to recovery and better physical health.</p>
@@ -93,6 +95,7 @@ const OurTeam = () => {
       
       </div>
     </div>
+    </Container>
   )
 }
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Container from "../container/Container";
 import FreeConsultation from "../modals/FreeConsultation";
 import Portal from "../portal/Portal";
 
@@ -6,7 +7,8 @@ const AppointmentBanner = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="lg:px-14 md:mt-20 mt-16 ">
+    <Container>
+    <section className="">
     <div className="h-60 w-full flex bg-gradient-to-l  from-teal-500 to-teal-600 overflow-hidden  items-center justify-around md:rounded-lg md:flex-row flex-col relative py-4">
         <h3 className="text-xl text-center md:text-3xl w-3/4 md:font-bold text-gray-50 md:w-1/2 z-[1]">&ldquo;Get back on track with expert physiotherapy to help you move, feel, and live better.&rdquo;</h3>
         <button
@@ -29,6 +31,7 @@ const AppointmentBanner = () => {
           </Portal>
         ) : null}
     </section>
+    </Container>
   )
 }
 

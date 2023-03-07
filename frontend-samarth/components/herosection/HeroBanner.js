@@ -7,9 +7,9 @@ const HeroBanner = () => {
     <>
       {/* <h3 className="text-center text-xl md:text-3xl font-semibold text-slate-500">Why People Choose Us</h3> */}
       <div
-        className="static lg:absolute  -bottom-[250px] left-0 z-[20] flex md:flex-row  flex-col px-2 [&>div]:gap-y-2 [&>div>svg]:text-5xl [&>div]:max-w-xl items-center lg:items-start
-md:[&>div>svg]:text-5xl [&>div]:items-center  [&>div]:p-8 lg:gap-10 [&>div]:text-center [&>div>svg]:text-white [&>div>h3]:text-xl 
-md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:mt-3 [&>div>h3]:text-slate-800 [&>div>p]:text-gray-500 [&>div>p]:font-normal lg:px-12 text-justify lg:[&>div]:w-1/3
+        className="static lg:absolute  -bottom-[250px] left-0 z-[20] flex md:flex-row  flex-col px-2 [&>div>svg]:text-5xl [&>div]:max-w-xl items-center lg:items-start
+md:[&>div>svg]:text-5xl [&>div]:items-center  [&>div]:p-8 lg:gap-10 [&>div]:text-center [&>div>svg]:text-white [&>div>h3]:text-xl [&>div>h3]:mt-4
+md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:text-slate-800 [&>div>p]:text-gray-500 [&>div>p]:font-normal lg:px-12 [&>div>p]:mt-4 text-justify lg:[&>div]:w-1/3
   "
       >
         <div className="flex flex-col  lg:self-stretch bg-white rounded-xl lg:shadow-md group ">

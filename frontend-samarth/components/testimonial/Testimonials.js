@@ -14,6 +14,7 @@ import DivHeading from "../headings/DivHeading";
 import Slide1 from "../../public/slide1.jpg"
 import Slide2 from "../../public/slide2.jpg"
 import Slide3 from "../../public/slide3.jpg"
+import Container from "../container/Container";
 
 
 const testimonial = [
@@ -56,7 +57,8 @@ const testimonial = [
 
 const Testimonials = () => {
   return (
-    <div className="flex flex-col justify-center items-center md:mt-20  py-16 ">
+    <Container>
+    <div className="flex flex-col justify-center items-center">
       <div className="w-full lg:px-10 xl:px-20 px-2 flex flex-col items-center ">
         <DivHeading title="What Our Patients Says" />
         <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center">Expert Care and Personalized Attention: Our Clients Share Their Experiences</p>
@@ -124,6 +126,7 @@ const Testimonials = () => {
         <SwiperButtonRight />
       </Swiper>
     </div>
+    </Container>
   );
 };
 // bg-[url('../public/flipped-diamonds.svg')]

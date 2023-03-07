@@ -38,7 +38,7 @@ const Navbar = () => {
 
   return (
     <header className={` flex flex-col border-b bg-white`}>
-      <div className="hidden md:flex bg-[#17234D] text-gray-200 lg:px-14 px-6 justify-between items-center flex-col md:flex-row py-2 md:py-2 text-xs md:text-base font-light">
+      <div className="hidden md:flex bg-[#17234D] text-gray-200 lg:px-16 px-6 justify-between items-center flex-col md:flex-row py-2 md:py-2 text-xs md:text-base font-light">
         <div className=" md:w-1/3  lg:w-2/4">
           <h4 className="">Welcome to Samarth Physiotherapy!</h4>
         </div>
