@@ -4,51 +4,59 @@ import RichTextComponent from "../../components/richtext/RichTextComponent";
 import urlFor from "@/lib/urlFor";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
+import Container from "@/components/container/Container";
 
 const Post = ({ post }) => {
   const { mainImage, body, _createdAt } = post;
 
   return (
-    <div className="min-h-screen md:px-20 mb-10 px-2 md:w-2/3 mt-12">
-      <div className="md:h-[420px] overflow-hidden relative shadow-lg">
+<>
+<div className="md:h-[450px] overflow-hidden relative shadow-lg">
         {mainImage ? (
           <Image
-            className="w-full"
+            className="w-full object-cover"
             width={480}
             height={320}
             alt={post.title}
             src={urlFor(mainImage).width(480).height(320).url()}
+            
           />
         ) : (
           ""
         )}
         <div
-          className="text-lg md:text-2xl font-bold text-white z-10 absolute bottom-0 bg-black/70 right-0 md:py-8 px-2
-        left-0 flex items-center justify-center break-words"
+          className="text-lg md:text-2xl font-bold text-white z-10 absolute  bg-black/70  md:py-8 px-2
+        inset-0 flex items-center justify-center break-words"
         >
-          {" "}
-          <h1 className="">{post.title}</h1>
+        <div className="flex flex-col w-2/3 justify-center items-center">
+          <h2 className="text-5xl text-center">{post.title}</h2>
+          <p className="mt-12 text-base font-medium">
+          {new Date(_createdAt).toDateString("en-US")}</p>
+
         </div>
-        <span className="z-10 absolute top-0 right-0 p-2 bg-rose-500 text-white">
-          {new Date(_createdAt).toDateString("en-US")}
-        </span>
+        </div>
+        
       </div>
+    <div className="min-h-screen  mb-10 mt-16 w-[768px] mx-auto">
+      
       <div className="mt-10 flex items-center gap-4 text-gray-500">
         <FaUserCircle className="" />
         <span>By {post.author}</span>{" "}
         <span>
           Category -{" "}
           {post.categories?.map((category) => {
-            return <span key={category}>{category}</span>;
+            return <span key={category}>{category} </span>;
           })}
         </span>
       </div>
 
       {/* <p>{post.description}</p> */}
-      <div className="mt-10 [&>p]:text-slate-500 [&>p]:mb-4 [&>p]:text-lg">
+      <div className="mt-10 [&>p]:text-slate-500 [&>p]:mb-4">
         <PortableText value={body} components={RichTextComponent} />
       </div>
     </div>
+</>
+
   );
 };
 

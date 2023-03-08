@@ -10,46 +10,47 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import SwiperButtonLeft from "../buttons/SwiperButtonLeft";
 import SwiperButtonRight from "../buttons/SwiperButtonRight";
 import DivHeading from "../headings/DivHeading";
-
+import {FaStar} from "react-icons/fa"
 import Slide1 from "../../public/slide1.jpg"
 import Slide2 from "../../public/slide2.jpg"
 import Slide3 from "../../public/slide3.jpg"
 import Container from "../container/Container";
 
-
+// bg-[url('../public/slide2.jpg')] bg-fixed after:content-[''] after:absolute after:inset-0
+        //  after:bg-gradient-to-r after:from-slate-800/80 after:to-slate-800/80 
 const testimonial = [
   {
     id: 1,
     patient: "John doe",
-    designation: "",
+    designation: "Cricketer",
     desc: `I was skeptical about physiotherapy at first, but after just a few sessions with the team at Samarth Physio, I am completely pain-free and back to my active lifestyle. I can't thank them enough for their expertise and personalized care.`,
     image:Slide1
   },
   {
     id: 2,
     patient: "Jane Smith",
-    designation: "",
+    designation: "Architect",
     desc: `After a serious sports injury, I was having trouble regaining my strength and mobility. The therapists at Samarth Physio helped me develop a tailored treatment plan and now I am stronger and more flexible than ever. Highly recommend!`,
     image:Slide2
   },
   {
     id: 3,
     patient: "David Lee",
-    designation: "",
+    designation: "Athelete",
     desc: `I was struggling with chronic back pain for years and had tried every treatment under the sun with no relief. The physiotherapists at Samarth Physio took the time to understand my condition and develop a plan that worked for me. I can finally say goodbye to pain!`,
     image:Slide3
   },
   {
     id: 4,
     patient: "Sarah Johnson",
-    designation: "",
+    designation: "CA",
     desc: `I was nervous about undergoing physiotherapy after a recent surgery, but the team at Samarth Physio put me at ease from the moment I walked in the door. Their evidence-based techniques and personalized attention have made all the difference in my recovery.`,
     image:Slide2
   },
   {
     id: 5,
     patient: "Michel Brown",
-    designation: "",
+    designation: "Shop Keeper",
     desc: `I have been seeing the therapists at Samarth Physio for several months now and have noticed a huge improvement in my overall well-being. Their holistic approach to physiotherapy has not only helped me heal from my injuries, but has also made me stronger and more resilient.`,
     image:Slide1
   },
@@ -57,68 +58,95 @@ const testimonial = [
 
 const Testimonials = () => {
   return (
-    <Container>
+    <Container bg="bg-teal-50/50">
     <div className="flex flex-col justify-center items-center">
       <div className="w-full lg:px-10 xl:px-20 px-2 flex flex-col items-center ">
         <DivHeading title="What Our Patients Says" />
         <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center">Expert Care and Personalized Attention: Our Clients Share Their Experiences</p>
       </div>
       <Swiper
-        slidesPerView={1}
+        slidesPerView={3}
         spaceBetween={20}
-        slidesPerGroup={1}
+        slidesPerGroup={2}
         loop={true}
         lazy={true}
         autoplay={{
           delay: 5500,
           disableOnInteraction: false,
         }}
-        loopFillGroupWithBlank={true}
+        loopFillGroupWithBlank={false}
         pagination={{
           clickable: true,
         }}
+        breakpoints={{
+          240:{
+            slidesPerView: 1,
+            // spaceBetween: 20,
+          slidesPerGroup:1,
+          },
+          420:{
+            slidesPerView: 1,
+            spaceBetween: 10,
+          slidesPerGroup:1,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          slidesPerGroup:1,
+
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          slidesPerGroup:2,
+
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          slidesPerGroup:3,
+
+          },
+        }}
         navigation={false}
         modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper testimonial-div bg-[url('../public/slide2.jpg')] bg-fixed w-full h-fit flex mt-8 md:mt-16  bg-center after:content-[''] after:absolute after:inset-0
-         after:bg-gradient-to-r after:from-slate-800/80 after:to-slate-800/80 group"
+        className="mySwiper testimonial-div  w-full h-full  mt-8 md:mt-20 gap-8 bg-center group  grid grid-cols-1"
       >
         {testimonial.map((data) => {
           return (
             <SwiperSlide
               key={data.id}
-              className="p-2  lg:p-8  w-full h-full flex flex-col justify-center"
+              className="w-full flex flex-col p-8  rounded-md shadow-sm bg-white border border-blue-100"
             >
-              <div
-                className="relative flex h-full m-auto flex-col-reverse  max-w-4xl rounded-xl  p-2 py-12 justify-center
-                            items-center gap-4 md:gap-8"
-              >
-                <div className="flex flex-col  text-white w-full px-4">
-                  <div className="px-2 text-base md:text-xl text-center flex gap-2  relative">
-                    <span className="font-serif text-7xl  absolute -top-5 -left-5 ">
-                      &ldquo;
-                    </span>
+             
+                <div className="flex flex-col   w-full gap-8 ">
+                  <span className="flex text-yellow-400"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></span>
+                  <div className="text-center flex gap-2  relative">
+                   
 
-                    <p className="self-center md:leading-8 text-gray-100 font-light px-4">
-                      {data.desc} Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Eius, sed!
+                    <p className="text-left text-gray-700">
+                      {data.desc} 
                     </p>
-                    <span className="font-serif text-7xl  flex flex-col absolute -bottom-10 right-0">
-                      &rdquo;
-                    </span>
+                  
                   </div>
-                  <h4 className="text-xl px-2 font-medium mt-12 self-center">
-                    - {data.patient}
-                  </h4>
-                  <p className="text-sm px-2 self-center text-slate-300">
-                    {data.designation}
-                  </p>
-                </div>
-                <Image 
+
+                  <div className="flex items-center  gap-4">
+                  <Image 
                   src={data.image}
                   alt={data.patient}
-                  className="w-20 h-20 object-cover rounded-full"
+                  className="w-14 h-14 object-cover rounded-full"
                 />
-              </div>
+                <div className="flex flex-col">
+                  <p className="font-medium text-gray-900">
+                     {data.patient}
+                  </p>
+                  <p className="text-gray-500">
+                    {data.designation}
+                  </p>
+                  </div>
+                  </div>
+                </div>
+               
             </SwiperSlide>
           );
         })}

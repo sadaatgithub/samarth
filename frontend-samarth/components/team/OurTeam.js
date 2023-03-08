@@ -62,12 +62,12 @@ const OurTeam = () => {
      <DivHeading title="Our Team"/>
      <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center z-[1]">No matter your needs, our team is here to help you on your path to recovery and better physical health.</p>
 
-      <div className="flex justify-evenly w-full mt-10 md:mt-20 sm:flex-row flex-col gap-12 lg:gap-16 items-center z-[1]">
+      <div className="flex justify-evenly w-full mt-10 md:mt-20 md:flex-row flex-col gap-12 items-center z-[1]">
         {team.map((member) => (
           <div 
           
          
-          className="flex flex-col gap-4 md:gap-8  w-full max-w-xs " key={member.id}>
+          className="flex flex-col gap-4 md:gap-12  w-full max-w-sm " key={member.id}>
           <Link 
             href={`/our-team/${member.id}`} className="flex flex-col justify-center rounded-md items-center relative overflow-hidden"
           >
@@ -76,7 +76,7 @@ const OurTeam = () => {
               width={320}
               height={240}
               alt=""
-              className="w-full h-72 xl:h-96  object-cover  rounded-md hover:scale-110 transition-transform duration-300"
+              className="w-[395px] h-[395px]  object-cover  rounded-md hover:scale-110 transition-transform duration-300"
             />
             <div className="flex flex-col items-center gap-1 absolute bg-white bottom-5 p-2 px-3 w-60 min-w-4/6 sm:w-5/6 shadow-xl rounded-sm border-b-8 border-teal-300">
               <p className="font-bold">{member.member}</p>
