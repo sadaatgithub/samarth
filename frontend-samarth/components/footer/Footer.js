@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
-import { services } from "../services/OurServiceSlider"
+import {services} from "../services/OurServices.js"
 
 const Footer = () => {
     const today = new Date()

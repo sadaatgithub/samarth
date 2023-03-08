@@ -1,12 +1,13 @@
 import Container from "../container/Container"
 import DivHeading from "../headings/DivHeading"
-import OurServiceSlider from "../services/OurServiceSlider"
 import Slide1 from "../../public/slide1.jpg"
 import Slide2 from "../../public/slide2.jpg"
 import Slide3 from "../../public/slide3.jpg"
 import Image from "next/image"
 import Link from "next/link"
 import { FaChevronRight } from "react-icons/fa"
+
+
 export const services = [
   {
     id: 1,
