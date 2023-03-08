@@ -11,7 +11,7 @@ const Introduction = () => {
     <Container>
     <div
       className="lg:mt-48 mt-8 intro-div  bg-white
-       min-h-screen flex-col-reverse md:flex-row  flex justify-center items-center md:gap-20"
+       min-h-screen flex-col-reverse md:flex-row  flex justify-center items-center gap-10 md:gap-20"
     >
       <div className="flex flex-col relative w-full md:w-4/6 justify-center text-left  md:items-start ">
         <p className="font-semibold text-rose-500">Welcome to</p>
@@ -36,7 +36,7 @@ const Introduction = () => {
         <p className="text-xl text-teal-700 font-semibold mt-8">
           Our Features
         </p>
-        <ul className="text-slate-500 z-[1] mt-6 flex flex-col gap-4 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-500 text-left">
+        <ul className="text-slate-500 z-[1] mt-6 flex flex-col gap-2 md:gap-4 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-500 text-left">
           <li>
             <FaArrowAltCircleRight />
             Personalised Treatment

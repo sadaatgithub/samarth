@@ -1,4 +1,3 @@
-import React from 'react'
 
 const BlogGrid = ({children,cols="grid-cols-2"}) => {
   return (

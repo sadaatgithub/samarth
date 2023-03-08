@@ -22,7 +22,7 @@ const handleChange = (e) =>{
       required
       value={value}
       id={name}
-      rows="5"
+      rows="4"
       onChange={handleChange}
       className="border w-full  px-2 rounded-sm focus:outline-[1px] outline-blue-400"
     />

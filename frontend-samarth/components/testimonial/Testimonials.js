@@ -110,7 +110,7 @@ const Testimonials = () => {
         }}
         navigation={false}
         modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper testimonial-div  w-full h-full  mt-8 md:mt-20 gap-8 bg-center group  grid grid-cols-1"
+        className="mySwiper  w-full h-ful relative   mt-8 md:mt-20 gap-8  group  grid grid-cols-1 group"
       >
         {testimonial.map((data) => {
           return (
@@ -150,8 +150,12 @@ const Testimonials = () => {
             </SwiperSlide>
           );
         })}
+        <div className="absolute top-1/2 -left-20 -translate-y-1/2 z-20 group-hover:left-2 transition-all duration-200 ease-linear">
         <SwiperButtonLeft />
+        </div>
+        <div className="absolute top-1/2 -right-20 -translate-y-1/2 z-20 group-hover:right-2 transition-all duration-200 ease-linear">
         <SwiperButtonRight />
+        </div>
       </Swiper>
     </div>
     </Container>

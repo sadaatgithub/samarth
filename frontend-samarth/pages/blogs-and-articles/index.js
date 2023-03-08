@@ -33,14 +33,14 @@ const blogSearchHandler = (e) =>{
           <h1 className="text-5xl text-gray-600 font-semibold">Browse our latest Blogs and articles</h1>
         </div>
         <div className="mt-20">
-          <div className="flex lg:flex-row flex-col md:gap-2 justify-between sticky top-[70px] bg-white/90 z-[120]  backdrop-blur-sm">
+          <div className="flex lg:flex-row flex-col md:gap-2 justify-between sticky top-[70px] bg-white/90 z-[120]  backdrop-blur-sm border-b">
            <div className="[&>button]:px-4 [&>button]:py-2 flex md:gap-2 justify-center"> <button className="bg-gray-200">View All</button>
             <button>Category 1</button>
             <button>Cstegory 2</button>
             <button>Category 3</button>
             </div>
-            <div className="flex justify-center items-center gap-2 bg-gray-100">
-            <p className="text-xl font-semibold text-slate-600 p-2">Search</p>
+            <div className="flex justify-center items-center gap-2 bg-gray-200 px-2 rounded-md">
+            <p className="font-semibold text-slate-600 p-2">Search</p>
             <input type="text" name="" id="" className="border p-1 focus:outline-none rounded-sm " onChange={blogSearchHandler}/>
 
             </div>

@@ -6,7 +6,7 @@ import Slide2 from "../../public/slide2.jpg"
 import Slide3 from "../../public/slide3.jpg"
 import Image from "next/image"
 import Link from "next/link"
-
+import { FaChevronRight } from "react-icons/fa"
 export const services = [
   {
     id: 1,
@@ -44,7 +44,7 @@ export const services = [
 
 const OurServices = () => {
   return (
-    <Container bg="bg-gray-100">
+    <Container bg="bg-gray-50">
     <div id="our-services" className="min-h-screen flex flex-col  justify-center items-center ">
 
         <DivHeading title="Our Services"/>
@@ -56,14 +56,14 @@ const OurServices = () => {
        <div className="py-20 grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-12">
 {services.map((service) =>{
   return(
-  <div key={service.id} className="flex flex-col bg-white max-w-sm">
+  <div key={service.id} className="flex flex-col bg-white max-w-sm border hover:shadow-2xl transition-all duration-300">
     <Image src={service.image} width={320} height={240} className="w-full h-60 object-cover"/>
     <div className="px-2 flex flex-col justify-between h-full">
     <div className="flex flex-col gap-y-4  mt-8">
 <h4 className="text-3xl">{service.name}</h4>
 <p className="text-gray-600">{service.content}</p>
     </div>
-    <button className="self-end mr-2 mb-2 text-rose-500 font-semibold"><Link href={`/our-services/${service.name.split(" ").join("-").toLowerCase()}`}>Read More</Link></button>
+    <button className="self-end mr-2 mb-2 text-rose-500 font-semibold "><Link href={`/our-services/${service.name.split(" ").join("-").toLowerCase()}`} className="flex gap-2 items-center">Read More <FaChevronRight className="text-xs"/></Link></button>
 
     </div>
   </div>

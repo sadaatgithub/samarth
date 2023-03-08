@@ -158,8 +158,15 @@ const HeroSlider = () => {
               </SwiperSlide>
             );
           })}
+          <div className="absolute top-1/2 right-2 -translate-y-1/2 z-20">
+
           <SwiperButtonRight />
+
+          </div>
+          <div className="absolute top-1/2 left-2 -translate-y-1/2 z-20">
           <SwiperButtonLeft />
+          </div>
+          
         </Swiper>
 
         <HeroBanner/>
