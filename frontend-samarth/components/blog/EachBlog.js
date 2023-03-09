@@ -17,14 +17,14 @@ const EachBlog = ({post,w="max-w-lg"}) => {
             src={urlFor(post.mainImage)
               .width(320)
               .url()}
-              className="object-cover w-full h-[300px] group-hover:scale-110 transition-transform duration-500"
+              className="object-cover w-full h-[250px]   transition-transform duration-500"
           />
           <div className="flex flex-col gap-2 px-2 mt-6">
-            <p className="text-sm font-semibold">Category</p>
-            <h5 className="text-2xl font-semibold text-gray-800">{post.title}</h5>
+            <p className="text-sm font-semibold text-gray-600">Category</p>
+            <h5 className="text-2xl font-semibold text-teal-600">{post.title}</h5>
             <p className="text-gray-600">{post.description}</p>
           </div>  
-          <div className="flex gap-4  p-2 mt-6">
+          <div className="flex gap-4  p-2 mt-auto pt-6">
             <div className="w-14 h-14 bg-gray-100 rounded-full"></div>
             <div className="flex flex-col justify-center">
             <p className="text-sm font-semibold text-gray-800">Full Name</p>

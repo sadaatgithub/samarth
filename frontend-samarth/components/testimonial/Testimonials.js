@@ -58,7 +58,7 @@ const testimonial = [
 
 const Testimonials = () => {
   return (
-    <Container bg="bg-teal-50/50">
+    <Container bg="bg-gray-50">
     <div className="flex flex-col justify-center items-center">
       <div className="w-full lg:px-10 xl:px-20 px-2 flex flex-col items-center ">
         <DivHeading title="What Our Patients Says" />

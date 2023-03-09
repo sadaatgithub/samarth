@@ -16,7 +16,7 @@ const BlogsArticles = ({post}) => {
       <DivHeading title="Blogs & Articles"/>
         
 <div className="py-20 w-full flex justify-center">
-        <BlogGrid> 
+        <BlogGrid cols="md:grid-cols-2 lg:grid-cols-3"> 
             {post.map(post =>(
       
           <EachBlog post={post} key={post._id} w="max-w-lg"/>

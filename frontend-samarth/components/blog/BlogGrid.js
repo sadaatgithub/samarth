@@ -1,7 +1,7 @@
 
-const BlogGrid = ({children,cols="grid-cols-2"}) => {
+const BlogGrid = ({children,cols}) => {
   return (
-<div className={`grid md:grid-cols-2 lg:${cols} grid-cols-1 gap-y-16 md:gap-12  relative  place-items-center md:place-items-stretch`}>
+<div className={`grid grid-cols-1  ${cols}  gap-y-16 md:gap-12  relative  place-items-center md:place-items-stretch`}>
         {children}
     </div>
   )
