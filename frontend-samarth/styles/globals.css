@@ -49,4 +49,6 @@ input:valid ~ .input-text,textarea:valid ~ .input-text
 {
   @apply text-blue-600 -translate-y-9 scale-[0.8] -translate-x-2 bg-white 
 }
-
+button.active{
+  @apply bg-gray-200
+}

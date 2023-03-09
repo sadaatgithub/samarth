@@ -73,10 +73,10 @@ const Introduction = () => {
           width={640}
           height={480}
           alt=""
-          className="w-full h-full object-cover object-right  shadow-xl "
+          className="w-full h-full object-cover object-right  shadow-2xl "
         />
         {/* <div className="bg-[url('../public/polka-dots.svg')]  absolute w-16 h-16 -left-6 -bottom-5 z-[-1] "></div> */}
-        <div className="bg-gray-200  absolute w-24 h-24 -left-6 -top-5 z-[-1] shadow-2xl"></div>
+        <div className="bg-gray-200  absolute w-24 h-24 -left-6 -top-5 z-[-1]"></div>
       </div>
     </div>
     </Container>
