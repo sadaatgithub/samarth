@@ -4,6 +4,7 @@ import RichTextComponent from "../../components/richtext/RichTextComponent";
 import urlFor from "@/lib/urlFor";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaUserCircle, FaWhatsapp } from "react-icons/fa";
+import SocialShare from "@/lib/SocialShare";
 
 const Post = ({ post }) => {
   const { mainImage, body, _createdAt } = post;
@@ -48,10 +49,10 @@ const Post = ({ post }) => {
           })}
         </span>
         <div className="flex ml-auto gap-4 [&>svg]:cursor-pointer ">
-          <FaInstagram className="text-rose-500"/>
+          {/* <FaInstagram className="text-rose-500"/>
           <FaFacebook className="text-blue-700"/>
-          <FaWhatsapp className="text-emerald-500"/>
-          {/* <SocialShare/> */}
+          <FaWhatsapp className="text-emerald-500"/> */}
+          <SocialShare/>
           </div>
       </div>
 

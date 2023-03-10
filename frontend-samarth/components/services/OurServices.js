@@ -58,7 +58,7 @@ const OurServices = () => {
 {services.map((service) =>{
   return(
   <div key={service.id} className="flex flex-col bg-white max-w-sm border hover:shadow-2xl transition-all duration-300">
-    <Image src={service.image} width={320} height={240} className="w-full h-60 object-cover"/>
+    <Image alt="" src={service.image} width={320} height={240} className="w-full h-60 object-cover"/>
     <div className="px-2 flex flex-col justify-between h-full">
     <div className="flex flex-col gap-y-4  mt-8">
 <h4 className="text-3xl text-gray-700">{service.name}</h4>
