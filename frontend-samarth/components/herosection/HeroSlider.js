@@ -89,7 +89,7 @@ const HeroSlider = () => {
                 {({ isActive }) => (
                   <div
                     className="relative after:content-[''] after:absolute object-cover h-full
-        after:inset-0 after:bg-teal-800/50 "
+        after:inset-0 after:bg-gradient-to-r after:from-teal-600  after:to-transparent "
                   >
                     <Image
                       src={slide.image}
@@ -121,7 +121,7 @@ const HeroSlider = () => {
                             isActive
                               ? "translate-x-0 opacity-100 duration-1000 delay-300"
                               : "translate-x-10 opacity-0 duration-200"
-                          } px-4 py-2 md:p-4 overflow-hidden transition-all  ease-in-out text-white bg-teal-500 capitalize`}
+                          } px-4 py-2 md:p-4 overflow-hidden transition-all ease-in-out text-white bg-teal-400 capitalize`}
                         >
                           {" "}
                           {secondDesc}
@@ -158,12 +158,12 @@ const HeroSlider = () => {
               </SwiperSlide>
             );
           })}
-          <div className="absolute top-1/2 right-2 -translate-y-1/2 z-20">
+          <div className="absolute top-1/2 -right-20 -translate-y-1/2 z-20 group-hover:right-2 transition-all duration-150 ease-in-out">
 
           <SwiperButtonRight />
 
           </div>
-          <div className="absolute top-1/2 left-2 -translate-y-1/2 z-20">
+          <div className="absolute top-1/2 -left-20 -translate-y-1/2 z-20 group-hover:left-2 transition-all duration-150 ease-in-out">
           <SwiperButtonLeft />
           </div>
           

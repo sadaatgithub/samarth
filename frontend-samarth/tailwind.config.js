@@ -9,7 +9,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        sourceSansPro:['var(--source-sans-pro)', ...fontFamily.sans]
+        sourceSansPro:['var(--source-sans-pro)', ...fontFamily.sans],
+        raleway:['var(--source-raleway)',...fontFamily.sans]
+
       },
       animation:{
         slideInLeft:

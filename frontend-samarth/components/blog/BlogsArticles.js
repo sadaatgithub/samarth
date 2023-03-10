@@ -10,9 +10,9 @@ import Container from "../container/Container"
 
 const BlogsArticles = ({post}) => {
   return (
-    <Container>
+    <Container bg="">
     <div
-     className="min-h-screen flex flex-col items-center gap-4">
+     className="min-h-screen flex flex-col items-center gap-4 bg-[url('../public/knee.svg')] bg-no-repeat  bg-right-bottom">
       <DivHeading title="Blogs & Articles"/>
         
 <div className="py-20 w-full flex justify-center">

@@ -56,9 +56,9 @@ export const team = [
 
 const OurTeam = () => {
   return (
-    <Container>
-    <div className="h-fit flex flex-col items-center  relative
-    after:content-[''] after:absolute after:inset-0 after:bg-white/50">
+    <Container bg="bg-[url('../public/stretching.svg')] bg-no-repeat bg-fixed bg-center">
+    <div className="h-fit flex flex-col items-center  relative 
+    ">
      <DivHeading title="Our Team"/>
      <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center z-[1]">No matter your needs, our team is here to help you on your path to recovery and better physical health.</p>
 

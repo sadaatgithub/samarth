@@ -8,9 +8,9 @@ import Container from "../container/Container";
 const Introduction = () => {
 // from-blue-900  to-teal-600 bg-gradient-to-tl from-blue-900  to-teal-600
   return (
-    <Container>
+    <Container bg="">
     <div
-      className="lg:mt-48 mt-8 intro-div  bg-white
+      className="lg:mt-48 mt-8 intro-div  bg-white 
        min-h-screen flex-col-reverse md:flex-row  flex justify-center items-center gap-10 md:gap-20"
     >
       <div className="flex flex-col relative w-full md:w-4/6 justify-center text-left  md:items-start ">
@@ -67,7 +67,7 @@ const Introduction = () => {
        
       </div>
 
-      <div className="md:w-2/6 w-full grow h-[320px] bg-[url('../public/polka-dots.svg')]  md:h-[360px] shadow-sm  rounded-tl-full px-2 md:px-0 relative z-[2]">
+      <div className="md:w-2/6 w-full grow h-[320px]   md:h-[360px] shadow-sm  rounded-tl-full px-2 md:px-0 relative z-[2]">
         <Image
           src={heroImage}
           width={640}
@@ -75,7 +75,7 @@ const Introduction = () => {
           alt=""
           className="w-full h-full object-cover object-right  shadow-2xl "
         />
-        {/* <div className="bg-[url('../public/polka-dots.svg')]  absolute w-16 h-16 -left-6 -bottom-5 z-[-1] "></div> */}
+        {/* <div className="bg-[url('../public/knee.svg')]  absolute w-16 h-16 -left-6 -bottom-5 z-[-1] "></div> */}
         <div className="bg-gray-200  absolute w-24 h-24 -left-6 -top-5 z-[-1]"></div>
       </div>
     </div>
