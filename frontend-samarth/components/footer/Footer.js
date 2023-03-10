@@ -19,7 +19,7 @@ const Footer = () => {
     </div>
     <div className="md:w-[60%] grid sm:grid-cols-3">
         <div className="flex flex-col text-gray-200 gap-4 z-10">
-            <h5 className="font-semibold">What We Offer</h5>
+            <h5 className="font-semibold tracking-wide">What We Offer</h5>
             <ul className="text-gray-400 cursor-pointer [&>a:hover]:underline text-sm [&>a:hover]:text-gray-200 [&>a]:transition-all duration-500">
                 {services.map(service =>{
                     return(
@@ -60,9 +60,9 @@ const Footer = () => {
     </div>
     </div>
     
-    <div className="z-10 px-14 mt-20 text-gray-400 border-t border-gray-400 flex justify-between items-center text-sm">
+    <div className="z-10 px-4 md:px-14 mt-10 md:mt-20 text-gray-400 border-t border-gray-400 flex justify-between items-center text-sm">
     <p className="z-10  mt-4"> &copy;{today.getFullYear()} Samarth Physio . All rights reserved</p> 
-    <span className="flex gap-2 cursor-pointer "><p>Terms of service</p><p>Privacy Policy</p></span>
+    <span className="flex md:gap-2 cursor-pointer "><p>Terms of service</p><p>Privacy Policy</p></span>
     </div>
 </footer>
   )

@@ -69,7 +69,7 @@ const Services = () => {
   return (
     <div className="">
       <PageBanner />
-      <div className="flex mt-10 md:divide-x-2 divide-slate-200 divide-y md:divide-y-0 md:flex-row flex-col">
+      <div className="flex mt-10 md:divide-x-2 divide-slate-200 divide-y md:divide-y-0 md:flex-row flex-col bg-[url('../public/knee.svg')] bg-no-repeat bg-contain bg-center bg-fixed">
       {eachService
         .filter((service) => service.slug === query.slug)
         .map((service) => {

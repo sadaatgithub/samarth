@@ -12,7 +12,7 @@ const BlogsArticles = ({post}) => {
   return (
     <Container bg="">
     <div
-     className="min-h-screen flex flex-col items-center gap-4 bg-[url('../public/knee.svg')] bg-no-repeat  bg-right-bottom">
+     className="min-h-screen flex flex-col items-center gap-4 bg-[url('../public/knee.svg')] bg-no-repeat  bg-[90%] bg-fixed">
       <DivHeading title="Blogs & Articles"/>
         
 <div className="py-20 w-full flex justify-center">

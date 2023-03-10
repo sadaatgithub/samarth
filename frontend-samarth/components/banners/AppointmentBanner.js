@@ -9,11 +9,11 @@ const AppointmentBanner = () => {
   return (
     <Container>
     <section className="">
-    <div className="h-60 w-full flex bg-gradient-to-l  from-teal-500 to-teal-600 overflow-hidden  items-center justify-around md:rounded-lg md:flex-row flex-col relative py-4">
+    <div className="h-60 w-full flex bg-gradient-to-l  from-teal-500 to-teal-600 overflow-hidden  items-center justify-around md:rounded-lg md:flex-row flex-col relative py-4 ">
         <h3 className="text-xl text-center md:text-3xl w-3/4 md:font-bold text-gray-50 md:w-1/2 z-[1]">&ldquo;Get back on track with expert physiotherapy to help you move, feel, and live better.&rdquo;</h3>
         <button
           className="flex max-w-xs justify-center items-center  gap-4 tracking-wide z-[1]
-           text-lg bg-teal-800/50 hover:bg-white shadow-md hover:text-teal-500 group text-white px-9 py-4 rounded-sm  focus:bg-teal-800 transition-all duration-200"
+           text-lg hover:bg-teal-800/50 bg-white shadow-md text-teal-500 group hover:text-white px-9 py-4 rounded-sm  focus:bg-teal-800 transition-all duration-200"
           onClick={() => setOpen(!open)}
         >
           Get Free Consultation

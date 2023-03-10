@@ -33,10 +33,10 @@ const Introduction = () => {
 
         
 
-        <p className="text-xl text-teal-700 font-semibold mt-8">
+        <p className="text-xl text-teal-400 font-semibold mt-8">
           Our Features
         </p>
-        <ul className="text-slate-500 z-[1] mt-6 flex flex-col gap-2 md:gap-4 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-500 text-left">
+        <ul className="text-slate-500 z-[1] mt-6 flex flex-col gap-2 md:gap-4 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-400 text-left">
           <li>
             <FaArrowAltCircleRight />
             Personalised Treatment
@@ -53,12 +53,12 @@ const Introduction = () => {
 
        
         <div className="flex gap-4 mt-6">
-          <button className="text-teal-500 rounded-sm px-6 py-3 mt-4 border border-teal-400 bg-white hover:bg-teal-500 hover:text-white shadow-xl transition-all duration-100">
+          <button className="text-teal-500 rounded-sm px-6 py-3 mt-4 border border-teal-400 bg-white hover:bg-teal-500 hover:text-white shadow-xl hover:-translate-y-2 transition-all duration-300">
             <Link href="/about" className="p-2 font-semibold">
               Know More
             </Link>
           </button>
-          <button className="text-white rounded-sm mt-4 px-6 py-3 bg-teal-400 hover:bg-teal-500 shadow-xl transition-all duration-100">
+          <button className="text-white rounded-sm mt-4 px-6 py-3 bg-teal-400 hover:bg-teal-500 shadow-xl hover:-translate-y-2 transition-all duration-300">
             <Link href="/contact-us" className="p-2 font-semibold">
               Contact Us
             </Link>
