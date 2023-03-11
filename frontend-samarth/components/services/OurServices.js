@@ -7,6 +7,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { FaChevronRight } from "react-icons/fa"
 import {GiJoint} from "react-icons/gi"
+// import { useInView } from "react-intersection-observer";
+
 
 export const services = [
   {
@@ -44,8 +46,15 @@ export const services = [
 ];
 
 const OurServices = () => {
+
+  // const { ref, inView } = useInView({
+  //   triggerOnce: true,
+  //   threshold:0.4,
+   
+  // });
+
   return (
-    <Container bg="bg-gray-50/50">
+    <Container bg="">
     <div id="our-services" className={`min-h-screen flex flex-col  justify-center items-center bg-[url('../public/knee.svg')] bg-no-repeat bg-center bg-fixed`}>
 
         <DivHeading title="Our Services"/>
@@ -64,7 +73,7 @@ const OurServices = () => {
 <h4 className="text-3xl text-gray-700">{service.name}</h4>
 <p className="text-slate-500">{service.content}</p>
     </div>
-    <button className="self-end mr-2 mb-2 text-rose-500 font-semibold "><Link href={`/our-services/${service.name.split(" ").join("-").toLowerCase()}`} className="flex gap-2 items-center">Read More <FaChevronRight className="text-xs"/></Link></button>
+    <button className="self-end mr-2 mb-2 text-rose-500 font-semibold "><Link href={`/our-services/${service.name.split(" ").join("-").toLowerCase()}`} className="flex gap-2 items-center group">Read More <FaChevronRight className="text-xs group-hover:translate-x-2 transition-transform duration-300"/></Link></button>
 
     </div>
   </div>

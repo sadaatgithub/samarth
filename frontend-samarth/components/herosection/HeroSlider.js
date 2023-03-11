@@ -89,7 +89,7 @@ const HeroSlider = () => {
                 {({ isActive }) => (
                   <div
                     className="relative after:content-[''] after:absolute object-cover h-full
-        after:inset-0 after:bg-gradient-to-r after:from-teal-600  after:to-transparent "
+        after:inset-0 after:bg-gradient-to-r after:from-teal-700  after:to-transparent "
                   >
                     <Image
                       src={slide.image}
@@ -109,7 +109,7 @@ const HeroSlider = () => {
                             isActive
                               ? "translate-x-0  opacity-100 duration-1000"
                               : "-translate-x-10 opacity-0 duration-200 "
-                          } px-4 py-2 md:p-4 overflow-hidden bg-white transition-all  ease-in-out shadow-xl text-teal-500 capitalize `}
+                          } px-4 py-2 md:p-4 overflow-hidden bg-white transition-all  ease-in-out  text-teal-500 capitalize `}
                         >
                           {" "}
                           {firstDesc}{" "}
@@ -121,7 +121,7 @@ const HeroSlider = () => {
                             isActive
                               ? "translate-x-0 opacity-100 duration-1000 delay-300"
                               : "translate-x-10 opacity-0 duration-200"
-                          } px-4 py-2 md:p-4 overflow-hidden transition-all ease-in-out shadow-xl  text-white bg-teal-400 capitalize`}
+                          } px-4 py-2 md:p-4 overflow-hidden transition-all ease-in-out   text-white bg-teal-500 capitalize`}
                         >
                           {" "}
                           {secondDesc}
@@ -139,16 +139,16 @@ const HeroSlider = () => {
                       </p>
 
 
-                      <Link href={slide.href.link}>
-                        <button
+                      <Link href={slide.href.link}
                           className={`
                           ${
                             isActive
                               ? "translate-x-0 opacity-100 transition-all duration-1000 delay-700 "
                               : "translate-x-8 opacity-0"
                           } 
-                text-white  py-3 px-6 bg-slate-800 rounded-full mt-8 md:mt-10 font-semibold flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out `}
+                text-white  rounded-full  mt-8 md:mt-10 font-semibold flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out tracking-wider`}
                         >
+                        <button className="py-3 px-6 bg-slate-800 rounded-full hover:bg-white hover:text-slate-800 transition-all duration-300">
                          {slide.href.text}
                         </button>
                       </Link>

@@ -67,7 +67,7 @@ const OurTeam = () => {
           <div 
           
          
-          className="flex flex-col gap-4 md:gap-12  w-full max-w-sm " key={member.id}>
+          className="flex flex-col gap-4 md:gap-12  w-full max-w-sm" key={member.id}>
           <Link 
             href={`/our-team/${member.id}`} className="flex flex-col justify-center rounded-md items-center relative overflow-hidden"
           >

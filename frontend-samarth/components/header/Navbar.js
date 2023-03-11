@@ -12,21 +12,29 @@ import { FaBars ,FaTimes} from "react-icons/fa";
 
 import Portal from "../portal/Portal";
 import MobileMenu from "./MobileMenu";
+import GoToTop from "../buttons/GoToTop";
+// import { useInView } from "react-intersection-observer";
 
 const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
 
 
 const Navbar = () => {
 
+  
+
   const [animateNav, setAnimateNav] = useState(false)
   const [burgerMenuState, setBurgerMenuState] = useState(false)
+  const [goToTop, setGoToTop] = useState(false)
 
   const navbarOnScroll = () =>{
     if(window.scrollY >=250){
       setAnimateNav(true)
+      setGoToTop(true)
     
     } else{
       setAnimateNav(false)
+      setGoToTop(false)
+
     }
   }
   useEffect(() =>{
@@ -37,7 +45,7 @@ const Navbar = () => {
   },[])
 
   return (
-    <header className={` flex flex-col border-b bg-white`}>
+    <header  className={` flex flex-col border-b bg-white`}>
       <div className="hidden md:flex bg-[#17234D] text-gray-200 lg:px-16 px-6 justify-between items-center flex-col md:flex-row py-2 md:py-2 text-xs md:text-base font-light">
         <div className=" md:w-1/3  lg:w-2/4">
           <h4 className="">Welcome to Samarth Physiotherapy!</h4>
@@ -72,6 +80,7 @@ const Navbar = () => {
        {burgerMenuState?<Portal>
         <MobileMenu setBurgerMenu={setBurgerMenuState} menuState={burgerMenuState}/>
        </Portal>:null}
+       <GoToTop visible={goToTop}/>
     </header>
   )
 }

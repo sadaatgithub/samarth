@@ -14,12 +14,15 @@ module.exports = {
 
       },
       animation:{
+        fadeIn: "fadein 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         slideInLeft:
         "slideInLeft 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
         drawerDown:
           "drawerDown 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both",
           drawerUp:
           "drawerUp 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both",
+          slideInBottom:
+          "slideInBottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
       },keyframes:{
         slideInLeft: {
           "0%": {
@@ -60,6 +63,26 @@ module.exports = {
 
             opacity: 0,
             display:"block"
+          },
+        },
+        slideInBottom: {
+          "0%": {
+            transform: "translateY(80px)",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: 1,
+          },
+        },
+        fadein: {
+          "0%": {
+            // transform: "translateY(-50px)",
+            opacity: 0,
+          },
+          "100%": {
+            // transform: "translateY(0)",
+            opacity: 1,
           },
         },
       }
