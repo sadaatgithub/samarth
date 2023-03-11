@@ -7,7 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { FaChevronRight } from "react-icons/fa"
 import {GiJoint} from "react-icons/gi"
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 
 
 export const services = [

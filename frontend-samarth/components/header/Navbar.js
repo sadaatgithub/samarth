@@ -13,7 +13,7 @@ import { FaBars ,FaTimes} from "react-icons/fa";
 import Portal from "../portal/Portal";
 import MobileMenu from "./MobileMenu";
 import GoToTop from "../buttons/GoToTop";
-// import { useInView } from "react-intersection-observer";
+
 
 const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
 

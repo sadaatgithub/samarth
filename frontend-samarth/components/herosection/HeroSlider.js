@@ -16,6 +16,7 @@ import HeroBanner from "./HeroBanner";
 import SwiperButtonRight from "../buttons/SwiperButtonRight";
 import SwiperButtonLeft from "../buttons/SwiperButtonLeft";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const data = [
   {
@@ -57,7 +58,11 @@ const HeroSlider = () => {
   return (
     <>
       {" "}
-      <div className="relative">
+      <div
+        
+        
+      
+      className="relative">
         <Swiper
           spaceBetween={30}
           effect={"fade"}
@@ -70,8 +75,8 @@ const HeroSlider = () => {
             disableOnInteraction: false,
           }}
           loop={true}
-          lazy={true}
-          modules={[EffectFade, Navigation, Autoplay, Lazy, Pagination]}
+          lazy={false}
+          modules={[EffectFade, Navigation, Autoplay, Pagination]}
           className="mySwiper  h-[80vh] md:h-[700px] group"
           style={{
             "--swiper-navigation-color": "#fff",
@@ -96,9 +101,10 @@ const HeroSlider = () => {
                       alt=""
                       width="1200"
                       height="780"
-                      className="w-full h-full object-cover object-top  swiper-lazy"
+                      className="w-full h-full object-cover object-top"
                     />
-                    <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    {/* swiper-lazy */}
+                    {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div> */}
                     <div
                       className={` md:w-2/3 absolute inset-0 z-[1] xl:p-20 p-6 md:p-10
                 text-white   flex  flex-col md:items-start items-center justify-center md:justify-start`}

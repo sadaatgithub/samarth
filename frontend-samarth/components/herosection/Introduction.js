@@ -4,23 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import Underline from "../headings/Underline";
 import Container from "../container/Container";
-import { useInView } from "react-intersection-observer";
+import {motion as m, useInView} from "framer-motion"
+import { container, item } from "@/animation";
+import { useRef } from "react";
 
 const Introduction = () => {
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold:0.4,
-   
-  });
+  const ref = useRef(null)
+  const isInView = useInView(ref)
 // from-blue-900  to-teal-600 bg-gradient-to-tl from-blue-900  to-teal-600
   return (
     <Container bg="">
-    <div ref={ref}
+    <div ref={ref} 
       className="lg:mt-48 mt-8 intro-div  bg-white 
        min-h-screen flex-col-reverse md:flex-row  flex justify-center items-center gap-16 md:gap-20"
     >
-      <div className={`${inView? "animate-slideInBottom anim-delay-200":"opacity-0"} flex flex-col relative w-full md:w-7/12 justify-center text-left  md:items-start `}>
+      {isInView? 
+      <m.div variants={container} initial="hidden" animate="show" 
+       className={` flex flex-col relative w-full md:w-7/12 justify-center text-left  md:items-start `}>
         <p className={` font-semibold text-rose-500`}>Welcome to</p>
         <h2 className={` text-3xl md:text-5xl font-bold text-sky-900 z-[1] mt-4`}>
           Samarth Physiotherapy & 
@@ -88,9 +89,9 @@ const Introduction = () => {
           </button>
         </div>
        
-      </div>
+      </m.div> :""}
 
-      <div className={`${inView? "animate-slideInBottom anim-delay-400":"opacity-0"} md:w-5/12 w-full grow h-[320px]   md:h-[420px] shadow-sm  rounded-tl-full px-2 md:px-0 relative z-[2]`}>
+      <div className={` md:w-5/12 w-full grow h-[320px]   md:h-[420px] shadow-sm  rounded-tl-full px-2 md:px-0 relative z-[2]`}>
         <Image
           src={heroImage}
           width={640}
