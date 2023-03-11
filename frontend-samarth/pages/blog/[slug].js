@@ -5,6 +5,7 @@ import urlFor from "@/lib/urlFor";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaUserCircle, FaWhatsapp } from "react-icons/fa";
 import SocialShare from "@/lib/SocialShare";
+import BlogsAndArticles from "../blogs-and-articles";
 
 const Post = ({ post }) => {
   const { mainImage, body, _createdAt } = post;
@@ -74,6 +75,7 @@ const Post = ({ post }) => {
 
       </div>
     </div>
+    {/* <BlogsAndArticles/> */}
 </>
 
   );

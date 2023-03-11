@@ -45,8 +45,8 @@ export const services = [
 
 const OurServices = () => {
   return (
-    <Container bg="">
-    <div id="our-services" className={`min-h-screen flex flex-col  justify-center items-center bg-[url('../public/knee.svg')] bg-no-repeat`}>
+    <Container bg="bg-gray-50/50">
+    <div id="our-services" className={`min-h-screen flex flex-col  justify-center items-center bg-[url('../public/knee.svg')] bg-no-repeat bg-center bg-fixed`}>
 
         <DivHeading title="Our Services"/>
         <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center">We provide a wide range of physiotherapy services to help our clients achieve optimal physical health and wellness.

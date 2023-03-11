@@ -6,6 +6,7 @@ import BlogGrid from "@/components/blog/BlogGrid";
 import { useEffect, useState } from "react";
 import Container from "@/components/container/Container";
 import Filter from "@/lib/Filter";
+import { FaSearch } from "react-icons/fa";
 
 // import useSWR
 
@@ -57,11 +58,14 @@ const blogSearchHandler = (e) =>{
           <h1 className="text-2xl sm:text-3xl lg:text-5xl text-gray-600 font-semibold">Browse our latest Blogs and articles</h1>
         </div>
         <div className="mt-20">
-          <div className="flex sm:flex-row flex-col md:gap-2 justify-between sticky top-[70px] z-[120] bg-white/70 backdrop-blur-sm">
+          <div className="flex sm:flex-row flex-col md:gap-2 justify-between sticky top-[70px] z-[10] bg-white/90 backdrop-blur-sm">
            <Filter categories={categories} setCategory={setCategory} activeCategory={activeCategory}/>
-            <div className="flex items-center gap-2 bg-gray-200 px-2 rounded-sm">
-            <p className="font-semibold text-slate-600 p-2">Search</p>
-            <input type="text" name="" id="" className="border p-1 focus:outline-none rounded-sm " onChange={blogSearchHandler}/>
+            <div className="flex items-center text-gray-500  rounded-md border overflow-hidden">
+              <div className="w-full h-full grid place-items-center bg-white">
+              <FaSearch className="w-8  "/>
+              </div>
+            
+            <input type="text" name="" id="" placeholder="Search" className="border p-2 focus:outline-none border-none" onChange={blogSearchHandler}/>
 
             </div>
           </div>

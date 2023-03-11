@@ -12,7 +12,7 @@ const MobileMenu = ({setBurgerMenu,menuState})=>{
 
     return(
     <>
-        <div className="fixed inset-0 h-full flex  items-center z-[104]  backdrop-blur-sm
+        <div className="fixed inset-0 h-full flex  items-center z-[110]  backdrop-blur-sm
         bg-black/70">
             <div  
             className={`${menuState? "animate-slideInLeft":"-translate-x-full"} h-full bg-teal-700/80 w-5/6 flex flex-col justify-between`}>

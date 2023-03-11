@@ -12,7 +12,7 @@ md:[&>div>svg]:text-5xl [&>div]:items-center  [&>div]:p-8 lg:gap-10 [&>div]:text
 md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:text-slate-800 [&>div>p]:text-gray-600 [&>div>p]:font-normal lg:px-12 [&>div>p]:mt-4 text-justify lg:[&>div]:w-1/3
   "
       >
-        <div className="flex flex-col  lg:self-stretch bg-white rounded-xl lg:shadow-2xl lg:shadow-teal-100/70 group ">
+        <div className="flex flex-col  lg:self-stretch mt-6 lg:mt-0 bg-white rounded-xl lg:shadow-2xl lg:shadow-teal-100/70 group ">
           <MdOutlineHealthAndSafety className="bg-emerald-500 rounded-full p-2 font-thin shadow-lg shadow-teal-100 group-hover:-translate-y-2 transition-all duration-500" />
           <h3>Health Guarantee</h3>
           <p className="">

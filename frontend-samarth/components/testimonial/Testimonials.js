@@ -116,7 +116,7 @@ const Testimonials = () => {
           return (
             <SwiperSlide
               key={data.id}
-              className="w-full flex flex-col p-8  rounded-md shadow-sm bg-white border border-blue-100"
+              className="w-full flex flex-col p-8  rounded-md shadow-sm bg-white"
             >
              
                 <div className="flex flex-col   w-full gap-8 ">

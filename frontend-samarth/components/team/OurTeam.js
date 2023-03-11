@@ -53,11 +53,11 @@ export const team = [
       image: Team3,
     },
   ];
-
+// 
 const OurTeam = () => {
   return (
-    <Container bg="bg-[url('../public/stretching.svg')] bg-no-repeat bg-fixed bg-center">
-    <div className="h-fit flex flex-col items-center  relative 
+    <Container bg="bg-[url('../public/banner2.jpg')] bg-no-repeat bg-cover relative after:content-[''] after:absolute after:bg-white/90 bg-fixed after:inset-0">
+    <div className="h-fit flex flex-col items-center  relative z-[1]
     ">
      <DivHeading title="Our Team"/>
      <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center z-[1]">No matter your needs, our team is here to help you on your path to recovery and better physical health.</p>

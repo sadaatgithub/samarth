@@ -80,7 +80,7 @@ const Services = () => {
                 <div className="capitalize text-2xl md:text-4xl font-bold text-slate-600">
                 {capitalTitle}
                 </div>
-                <div className=" mt-8 flex flex-col gap-6 mb-10 text-slate-500 text-lg">
+                <div className=" mt-8 flex flex-col gap-6 mb-10 text-slate-600">
                   {service.desc.split("/n").map((desc, index) => {
                     return (
                     
