@@ -11,7 +11,7 @@ import { useRef } from "react";
 const Introduction = () => {
 
   const ref = useRef(null)
-  const isInView = useInView(ref)
+  const isInView = useInView(ref,{once:true})
 // from-blue-900  to-teal-600 bg-gradient-to-tl from-blue-900  to-teal-600
   return (
     <Container bg="">
@@ -23,10 +23,10 @@ const Introduction = () => {
       <m.div variants={container} initial="hidden" animate="show" 
        className={` flex flex-col relative w-full md:w-7/12 justify-center text-left  md:items-start `}>
         <p className={` font-semibold text-rose-500`}>Welcome to</p>
-        <h2 className={` text-3xl md:text-5xl font-bold text-sky-900 z-[1] mt-4`}>
+        <m.h2 variants={item} className={` text-3xl md:text-5xl font-bold text-sky-900 z-[1] mt-4`}>
           Samarth Physiotherapy & 
           Rehab Care Unit
-        </h2>
+        </m.h2>
         <div className="w-2/3  flex justify-center">
         <Underline/>
         </div>
