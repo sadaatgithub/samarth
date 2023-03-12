@@ -1,35 +1,36 @@
-
+"use client"
 import { MdOutlineHealthAndSafety } from "react-icons/md";
 import { BiClinic } from "react-icons/bi";
 import { TbPhysotherapist } from "react-icons/tb";
-import { useInView ,motion as m} from "framer-motion"
-import { useRef } from "react";
-import { container, item } from "@/animation";
+import { motion as m,AnimatePresence} from "framer-motion"
+import { container, item,fadeIn } from "@/animation";
+import { useInView } from "react-intersection-observer";
 
 
 const HeroBanner = () => {
 
-  const ref = useRef(null)
-  const isInView = useInView(ref, {margin: "0px -100px -50px 0px",once:true})
+  // const ref = useRef(null)
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold:0.1,
+  });
   return (
     <>
-    {/* initial={{ y: 100,opacity:0 }}
-        animate={{ y: 0 ,opacity:1}}
-        exit={{ y: 100 }} transition={{ delay: 0.5 }} */}
-      {/* <h3 className="text-center text-xl md:text-3xl font-semibold text-slate-500">Why People Choose Us</h3> */}
+   
 
 
       <div ref={ref}
         className="static lg:absolute  -bottom-[250px] left-0 z-[20] 
   "
       >
-        {isInView? <m.div variants={container} initial="hidden" animate="show" className="md:flex-row  flex-col px-2 overflow-hidden flex w-full h-full [&>div>svg]:text-5xl [&>div]:max-w-xl items-center lg:items-start
+        <AnimatePresence>
+        {inView? <m.div variants={container} initial="hidden" animate="show" exit="hidden" className="md:flex-row  flex-col px-2 overflow-hidden flex w-full h-full [&>div>svg]:text-5xl [&>div]:max-w-xl items-center lg:items-start
 md:[&>div>svg]:text-5xl [&>div]:items-center  [&>div]:p-8 lg:gap-10 [&>div]:text-center [&>div>svg]:text-white [&>div>h3]:text-xl [&>div>h3]:mt-4
 md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:text-slate-800 [&>div>p]:text-gray-600 [&>div>p]:font-normal lg:px-12 [&>div>p]:mt-4 text-justify lg:[&>div]:w-1/3">
         
         <m.div variants={item} 
         
-        className={` flex flex-col  lg:self-stretch mt-6 lg:mt-0 bg-white rounded-xl lg:shadow-2xl lg:shadow-teal-100/70 group `}>
+        className={`flex flex-col  lg:self-stretch mt-6 lg:mt-0 bg-white rounded-xl lg:shadow-2xl lg:shadow-teal-100/70 group `}>
           <MdOutlineHealthAndSafety className="bg-emerald-500 rounded-full p-2 font-thin shadow-lg shadow-teal-100 group-hover:-translate-y-2 transition-all duration-500" />
           <h3>Health Guarantee</h3>
           <p className="">
@@ -58,6 +59,7 @@ md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:text-slate-800 [&>di
           </p>
         </m.div>
         </m.div>:""}
+        </AnimatePresence>
       </div>
     </>
   );
