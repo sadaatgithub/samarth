@@ -59,7 +59,7 @@ const Introduction = () => {
             Post operated patients care
           </li>
         </ul>
-        <ul className="text-slate-500 z-[1]mt-0 md:mt-6 flex flex-col gap-2 md:gap-4 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-400 text-left">
+        <ul className="text-slate-500 z-[1] mt-2 md:mt-6 flex flex-col gap-2 md:gap-4 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-400 text-left">
           <li>
             <FaArrowAltCircleRight />
             Physiotherapy OPD
@@ -76,13 +76,13 @@ const Introduction = () => {
         </div>
 
        
-        <div className="flex flex-col sm:flex-row gap-4 mt-8 [&>button]:uppercase justify-center items-center sm:items-start sm:justify-start w-full">
-          <button className="text-teal-600  max-w-xs rounded-sm px-6 py-3 tracking-wider mt-4 border border-teal-800 bg-white  hover:text-white  hover:bg-teal-800 transition-all duration-300">
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 [&>button]:uppercase  items-center sm:items-start justify-start w-full">
+          <button className="text-teal-600 w-full  sm:w-auto max-w-xs rounded-sm px-6 py-3 tracking-wider mt-4 border border-teal-800 bg-white  hover:text-white  hover:bg-teal-800 transition-all duration-300">
             <Link href="/about" className="p-2 font-semibold">
               Know More
             </Link>
           </button>
-          <button className="text-white rounded-sm max-w-xs mt-4 px-6 py-3 bg-teal-400  tracking-wider hover:bg-teal-800 transition-all duration-200">
+          <button className="text-white rounded-sm w-full sm:w-auto max-w-xs mt-4 px-6 py-3 bg-teal-400  tracking-wider hover:bg-teal-800 transition-all duration-200">
             <Link href="/contact-us" className="p-2 font-semibold">
               Book An Appointment
             </Link>

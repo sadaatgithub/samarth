@@ -10,7 +10,7 @@ import { container, item } from "@/animation";
 const HeroBanner = () => {
 
   const ref = useRef(null)
-  const isInView = useInView(ref, {margin: "0px -100px -50px 0px"})
+  const isInView = useInView(ref, {margin: "0px -100px -50px 0px",once:true})
   return (
     <>
     {/* initial={{ y: 100,opacity:0 }}
