@@ -62,15 +62,14 @@ const Post = ({ post }) => {
         <PortableText value={body} components={RichTextComponent} />
       </div>
 
-      <div className="mt-16 flex flex-col justify-center items-center gap-4">
+      <div className="mt-16 flex flex-col justify-center items-center gap-4 ">
         <p className="text-xl font-semibold">Share this post</p>
-        <div className="flex  gap-4 [&>svg]:cursor-pointer ">
-          <FaInstagram className="text-rose-500"/>
-          <FaFacebook className="text-blue-700"/>
-          <FaWhatsapp className="text-emerald-500"/>
+        <div className="flex pt-4 [&>svg]:cursor-pointer ">
+        <SocialShare/>
+
           </div>
-          <div className="">
-            tag1 tag2 tag3
+          <div className="flex gap-6 py-12 [&>span]:bg-gray-200 [&>span]:px-2">
+          <span>Tag 1</span><span>Tag 2</span><span>Tag 3</span>
           </div>
 
       </div>

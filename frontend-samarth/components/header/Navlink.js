@@ -10,6 +10,7 @@ export const link = [
   "Neuro Physiotherapy",
   "Sports Physiotherapy & Fitness",
   "Hydrotherapy",
+  "Physiotherapy in hemophilia"
 ];
 
 export const menuLink = [
