@@ -2,16 +2,24 @@ import Link from 'next/link'
 import imageUrlBuilder from '@sanity/image-url'
 import client from "@/sanity/client"
 import Image from 'next/image'
+import { motion as m } from "framer-motion"
+import { fadeIn } from "../../lib/Animation"
+
 
 function urlFor(source){
     return imageUrlBuilder(client).image(source)
   }
 
-const EachBlog = ({post,w="max-w-lg"}) => {
+
+
+const EachBlog = ({post,w="max-w-lg",idx}) => {
   return (
     <Link href={`/blog/${post.slug}`} className={`w-full ${w} rounded-sm   overflow-hidden group hover:shadow-lg`}>
     
-    <div className="flex flex-col h-full">
+    <m.div variants={fadeIn("up", "tween", idx*0.2, 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.5 }} className="flex flex-col h-full">
       <div className="overflow-hidden">
     <Image alt="" width={320} height={240}
             src={urlFor(post.mainImage)
@@ -34,7 +42,7 @@ const EachBlog = ({post,w="max-w-lg"}) => {
             <p className="text-lg text-teal-400 tracking-wide">Read More</p>
           </div>
 
-    </div>
+    </m.div>
     
    
               </Link>

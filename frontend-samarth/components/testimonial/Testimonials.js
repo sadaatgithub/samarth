@@ -15,7 +15,9 @@ import Slide1 from "../../public/slide1.jpg"
 import Slide2 from "../../public/slide2.jpg"
 import Slide3 from "../../public/slide3.jpg"
 import Container from "../container/Container";
-
+import Subheading from "../headings/Subheading";
+import { motion as m } from "framer-motion";
+import { fadeIn } from "../../lib/Animation";
 // bg-[url('../public/slide2.jpg')] bg-fixed after:content-[''] after:absolute after:inset-0
         //  after:bg-gradient-to-r after:from-slate-800/80 after:to-slate-800/80 
 const testimonial = [
@@ -62,9 +64,14 @@ const Testimonials = () => {
     <div className="flex flex-col justify-center items-center">
       <div className="w-full lg:px-10 xl:px-20 px-2 flex flex-col items-center ">
         <DivHeading title="What Our Patients Says" />
-        <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center">Expert Care and Personalized Attention: Our Clients Share Their Experiences</p>
+<Subheading title="Expert Care and Personalized Attention: Our Clients Share Their Experiences"/>
+
       </div>
-      <Swiper
+  <m.div variants={fadeIn("up", "tween", 0.2, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.5 }}  className="">
+      <Swiper  
         slidesPerView={3}
         spaceBetween={20}
         slidesPerGroup={2}
@@ -112,9 +119,9 @@ const Testimonials = () => {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper  w-full h-ful relative   mt-8 md:mt-20 gap-8  group  grid grid-cols-1 group"
       >
-        {testimonial.map((data) => {
+        {testimonial.map((data,idx) => {
           return (
-            <SwiperSlide
+            <SwiperSlide 
               key={data.id}
               className="w-full flex flex-col p-8  rounded-md shadow-sm bg-white"
             >
@@ -157,6 +164,7 @@ const Testimonials = () => {
         <SwiperButtonRight />
         </div>
       </Swiper>
+      </m.div>
     </div>
     </Container>
   );

@@ -152,9 +152,9 @@ const HeroSlider = () => {
                               ? "translate-x-0 opacity-100 transition-all duration-1000 delay-700 "
                               : "translate-x-8 opacity-0"
                           } 
-                text-white  rounded-full  mt-8 md:mt-10 font-semibold flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out tracking-wider`}
+                text-white  rounded-sm  mt-8 md:mt-10 font-semibold flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out tracking-wider`}
                         >
-                        <button className="py-3 px-6 bg-slate-800 rounded-full hover:bg-white hover:text-slate-800 transition-all duration-300">
+                        <button className="py-3 px-6 bg-slate-800 hover:bg-white hover:text-slate-800 transition-all duration-300">
                          {slide.href.text}
                         </button>
                       </Link>

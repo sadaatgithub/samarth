@@ -7,7 +7,10 @@ import {BsTwitter,BsFacebook} from "react-icons/bs"
 import {AiFillInstagram} from "react-icons/ai"
 import DivHeading from "../headings/DivHeading"
 import Container from "../container/Container"
+import { motion as m } from "framer-motion"
 
+import { fadeIn } from "@/lib/Animation"
+import Subheading from "../headings/Subheading"
 
 export const team = [
     {
@@ -38,20 +41,7 @@ export const team = [
       numquam mollitia explicabo accusantium earum odit ea. Sed aspernatur dolorem nam error reiciendis!`,
       image:Team2,
     },
-    {
-      id: 3,
-      member: "Dr Albert Einstein",
-      designation: "BPTH, MPTH",
-      desc:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fugit impedit consequatur sequi voluptatibus 
-      adipisci id eveniet, delectus, deleniti doloremque earum repudiandae quas, recusandae atque qui ea? Consequuntur 
-      dolore culpa accusamus harum fugiat provident aspernatur cumque magni suscipit corporis, 
-      nostrum molestiae impedit facilis commodi eaque nisi sint, minima dicta quod. Lorem ipsum dolor sit amet 
-      consectetur adipisicing elit. Cupiditate est possimus consequuntur tenetur inventore? Necessitatibus, consectetur 
-      alias optio deserunt minus, itaque explicabo illo voluptatum rem, maiores beatae sint iusto dolor delectus totam 
-      reprehenderit? Enim repellendus corporis a, id tempore cumque rem consequuntur soluta itaque animi pariatur sint 
-      numquam mollitia explicabo accusantium earum odit ea. Sed aspernatur dolorem nam error reiciendis!`,
-      image: Team3,
-    },
+    
   ];
 // 
 const OurTeam = () => {
@@ -60,16 +50,46 @@ const OurTeam = () => {
     <div className="h-fit flex flex-col items-center  relative z-[1]
     ">
      <DivHeading title="Our Team"/>
-     <p className="mt-6 md:text-lg text-gray-500 md:w-3/4 text-center z-[1]">No matter your needs, our team is here to help you on your path to recovery and better physical health.</p>
+<Subheading title="No matter your needs, our team is here to help you on your path to recovery and better physical health."/>
 
-      <div className="flex justify-evenly w-full mt-10 md:mt-20 md:flex-row flex-col gap-12 items-center z-[1]">
-        {team.map((member) => (
-          <div 
+
+      <div className="flex justify-evenly w-full mt-10 md:mt-20 md:flex-row flex-col gap-16 items-center z-[1]">
+        {team.map((member,idx) => (
+          <Link href={`our-team/${member.id}`}>
+          <m.div  variants={fadeIn("up", "tween", idx*0.2, 0.3)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.5 }}
           
          
-          className="flex flex-col gap-4 md:gap-12  w-full max-w-sm" key={member.id}>
-          <Link 
-            href={`/our-team/${member.id}`} className="flex flex-col justify-center rounded-md items-center relative overflow-hidden"
+          className="flex flex-col  gap-4 md:gap-6  w-full " key={member.id}>
+              <div className="h-[300px] lg:h-[405px] w-full  overflow-hidden object-cover">
+              <Image
+              src={member.image}
+              width={320}
+              height={240}
+              alt=""
+              className="w-full h-full object-cover "
+            />
+              </div>
+              <div className=" flex flex-col gap-4">
+                <div className="flex flex-col">
+                  <p className="text-xl font-semibold text-rose-500">{member.member}</p>
+                  <p className="text-lg text-gray-500">{member.designation}</p>
+                </div>
+                <div className="">
+                  <p className="text-gray-500">{member.desc.slice(0,180)}</p>
+                </div>
+
+              </div>
+              <div className="flex gap-4 text-2xl text-gray-400 [&>svg]:cursor-pointer  [&>svg]:transition-all [&>svg]:duration-150">
+              <BsTwitter className="hover:text-sky-400"/>
+          <BsFacebook className="hover:text-blue-600"/>
+          <AiFillInstagram className="hover:text-rose-600"/>
+              </div>
+
+          {/* <div 
+            className=""
           >
             <Image
               src={member.image}
@@ -83,13 +103,14 @@ const OurTeam = () => {
               <p className="text-gray-700">{member.designation}</p>
             </div>
             
-          </Link>
-          <div className="flex gap-4 justify-center text-2xl text-gray-400 [&>svg]:cursor-pointer  [&>svg]:transition-all [&>svg]:duration-150">
+          </div>
+          <div className="flex gap-4 justify-center ">
           <BsTwitter className="hover:text-sky-400"/>
           <BsFacebook className="hover:text-blue-600"/>
-          <AiFillInstagram className="hover:text-rose-600"/>
-          </div>
-      </div>
+          <AiFillInstagram className="hover:text-rose-600"/> */}
+          {/* </div> */}
+      </m.div>
+      </Link>
         ))}
 
       

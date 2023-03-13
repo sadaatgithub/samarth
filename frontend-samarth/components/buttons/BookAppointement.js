@@ -1,9 +1,9 @@
 import Link from "next/link"
 
 
-const BookAppointement = () => {
+const BookAppointement = ({title}) => {
   return (
-    <button className="bg-teal-500 text-white px-4 py-2 rounded-sm font-medium text-base hidden lg:block hover:bg-teal-400 transition-all duration-200 shadow-md"><Link href="/contact-us">Book Now</Link></button>
+    <Link href="/contact-us"> <button className="rounded-sm w-full sm:w-auto max-w-xs text-white px-6 py-3 bg-teal-400  tracking-wider hover:bg-teal-800 transition-all duration-200">{title}</button></Link>
 
   )
 }

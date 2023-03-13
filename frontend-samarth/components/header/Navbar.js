@@ -71,7 +71,7 @@ const Navbar = () => {
                     </div>
                     <span>example@email.com</span>
                 </div>
-                <BookAppointement/>
+                <BookAppointement title="Book Now"/>
           </div>
         </div>
       <Navlink animateNav={animateNav}/>

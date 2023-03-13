@@ -73,10 +73,10 @@ const blogSearchHandler = (e) =>{
             {filteredData.length===0? <p className="text-center text-lg md:text-4xl w-full text-gray-500 mt-24 grow">No Blogs Found , Please try another keyword</p>:
           <BlogGrid cols="md:grid-cols-2 lg:grid-cols-3">
         
-        {filteredData.map((post) =>{
+        {filteredData.map((post,idx) =>{
           return (
         
-            <EachBlog post={post} key={post._id}/>
+            <EachBlog post={post} key={post._id} idx={idx}/>
              
           )
         })} 

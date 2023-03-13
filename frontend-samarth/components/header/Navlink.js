@@ -4,6 +4,7 @@ import { AiOutlineCaretDown } from "react-icons/ai";
 import DesktopSubmenus from "./DesktopSubmenus";
 import {useRouter} from "next/router";
 
+
 export const link = [
   "Orthopedic Physiotherapy",
   "Neuro Physiotherapy",
@@ -54,7 +55,7 @@ const Navlink = ({ visible }) => {
           const isLinkActive = link.href === pathname
 
           return isSublink ? (
-            <li className={`${isLinkActive? "active":""} group flex gap-2`} key={link.id}>
+            <li  className={`${isLinkActive? "active":""} group flex gap-2`} key={link.id}>
               {link.title} <DesktopSubmenus sublink={link.sublink} />
               <AiOutlineCaretDown className="text-sm self-center" />
             </li>
