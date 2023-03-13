@@ -55,14 +55,14 @@ const OurTeam = () => {
 
       <div className="flex justify-evenly w-full mt-10 md:mt-20 md:flex-row flex-col gap-16 items-center z-[1]">
         {team.map((member,idx) => (
-          <Link href={`our-team/${member.id}`}>
+          <Link href={`our-team/${member.id}`} key={member.id}>
           <m.div  variants={fadeIn("up", "tween", idx*0.2, 0.3)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.5 }}
           
          
-          className="flex flex-col  gap-4 md:gap-6  w-full " key={member.id}>
+          className="flex flex-col  gap-4 md:gap-6  w-full " >
               <div className="h-[300px] lg:h-[405px] w-full  overflow-hidden object-cover">
               <Image
               src={member.image}

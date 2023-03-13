@@ -7,9 +7,8 @@ import Slide3 from "../../public/slide3.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa";
-import { GiJoint } from "react-icons/gi";
 import { motion as m } from "framer-motion";
-import { container, fadeIn, staggerContainer } from "../../lib/Animation";
+import {  fadeIn } from "../../lib/Animation";
 import Subheading from "../headings/Subheading";
 
 export const services = [
