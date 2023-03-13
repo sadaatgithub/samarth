@@ -44,6 +44,14 @@ export const services = [
       "Hydrotherapy refers to using water as therapy in any form, in this instance we use it for the performing of exercises in water.",
     image: Slide1,
   },
+  {
+    id:5,
+    name:"Physiotherapy in Hemophilia",
+    content:`
+    Physiotherapy in hemophilia is essential for maintaining joint health and preventing joint damage. Hemophilia patients are at a higher risk of
+    `,
+    image:Slide1,
+  }
 ];
 
 const OurServices = () => {
@@ -53,7 +61,7 @@ const OurServices = () => {
         initial="hidden"
         whileInView="show"
         id="our-services"
-        className={`min-h-screen flex flex-col  justify-center items-center bg-[url('../public/knee.svg')] bg-no-repeat bg-center bg-fixed`}
+        className={`min-h-screen flex flex-col  justify-center items-center bg-[url('../public/knee.svg')] bg-no-repeat bg-contain bg-right bg-fixed`}
       >
         <DivHeading title="Our Services" />
         <Subheading

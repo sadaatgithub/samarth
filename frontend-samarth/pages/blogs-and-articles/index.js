@@ -55,7 +55,7 @@ const blogSearchHandler = (e) =>{
       <PageBanner/>
       <Container>
         <div className="flex justify-center">
-          <h1 className="text-2xl sm:text-3xl lg:text-5xl text-gray-600 font-semibold">Browse our latest Blogs and articles</h1>
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl text-gray-800 font-semibold">Browse our latest Blogs and articles</h1>
         </div>
         <div className="mt-20">
           <div className="flex sm:flex-row flex-col md:gap-2 justify-between sticky top-[70px] z-[10] bg-white/90 backdrop-blur-sm">

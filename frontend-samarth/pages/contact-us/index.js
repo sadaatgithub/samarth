@@ -128,6 +128,7 @@ const ContactUs = () => {
                 name="message"
                 label="Message"
                 setState={setState}
+                row="7"
               />
             </div>
 

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const FormsInput = ({name,type,label,setState,value}) => {
+const FormsInput = ({name,type,label,setState,value,row="4"}) => {
 
 
 
@@ -22,7 +22,7 @@ const handleChange = (e) =>{
       required
       value={value}
       id={name}
-      rows="4"
+      rows={row}
       onChange={handleChange}
       className="border w-full  px-2 rounded-sm focus:outline-[1px] outline-blue-400"
     />

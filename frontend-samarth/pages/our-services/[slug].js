@@ -61,6 +61,21 @@ const eachService = [
     
     /n In conclusion, sport physiotherapy and fitness is an effective and specialized form of physical therapy that is designed specifically for athletes. It can help athletes recover from injury, improve their physical function, and prevent future injuries. If you are an athlete and experiencing symptoms of an injury, consider seeking the help of a sport physiotherapist.`,
   },
+  {
+    id:5,
+    slug:"physiotherapy-in-hemophilia",
+    desc:`
+    Hemophilia is a genetic disorder that affects the blood's ability to clot, leading to excessive bleeding and bruising. Hemophilia patients often require physiotherapy as part of their treatment plan.
+
+/n Physiotherapy in hemophilia is essential for maintaining joint health and preventing joint damage. Hemophilia patients are at a higher risk of developing joint problems due to the repeated bleeding into the joints. Physiotherapy can help reduce pain, swelling, and stiffness in the joints, as well as improve joint mobility and strength.
+
+/n Physiotherapy for hemophilia patients typically involves exercises and stretches that focus on improving joint range of motion, strength, and flexibility. The physiotherapist will create an individualized exercise program based on the patient's specific needs and goals.
+
+/n In addition to exercises, hemophilia patients may also benefit from manual therapies such as massage, joint mobilization, and soft tissue techniques. These therapies can help improve blood flow to the affected area, reduce pain and inflammation, and promote healing.
+
+/n Overall, physiotherapy is a vital component of hemophilia treatment, helping patients manage their symptoms and maintain their quality of life. By working closely with a physiotherapist, hemophilia patients can improve their joint health, reduce their risk of complications, and lead a more active and fulfilling life.
+`
+  }
 ];
 
 const Services = () => {
@@ -89,8 +104,8 @@ const Services = () => {
                       
                     );
                   })}
-                  <div class="">
-                  <BookAppointement/></div>
+                  <div class="max-w-xs mt-8">
+                  <BookAppointement title="Book An Appointment"/></div>
                 </div>
               </div> 
             
