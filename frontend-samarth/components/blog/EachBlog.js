@@ -16,10 +16,10 @@ const EachBlog = ({post,w="max-w-lg",idx}) => {
   return (
     <Link href={`/blog/${post.slug}`} className={`w-full ${w} rounded-sm   overflow-hidden group hover:shadow-lg`}>
     
-    <m.div variants={fadeIn("up", "tween", idx*0.2, 0.2)}
+    <m.div variants={fadeIn("up", "tween", idx*0.2, 0.5)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.5 }} className="flex flex-col h-full">
+            viewport={{ once: true, amount: 0.2 }} className="flex flex-col h-full">
       <div className="overflow-hidden">
     <Image alt="" width={320} height={240}
             src={urlFor(post.mainImage)
@@ -33,12 +33,7 @@ const EachBlog = ({post,w="max-w-lg",idx}) => {
             <p className="text-slate-400">{post.description}</p>
           </div>  
           <div className="flex gap-4  p-2 mt-auto pt-6">
-            {/* <Link></Link> */}
-            {/* <div className="w-14 h-14 bg-gray-100 rounded-full"></div>
-            <div className="flex flex-col justify-center">
-            <p className="text-sm font-semibold text-gray-800">Full Name</p>
-            <p className="text-xs text-gray-500">dd/mm/yyyy<span></span> | <span>5 min read</span></p>
-            </div> */}
+           
             <p className="text-lg text-teal-400 tracking-wide">Read More</p>
           </div>
 

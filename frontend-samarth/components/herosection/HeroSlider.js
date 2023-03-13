@@ -88,7 +88,6 @@ const HeroSlider = () => {
             const descLength = desc.length / 2;
             const firstDesc = desc.slice(0, descLength).join(" ");
             const secondDesc = desc.slice(descLength).join(" ");
-// after:bg-gradient-to-tl after:from-transparent after:to-teal-500
             return (
               <SwiperSlide key={index}>
                 {({ isActive }) => (
@@ -103,8 +102,7 @@ const HeroSlider = () => {
                       height="780"
                       className="w-full h-full object-cover object-top"
                     />
-                    {/* swiper-lazy */}
-                    {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div> */}
+                 
                     <div
                       className={` md:w-2/3 absolute inset-0 z-[1] xl:p-20 p-6 md:p-10
                 text-white   flex  flex-col md:items-start items-center justify-center md:justify-start`}
@@ -152,9 +150,9 @@ const HeroSlider = () => {
                               ? "translate-x-0 opacity-100 transition-all duration-1000 delay-700 "
                               : "translate-x-8 opacity-0"
                           } 
-                text-white  rounded-sm  mt-8 md:mt-10 font-semibold flex justify-center items-center flex-col gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out tracking-wider`}
+                text-white  rounded-sm w-full sm:w-auto mt-8 md:mt-10 font-semibold flex  flex-col justify-center items-center gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out tracking-wider`}
                         >
-                        <button className="py-3 px-6 bg-slate-800 hover:bg-white hover:text-slate-800 transition-all duration-300">
+                        <button className="w-full max-w-xs sm:w-auto py-3 px-6 bg-slate-800 hover:bg-white hover:text-slate-800 transition-all duration-300">
                          {slide.href.text}
                         </button>
                       </Link>

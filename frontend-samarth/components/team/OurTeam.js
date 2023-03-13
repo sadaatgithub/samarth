@@ -66,8 +66,8 @@ const OurTeam = () => {
               <div className="h-[300px] lg:h-[405px] w-full  overflow-hidden object-cover">
               <Image
               src={member.image}
-              width={320}
-              height={240}
+              width={640}
+              height={480}
               alt=""
               className="w-full h-full object-cover "
             />
