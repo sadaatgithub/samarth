@@ -4,6 +4,9 @@ import DivHeading from "../headings/DivHeading";
 import Slide1 from "../../public/slide1.jpg";
 import Slide2 from "../../public/slide2.jpg";
 import Slide3 from "../../public/slide3.jpg";
+import hydrotherapy from "../../public/hydrotherapy.jpg"
+import orthopedic from "../../public/orthopedic.jpg"
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa";
@@ -18,7 +21,7 @@ export const services = [
     designation: "Doctor",
     content:
       "Orthopedic physiotherapy helps finding pain relief due to or musculoskeletal conditions in bones or soft tissues - including back pain, neck pain, shoulder pain, knee pain, joint pain...",
-    image: Slide1,
+    image: orthopedic,
   },
   {
     id: 2,
@@ -42,7 +45,7 @@ export const services = [
     designation: "Advocate",
     content:
       "Hydrotherapy refers to using water as therapy in any form, in this instance we use it for the performing of exercises in water.",
-    image: Slide1,
+    image: hydrotherapy,
   },
   {
     id:5,
