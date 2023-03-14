@@ -13,6 +13,7 @@ const raleway = Raleway({
   })
 
 export default function App({ Component, pageProps }) {
+  // console.log(pageProps.services)
   return (
     <>
       <style jsx global>

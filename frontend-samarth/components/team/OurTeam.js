@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Team1 from "@/public/team1.jpg";
+import Team1 from "@/public/physio3.jpg";
 import Team2 from "@/public/team2.jpg";
 import { BsTwitter, BsFacebook } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
@@ -14,8 +14,8 @@ import Subheading from "../headings/Subheading";
 export const team = [
   {
     id: 1,
-    member: "Dr Doe Jones",
-    designation: "BPTH, MPTH",
+    member: "Dr Abhinav Fadnis",
+    designation: "Director and Consultant Physiotherapist - BPTH, MPTH",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fugit impedit consequatur sequi voluptatibus 
       adipisci id eveniet, delectus, deleniti doloremque earum repudiandae quas, recusandae atque qui ea? Consequuntur 
       dolore culpa accusamus harum fugiat provident aspernatur cumque magni suscipit corporis, 
@@ -28,8 +28,8 @@ export const team = [
   },
   {
     id: 2,
-    member: "Dr Steve Smith",
-    designation: "BPTH, MPTH",
+    member: "Dr Harshada Kumbhare",
+    designation: "Consultant Physiotherapist - BPTH, MPTH",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fugit impedit consequatur sequi voluptatibus 
       adipisci id eveniet, delectus, deleniti doloremque earum repudiandae quas, recusandae atque qui ea? Consequuntur 
       dolore culpa accusamus harum fugiat provident aspernatur cumque magni suscipit corporis, 
@@ -76,7 +76,7 @@ const OurTeam = () => {
                     <p className="text-xl font-semibold text-rose-500">
                       {member.member}
                     </p>
-                    <p className="text-lg text-gray-500">
+                    <p className="text-lg text-gray-600">
                       {member.designation}
                     </p>
                   </div>

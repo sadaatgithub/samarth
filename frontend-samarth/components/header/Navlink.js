@@ -1,19 +1,12 @@
-"use client"
 import Link from "next/link";
 import { AiOutlineCaretDown } from "react-icons/ai";
 import DesktopSubmenus from "./DesktopSubmenus";
 import {useRouter} from "next/router";
 
 
-export const link = [
-  "Orthopedic Physiotherapy",
-  "Neuro Physiotherapy",
-  "Sports Physiotherapy & Fitness",
-  "Hydrotherapy",
-  "Physiotherapy in hemophilia"
-];
 
-export const menuLink = [
+export const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
+const menuLink = [
   {
     id: 1,
     title: "Home",
@@ -28,7 +21,7 @@ export const menuLink = [
     id: 3,
     title: "Services",
     href: "",
-    sublink: link,
+    sublink:link,
   },
   {
     id: 4,
@@ -42,8 +35,12 @@ export const menuLink = [
   },
 ];
 
-const Navlink = ({ visible }) => {
+
+const Navlink = ({ visible,serviceNav }) => {
   const { pathname } = useRouter();
+  // console.log(serviceNav)
+
+ 
   return (
     <nav className="flex flex-grow  w-full lg:px-14  text-gray-600 font-medium">
       <ul

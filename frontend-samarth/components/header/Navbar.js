@@ -15,7 +15,6 @@ import MobileMenu from "./MobileMenu";
 import GoToTop from "../buttons/GoToTop";
 
 
-const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
 
 
 const Navbar = () => {

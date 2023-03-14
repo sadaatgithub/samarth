@@ -1,9 +1,11 @@
 import Link from "next/link"
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
-import {services} from "../services/OurServices.js"
+
+import { link } from "../header/Navlink"
 
 const Footer = () => {
     const today = new Date()
+    
 
 
   return (
@@ -21,12 +23,11 @@ const Footer = () => {
         <div className="flex flex-col text-gray-200 gap-4 z-10">
             <h5 className="font-semibold tracking-wide">What We Offer</h5>
             <ul className="text-gray-400 cursor-pointer [&>a:hover]:underline text-sm [&>a:hover]:text-gray-200 [&>a]:transition-all duration-500">
-                {services.map(service =>{
+                {link?.map(service =>{
                     return(
-                        <Link key={service.name} href={`/our-services/${service.name.split(" ").join("-").toLowerCase()}`}>
-                        <li className="pb-2">{service.name}</li>
+                        <Link key={service} href={`/our-services/${service.split(" ").join("-").toLowerCase()}`}>
+                        <li className="pb-2">{service}</li>
                         </Link>
-                        // `/our-services/${sublink.split(" ").join("-").toLowerCase()}`
                     )
                 })}
 
@@ -39,9 +40,7 @@ const Footer = () => {
             <li><Link href="/about-us">About Us</Link></li>
             <li><Link href="#our-services">Our Services</Link></li>
             <li> <Link href="/contact-us">Contact Us</Link></li>
-            {/* <li>Therapists Details</li>
-            <li>Blog Standard</li>
-            <li>Blog Details</li> */}
+        
             </ul>
         </div>
 

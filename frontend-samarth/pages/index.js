@@ -22,9 +22,8 @@ export default function Home({post}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/physiologo2.png" />
       </Head>
-<HeroSlider/>
-      
-      {/* <HeroBanner/> */}
+
+      <HeroSlider/>
       <Introduction/>
       <OurServices/>
       <OurTeam/>
@@ -37,6 +36,8 @@ export default function Home({post}) {
 export async function getStaticProps() {
   const post = await sanityClient.fetch(`*[_type=="post" && defined(slug.current) && !(_id in path("drafts.**"))] 
   | order(_createdAt desc) {_id,title,description,mainImage,_createdAt, "slug":slug.current}[0...6]`)
+
+  // console.log(services)
   return {
     props: {
       post

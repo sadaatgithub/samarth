@@ -2,6 +2,7 @@ import PageBanner from "@/components/banners/PageBanner";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import BookAppointement from "@/components/buttons/BookAppointement";
+import Container from "@/components/container/Container";
 
 const eachService = [
   {
@@ -84,14 +85,15 @@ const Services = () => {
   return (
     <div className="">
       <PageBanner />
-      <div className="flex mt-10 md:divide-x-2 divide-slate-200 divide-y md:divide-y-0 md:flex-row flex-col bg-[url('../public/knee.svg')] bg-no-repeat bg-contain bg-center bg-fixed">
+      <Container>
+      <div className="flex mt-10 md:divide-x-2 divide-slate-200 divide-y gap-8 md:divide-y-0 md:flex-row flex-col bg-[url('../public/knee.svg')] bg-no-repeat bg-contain bg-center bg-fixed">
       {eachService
         .filter((service) => service.slug === query.slug)
         .map((service) => {
           const title = service.slug.split("-").join(" ")
           const capitalTitle = title.charAt(0).toUpperCase() + title.slice(1)
           return ( 
-              <div className="  md:px-20 px-4 md:w-3/4" key={service.id}>
+              <div className=" md:w-3/4" key={service.id}>
                 <div className="capitalize text-2xl md:text-4xl font-bold text-slate-600">
                 {capitalTitle}
                 </div>
@@ -104,7 +106,7 @@ const Services = () => {
                       
                     );
                   })}
-                  <div class="max-w-xs mt-8">
+                  <div className="max-w-xs mt-8">
                   <BookAppointement title="Book An Appointment"/></div>
                 </div>
               </div> 
@@ -128,10 +130,14 @@ const Services = () => {
             })}
           </ul>
           </div>
-        </div>
+        </div>  
       </div>
+      </Container>
     </div>
   );
 };
 
 export default Services;
+
+
+

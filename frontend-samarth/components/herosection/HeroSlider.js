@@ -23,34 +23,28 @@ const data = [
     image: Slide1,
     desc: " Best physiotherapy service you can get in Nagpur ",
     detail: `We are a well-known physiotherapy center in Nagpur, committed to providing top-notch care to its clients through a team of experienced therapists and state-of-the-art equipment.`,
-    href:
-      {
-        text:"Know More",
-        link:"/about"
-      }
-    
+    href: {
+      text: "Know More",
+      link: "/about",
+    },
   },
   {
     image: Slide2,
     desc: "Regain Your Mobility with Expert Physiotherapy",
     detail: `We offers expert physiotherapy services personalized to each patient's specific needs, aiming to achieve optimal physical health and wellness.`,
-    href:
-      {
-        text:"Book Now",
-        link:"/contact-us"
-      }
-    
+    href: {
+      text: "Book Now",
+      link: "/contact-us",
+    },
   },
   {
     image: Slide3,
     desc: "Say Goodbye to Pain with Personalized Treatment Plans",
     detail: `We provides personalised treatment plans tailored to each patient's specific needs to ensure the highest quality care and optimal physical health and wellness.`,
-    href:
-      {
-        text:"Our Services",
-        link:"#our-services"
-      }
-    
+    href: {
+      text: "Our Services",
+      link: "#our-services",
+    },
   },
 ];
 
@@ -58,11 +52,7 @@ const HeroSlider = () => {
   return (
     <>
       {" "}
-      <div
-        
-        
-      
-      className="relative">
+      <div className="relative">
         <Swiper
           spaceBetween={30}
           effect={"fade"}
@@ -102,7 +92,7 @@ const HeroSlider = () => {
                       height="780"
                       className="w-full h-full object-cover object-top"
                     />
-                 
+
                     <div
                       className={` md:w-2/3 absolute inset-0 z-[1] xl:p-20 p-6 md:p-10
                 text-white   flex  flex-col md:items-start items-center justify-center md:justify-start`}
@@ -139,21 +129,20 @@ const HeroSlider = () => {
                         } mt-6 md:mt-10 md:text-xl xl:w-2/3 text-center  md:text-left text-lg text-white  leading-5`}
                       >
                         {slide.detail}
-                      
                       </p>
 
-
-                      <Link href={slide.href.link}
-                          className={`
+                      <Link
+                        href={slide.href.link}
+                        className={`
                           ${
                             isActive
                               ? "translate-x-0 opacity-100 transition-all duration-1000 delay-700 "
                               : "translate-x-8 opacity-0"
                           } 
                 text-white  rounded-sm w-full sm:w-auto mt-8 md:mt-10 font-semibold flex  flex-col justify-center items-center gap-y-6 md:gap-y-12 overflow-hidden transition-all  ease-in-out tracking-wider`}
-                        >
-                        <button className="w-full max-w-xs sm:w-auto py-3 px-6 bg-slate-800 hover:bg-white hover:text-slate-800 transition-all duration-300">
-                         {slide.href.text}
+                      >
+                        <button className="tracking-wider sm:w-auto py-3 px-6 bg-slate-800 hover:bg-white hover:text-slate-800 transition-all duration-300">
+                          {slide.href.text}
                         </button>
                       </Link>
                     </div>
@@ -163,17 +152,14 @@ const HeroSlider = () => {
             );
           })}
           <div className="absolute top-1/2 -right-20 -translate-y-1/2 z-20 group-hover:right-2 transition-all duration-150 ease-in-out">
-
-          <SwiperButtonRight />
-
+            <SwiperButtonRight />
           </div>
           <div className="absolute top-1/2 -left-20 -translate-y-1/2 z-20 group-hover:left-2 transition-all duration-150 ease-in-out">
-          <SwiperButtonLeft />
+            <SwiperButtonLeft />
           </div>
-          
         </Swiper>
 
-        <HeroBanner/>
+        <HeroBanner />
       </div>
     </>
   );

@@ -5,7 +5,6 @@ import { EmailIcon, TwitterIcon ,TwitterShareButton,FacebookShareButton,Facebook
 
 const SocialShare = () => {
   const router = useRouter();
-  console.log(router.asPath)
   const curUrl = "http://127.0.0.1:3000/" + router.asPath
 
 
