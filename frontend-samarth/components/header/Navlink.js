@@ -6,7 +6,7 @@ import {useRouter} from "next/router";
 
 
 export const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
-const menuLink = [
+export const menuLink = [
   {
     id: 1,
     title: "Home",
