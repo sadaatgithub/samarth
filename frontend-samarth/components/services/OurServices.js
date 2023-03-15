@@ -60,7 +60,7 @@ const OurServices = () => {
     <Container bg="">
       <div
         id="our-services"
-        className={`min-h-screen flex flex-col  justify-center items-center bg-[url('../public/knee.svg')] bg-no-repeat bg-contain bg-right bg-fixed`}
+        className={`min-h-screen flex flex-col  justify-center items-center bg-[url('../public/knee.svg')] bg-no-repeat  bg-[10%] bg-fixed`}
       >
         <DivHeading title="Our Services" />
         <Subheading
@@ -70,7 +70,7 @@ const OurServices = () => {
 
         <div
           
-          className="py-20 grid md:grid-cols-2  lg:grid-cols-3 xl:gap-12 md:gap-8"
+          className="py-20 grid md:grid-cols-2  lg:grid-cols-3 xl:gap-12 gap-8"
         >
           {services.map((service, idx) => {
             return <EachService key={service.id} service={service} idx={idx}/>

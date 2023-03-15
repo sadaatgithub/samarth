@@ -13,7 +13,7 @@ const EachService = ({service,idx}) => {
     whileInView="show"
     viewport={{ once: true, amount: 0.2 }}
     
-    className="flex flex-col bg-white max-w-sm border rounded-sm overflow-hidden hover:shadow-2xl hover:shadow-teal-200/50 transition-all duration-300"
+    className="flex flex-col bg-white max-w-sm border rounded-sm overflow-hidden hover:shadow-2xl hover:shadow-gray-300 transition-all duration-300"
   >
     <Image
       alt=""
@@ -27,7 +27,7 @@ const EachService = ({service,idx}) => {
         <h4 className="text-3xl text-gray-700">{service.name}</h4>
         <p className="text-slate-500">{service.content}</p>
       </div>
-      <button className="self-end mr-2 mb-2 text-teal-500 font-semibold ">
+      <button className="self-end mr-4 mb-4 mt-6 text-teal-400  font-semibold ">
         <Link
           href={`/our-services/${service.name
             .split(" ")

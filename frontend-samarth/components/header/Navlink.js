@@ -5,7 +5,7 @@ import {useRouter} from "next/router";
 
 
 
-export const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy"]
+export const link = ["Orthopedic Physiotherapy","Neuro Physiotherapy","Sports Physiotherapy & Fitness","Hydrotherapy","Physiotherapy in Hemophilia"]
 export const menuLink = [
   {
     id: 1,
@@ -36,9 +36,8 @@ export const menuLink = [
 ];
 
 
-const Navlink = ({ visible,serviceNav }) => {
+const Navlink = ({ visible }) => {
   const { pathname } = useRouter();
-  // console.log(serviceNav)
 
  
   return (

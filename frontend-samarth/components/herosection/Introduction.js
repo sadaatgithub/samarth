@@ -40,10 +40,10 @@ const Introduction = () => {
 
         
 
-        <m.p variants={textVariant(0.4)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.2}} className="text-xl text-sky-900 font-semibold mt-8">
+        <m.p variants={textVariant(0.4)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}} className="text-xl text-sky-900 font-semibold mt-8">
           Our Features
         </m.p>
-        <m.div variants={textVariant(0.5)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.2}} className="flex md:gap-6 flex-col md:flex-row">
+        <m.div variants={textVariant(0.5)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}} className="flex md:gap-6 flex-col md:flex-row">
         <ul className="text-slate-500 z-[1] mt-6 flex flex-col gap-2 md:gap-4 font-medium [&>li]:flex [&>li]:gap-4 [&>li]:items-center [&>li>svg]:text-teal-400 text-left">
           <li>
             <FaArrowAltCircleRight />
@@ -75,7 +75,7 @@ const Introduction = () => {
         </m.div>
 
        
-        <m.div variants={textVariant(0.6)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.2}} className="flex flex-col sm:flex-row gap-4 mt-12 [&>button]:uppercase  items-center sm:items-start justify-start w-full">
+        <m.div variants={textVariant(0.6)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}} className="flex flex-col sm:flex-row gap-4 mt-12 [&>button]:uppercase  items-center sm:items-start justify-start w-full">
         <Link href="/about" className="font-semibold w-full sm:w-auto max-w-xs ">
           
           <button className="text-teal-600 w-full  rounded-sm px-6 py-3 tracking-wider  border border-teal-800 bg-white  hover:text-white  hover:bg-teal-800 transition-all duration-300">
@@ -87,7 +87,7 @@ const Introduction = () => {
        
       </div> 
 
-      <m.div variants={fadeIn('up','tween',0.2,0.5)} className={` md:w-5/12 w-full grow h-[320px]   md:h-[420px] shadow-sm  rounded-tl-full px-2 md:px-0 relative z-[2]`}>
+      <m.div variants={fadeIn('up','tween',0.2,0.5)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}} className={` md:w-5/12 w-full grow h-[320px]   md:h-[420px] shadow-sm  rounded-tl-full px-2 md:px-0 relative z-[2]`}>
         <Image
           src={heroImage}
           width={640}
