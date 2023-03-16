@@ -16,7 +16,7 @@ const Introduction = () => {
     <Container bg="">
     <m.div  variants={textContainer} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}}
       className="lg:mt-48 mt-8 intro-div  bg-white 
-       min-h-screen flex-col-reverse md:flex-row  flex justify-center items-center gap-16 md:gap-20"
+       min-h-screen flex-col-reverse md:flex-row  flex justify-center items-center gap-16 md:gap-20 "
     >
        
      <div 

@@ -12,6 +12,7 @@ const Post = ({ post }) => {
 
   return (
 <>
+<article>
 <div className="md:h-[450px] overflow-hidden relative shadow-lg">
         {mainImage ? (
           <Image
@@ -75,6 +76,7 @@ const Post = ({ post }) => {
       </div>
     </div>
     {/* <BlogsAndArticles/> */}
+    </article>
 </>
 
   );
