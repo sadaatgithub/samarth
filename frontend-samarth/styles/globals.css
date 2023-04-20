@@ -22,10 +22,10 @@ transform: scaleX(0);
 transform-origin: right;
 /* color: #f3f3f3ef; */
   transition: transform 0.2s ease-in-out;
-  @apply bg-teal-400 rounded-full
+  @apply bg-rose-400 rounded-full
 }
 nav>ul>li.active{
-  @apply text-teal-400 font-semibold
+  @apply text-rose-500 font-semibold
 }
 nav>ul>li:hover::after
 {
@@ -50,7 +50,7 @@ input:valid ~ .input-text,textarea:valid ~ .input-text
   @apply text-blue-600 -translate-y-9 scale-[0.8] -translate-x-2 bg-white 
 }
 button.active{
-  @apply border 
+  @apply border-b-2 border-teal-400
 }
 
 /* animation delay */

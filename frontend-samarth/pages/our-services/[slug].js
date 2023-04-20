@@ -8,73 +8,71 @@ const eachService = [
   {
     id: 1,
     slug: "orthopedic-physiotherapy",
-    desc: `Orthopedic physiotherapy is a type of physical therapy that focuses on the treatment of musculoskeletal injuries and conditions. The goal of orthopedic physiotherapy is to help patients recover from injury, reduce pain and swelling, improve mobility, and prevent further injury.
-    /n Orthopedic physiotherapy can be used to treat a wide range of conditions, including sports injuries, joint pain, arthritis, and back pain. Physiotherapists use a variety of techniques, such as exercise, manual therapy, and modalities, to help patients recover from injury and improve their overall physical function.
-       
-       /n One of the main benefits of orthopedic physiotherapy is that it is non-invasive and does not involve the use of drugs or surgery. This makes it a safe and effective alternative to more invasive treatments and can help patients avoid the risks and side effects associated with these treatments.
-       
-      /n Orthopedic physiotherapy can be performed in a variety of settings, including hospitals, clinics, and rehabilitation centers. Physiotherapists work closely with patients to develop individualized treatment plans based on their specific needs and goals. This may involve a combination of exercises, manual therapy, and modalities, such as ultrasound, heat therapy, and electrical stimulation.
-       
-       /n In addition to helping patients recover from injury, orthopedic physiotherapy can also help prevent future injuries by promoting healthy posture, flexibility, and strength. This can be particularly beneficial for athletes and other individuals who are at risk of injury due to physical activity.
-       
-       /n In conclusion, orthopedic physiotherapy is an effective and non-invasive form of treatment for musculoskeletal injuries and conditions. It can help patients recover from injury, reduce pain, improve mobility, and prevent future injuries. If you are experiencing pain or injury, consider seeking the help of an orthopedic physiotherapist.`
+    desc: `Orthopedic physiotherapy is a type of physical therapy that is focused on treating injuries and conditions related to the muscles and bones. Its primary goal is to aid patients in recovering from injuries, reducing pain and swelling, improving their mobility, and preventing further injuries.
+
+    /n Orthopedic physiotherapy can be used to treat a broad range of conditions such as arthritis, joint pain, sports injuries, and back pain. Various techniques such as exercise, manual therapy, and modalities, such as ultrasound, heat therapy, and electrical stimulation are used by physiotherapists to help patients recover from injuries and improve their physical function.
+    
+    /n One of the significant advantages of orthopedic physiotherapy is that it is a non-invasive and drug-free form of treatment, making it a safe and effective alternative to more invasive procedures. Patients can avoid the risks and side effects associated with these treatments.
+    
+    /n Orthopedic physiotherapy can be provided in hospitals, clinics, and rehabilitation centers. The physiotherapists work with patients closely to develop personalized treatment plans based on their specific needs and goals. Treatment plans may include a combination of exercises, manual therapy, and modalities, depending on the patient's condition.
+    
+    /n Apart from helping patients recover from injuries, orthopedic physiotherapy can also help prevent future injuries by promoting healthy posture, flexibility, and strength. This makes it especially beneficial for athletes and individuals who are at risk of injury due to physical activity.
+    
+    /n Overall, orthopedic physiotherapy is a highly effective and safe form of treatment for musculoskeletal injuries and conditions. If you are experiencing any pain or injury, you may want to consider seeking the help of an orthopedic physiotherapist.`
   },
   {
     id: 2,
     slug: "hydrotherapy",
-    desc: `Hydrotherapy is a type of physical therapy that involves the use of water to help heal and rehabilitate the body. It is a non-invasive and low-impact form of therapy that can be used to treat a wide range of conditions, including musculoskeletal injuries, joint pain, arthritis, and back pain.
+    desc: `Hydrotherapy is a form of physical therapy that uses water to help people heal and recover from injuries. It is a gentle and non-invasive therapy that can be used to treat a variety of conditions such as joint pain, arthritis, back pain, and musculoskeletal injuries.
 
-  /n Hydrotherapy uses the properties of water, such as buoyancy, resistance, and temperature, to help reduce pain and swelling, improve mobility, and promote healing. For example, buoyancy in water can help reduce stress on the joints, making it easier for patients to perform exercises and movements. Resistance in water can be used to help strengthen muscles and improve joint stability. And, changes in water temperature can be used to help manage pain and promote healing.
-  
-  /n Hydrotherapy can be performed in a variety of settings, including swimming pools, hydrotherapy pools, and hot tubs. It is typically performed under the supervision of a physical therapist, who will design an individualized treatment plan based on the patient's specific needs and goals. This may involve a combination of exercises, stretches, and movements performed in the water.
-  
-  /n In addition to helping patients recover from injury, hydrotherapy can also help improve overall physical function and prevent future injuries. For example, it can help improve flexibility, strength, and balance, and promote healthy posture and movement patterns. It can also be used to help manage chronic conditions, such as arthritis, by reducing pain and improving joint mobility.
-  
-  /n Hydrotherapy is a safe and effective form of therapy that can be used to help heal and rehabilitate the body. If you are experiencing pain or injury, consider seeking the help of a physical therapist to see if hydrotherapy is right for you.`,
+    /n The unique properties of water, such as buoyancy, resistance, and temperature, are used in hydrotherapy to help reduce pain, swelling, and improve mobility. For example, the buoyancy of water helps reduce the strain on joints, making it easier for people to move and perform exercises. Resistance in water can help strengthen muscles and promote joint stability. And changes in water temperature can help manage pain and promote healing.
+    
+    /n Hydrotherapy can be performed in swimming pools, hot tubs, or hydrotherapy pools under the guidance of a physical therapist. The therapist will develop a personalized treatment plan based on the individual's needs and goals, which may include a range of exercises, stretches, and movements performed in the water.
+    
+    /n Hydrotherapy is not just useful for people recovering from an injury, but can also help improve overall physical function and prevent future injuries. It can help increase flexibility, strength, balance, and promote healthy posture and movement patterns. For people with chronic conditions like arthritis, hydrotherapy can help reduce pain and improve joint mobility.
+    
+    /n Hydrotherapy is a safe and effective form of physical therapy that can help people recover from injuries and improve their overall physical function. If you are experiencing pain or an injury, it may be worth considering hydrotherapy as a potential treatment option. A physical therapist can help determine if it is the right therapy for you.
+    
+    
+    
+    
+    `,
   },
   {
     id: 3,
     slug: "neuro-physiotherapy",
-    desc: `Neuro physiotherapy is a type of physical therapy that specializes in the treatment of neurological conditions and injuries. The goal of neuro physiotherapy is to help patients improve their physical function, reduce pain and discomfort, and improve quality of life.
+    desc: `Neuro physiotherapy is a type of physical therapy that specializes in the treatment of neurological conditions and injuries. This therapy aims to help patients recover from injury, reduce pain, and improve their overall physical function, ultimately improving their quality of life. Neuro physiotherapy can be used to treat a range of conditions including spinal cord injuries, traumatic brain injuries, stroke, multiple sclerosis, and Parkinson's disease.
 
-    /n Neuro physiotherapy can be used to treat a wide range of conditions, including spinal cord injuries, traumatic brain injuries, stroke, multiple sclerosis, and Parkinson's disease. Physiotherapists use a variety of techniques, such as exercise, manual therapy, and modalities, to help patients recover from injury and improve their overall physical function.
+    /n The techniques used in neuro physiotherapy include exercises, manual therapy, and modalities like electrical stimulation, heat therapy, and ultrasound. The physiotherapist works closely with the patient to develop an individualized treatment plan based on their specific needs and goals. Neuro physiotherapy is non-invasive, which means that it does not involve the use of drugs or surgery. This makes it a safe and effective alternative to other more invasive treatments.
     
-    /n One of the main benefits of neuro physiotherapy is that it is non-invasive and does not involve the use of drugs or surgery. This makes it a safe and effective alternative to more invasive treatments and can help patients avoid the risks and side effects associated with these treatments.
+    /n Neuro physiotherapy can be performed in various settings such as hospitals, clinics, and rehabilitation centers. Patients can benefit from this therapy by improving their overall physical function and reducing the risk of future injuries. It can help to improve balance, coordination, mobility, and promote healthy posture and movement patterns. Furthermore, it can be used to manage chronic conditions such as Parkinson's disease by reducing symptoms and improving physical function.
     
-    /n Neuro physiotherapy can be performed in a variety of settings, including hospitals, clinics, and rehabilitation centers. Physiotherapists work closely with patients to develop individualized treatment plans based on their specific needs and goals. This may involve a combination of exercises, manual therapy, and modalities, such as electrical stimulation, heat therapy, and ultrasound.
-    
-    /n In addition to helping patients recover from injury, neuro physiotherapy can also help improve overall physical function and prevent future injuries. For example, it can help improve balance, coordination, and mobility, and promote healthy posture and movement patterns. It can also be used to help manage chronic conditions, such as Parkinson's disease, by reducing symptoms and improving physical function.
-    
-    /n In conclusion, neuro physiotherapy is an effective and non-invasive form of treatment for neurological conditions and injuries. It can help patients improve their physical function, reduce pain and discomfort, and improve quality of life. If you are experiencing symptoms of a neurological condition or injury, consider seeking the help of a neuro physiotherapist.`,
+    /n In conclusion, neuro physiotherapy is an effective way to treat neurological conditions and injuries. If you are experiencing any symptoms of a neurological condition or injury, you should consider seeking the help of a neuro physiotherapist.`,
   },
   {
     id: 4,
     slug: "sports-physiotherapy-&-fitness",
-    desc: `Sport physiotherapy and fitness is a specialized field of physical therapy that focuses on the treatment and rehabilitation of athletic injuries. The goal of sport physiotherapy is to help athletes recover from injury, improve their physical function, and prevent future injuries.
+    desc: `Sport physiotherapy and fitness is a type of physical therapy that focuses on treating athletic injuries. The aim is to help athletes recover from injury, improve their physical function, and prevent future injuries. This specialized field can help with a range of athletic injuries like sprains, strains, fractures, and overuse injuries. The physiotherapists in this field use various techniques like exercise, manual therapy, and modalities such as electrical stimulation, heat therapy, and ultrasound to design personalized treatment plans for each athlete. 
 
-    /n Sport physiotherapy can be used to treat a wide range of athletic injuries, including sprains, strains, fractures, and overuse injuries. Physiotherapists use a variety of techniques, such as exercise, manual therapy, and modalities, to help athletes recover from injury and improve their overall physical function.
+    /n The main benefit of sport physiotherapy is that it is tailored to meet the unique demands of athletic performance. Physiotherapists are knowledgeable in the demands of athletic activities and can use this knowledge to design treatment plans that meet the specific needs of each athlete. They work in various settings like sports clinics, rehabilitation centers, and fitness facilities. 
     
-    /n One of the main benefits of sport physiotherapy is that it is designed specifically for athletes. Physiotherapists understand the unique demands of athletic performance and use this knowledge to design individualized treatment plans that meet the specific needs of each athlete.
+    /n Apart from treating injuries, sport physiotherapy can also help to improve overall physical function and prevent future injuries. It can help athletes improve their strength, flexibility, and endurance, as well as promote healthy posture and movement patterns. Additionally, it can be used to help athletes optimize their performance and reach their full potential. 
     
-    /n Sport physiotherapy can be performed in a variety of settings, including sports clinics, rehabilitation centers, and fitness facilities. Physiotherapists work closely with athletes to develop individualized treatment plans based on their specific needs and goals. This may involve a combination of exercises, manual therapy, and modalities, such as electrical stimulation, heat therapy, and ultrasound.
-    
-    /n In addition to helping athletes recover from injury, sport physiotherapy can also help improve overall physical function and prevent future injuries. For example, it can help improve strength, flexibility, and endurance, and promote healthy posture and movement patterns. It can also be used to help athletes optimize their performance and reach their full potential.
-    
-    /n In conclusion, sport physiotherapy and fitness is an effective and specialized form of physical therapy that is designed specifically for athletes. It can help athletes recover from injury, improve their physical function, and prevent future injuries. If you are an athlete and experiencing symptoms of an injury, consider seeking the help of a sport physiotherapist.`,
+    /n In conclusion, sport physiotherapy and fitness is a specialized form of physical therapy that is designed specifically for athletes. It is effective in treating athletic injuries, improving physical function, and preventing future injuries. If you are an athlete and experiencing symptoms of an injury, consider seeking the help of a sport physiotherapist.`,
   },
   {
     id:5,
     slug:"physiotherapy-in-hemophilia",
     desc:`
-    Hemophilia is a genetic disorder that affects the blood's ability to clot, leading to excessive bleeding and bruising. Hemophilia patients often require physiotherapy as part of their treatment plan.
+    Hemophilia is a genetic disorder that makes it difficult for the blood to clot, which can lead to excessive bleeding and bruising. Hemophilia patients often require physiotherapy as part of their treatment plan.
 
-/n Physiotherapy in hemophilia is essential for maintaining joint health and preventing joint damage. Hemophilia patients are at a higher risk of developing joint problems due to the repeated bleeding into the joints. Physiotherapy can help reduce pain, swelling, and stiffness in the joints, as well as improve joint mobility and strength.
+/n Physiotherapy is crucial in managing joint health and preventing joint damage in hemophilia patients. Hemophilia patients are at a higher risk of developing joint problems due to bleeding into the joints. Physiotherapy can help reduce pain, swelling, and stiffness in the joints, as well as improve joint mobility and strength.
 
-/n Physiotherapy for hemophilia patients typically involves exercises and stretches that focus on improving joint range of motion, strength, and flexibility. The physiotherapist will create an individualized exercise program based on the patient's specific needs and goals.
+/n Physiotherapy for hemophilia patients usually involves exercises and stretches that focus on enhancing joint range of motion, strength, and flexibility. The physiotherapist creates an individualized exercise program based on the patient's specific needs and goals.
 
 /n In addition to exercises, hemophilia patients may also benefit from manual therapies such as massage, joint mobilization, and soft tissue techniques. These therapies can help improve blood flow to the affected area, reduce pain and inflammation, and promote healing.
 
-/n Overall, physiotherapy is a vital component of hemophilia treatment, helping patients manage their symptoms and maintain their quality of life. By working closely with a physiotherapist, hemophilia patients can improve their joint health, reduce their risk of complications, and lead a more active and fulfilling life.
+/n Overall, physiotherapy plays a vital role in the treatment of hemophilia, enabling patients to manage their symptoms and improve their quality of life. By working with a physiotherapist, hemophilia patients can enhance their joint health, reduce the risk of complications, and lead a more active and fulfilling life.
 `
   }
 ];
@@ -106,7 +104,7 @@ const Services = () => {
                       
                     );
                   })}
-                  <div className="max-w-xs mt-8">
+                  <div className="max-w-xs mt-8 text-lg">
                   <BookAppointement title="Book An Appointment"/></div>
                 </div>
               </div> 

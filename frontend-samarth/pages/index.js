@@ -7,7 +7,6 @@ import BlogsArticles from '@/components/blog/BlogsArticles'
 import OurTeam from '@/components/team/OurTeam'
 
 import sanityClient from "../sanity/client"
-import HeroBanner from '@/components/herosection/HeroBanner'
 import HeroSlider from '@/components/herosection/HeroSlider'
 import AppointmentBanner from '@/components/banners/AppointmentBanner'
 

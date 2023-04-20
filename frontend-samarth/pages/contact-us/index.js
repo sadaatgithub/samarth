@@ -79,8 +79,8 @@ const ContactUs = () => {
           <div className="flex gap-4  flex-col z-[1] mt-4">
             <address className="flex">
               <TfiLocationPin className="text-xl" />
-              123, Swawalambi Nagar, Abc Road, Nagpur <br />
-              Dist Nagpur 440022 MS
+              Plot No 114, Deendayal Nagar, Ram Mandir Marg, Swavalambi Nagar, Nagpur <br/>
+        Maharashtra 440022
             </address>
           </div>
         </div>
@@ -150,11 +150,11 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="mt-2 rounded-sm overflow-hidden z-[1] w-full">
-       
+        
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.11407699304!2d79.04566961424669!3d21.108017690445298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf92282048db%3A0x261b7b7572f2e33c!2sSamarth%20Physiotherapy%20%26%20Rehab%20Care%20Unit!5e0!3m2!1sen!2sin!4v1678444973952!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d266.9670767211117!2d79.04793021064098!3d21.10803000814813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf92282048db%3A0x261b7b7572f2e33c!2sSamarth%20Physiotherapy%20%26%20Rehab%20Care%20Unit!5e0!3m2!1sen!2sin!4v1680953746321!5m2!1sen!2sin"
           width="1440"
-          height="450"
+          height="600"
           style={{border:0}}
           allowfullscreen=""
           loading="lazy"

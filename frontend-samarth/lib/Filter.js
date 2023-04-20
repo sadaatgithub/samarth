@@ -5,8 +5,8 @@ const Filter = ({categories,setCategory,activeCategory}) => {
 
   return (
     <div className="flex">
-        <button onClick={()=> setCategory("All")} className={`${activeCategory == "All"? "active":"border-transparent" } px-4 py-2 border `}>View All</button>
-    {category.map((category) => (<button key={category} onClick={()=> setCategory(category)} className={`${activeCategory===category? "active":"border-transparent"} px-4 py-2 border `}>{category}</button>))}
+        <button onClick={()=> setCategory("All")} className={`${activeCategory == "All"? "active":"border-transparent" } px-2 py-2  `}>View All</button>
+    {category.map((category) => (<button key={category} onClick={()=> setCategory(category)} className={`${activeCategory===category? "active":"border-transparent"} px-4 py-2 `}>{category}</button>))}
             </div>
   )
 }

@@ -97,7 +97,7 @@ const Introduction = () => {
         />
         {/*  */}
         {/* <div className="bg-[url('../public/polka-dots.svg')]  absolute w-16 h-16 -left-6 -bottom-5 z-[-1] "></div> */}
-        <div className="bg-[url('../public/polka-dots.svg')] absolute w-full -bottom-14 lg:-right-14 -top-14 z-[-1]"></div>
+        <div className="bg-[url('../public/polka-dots.svg')] absolute w-full -bottom-5 -top-5 lg:-bottom-14 lg:-right-14 lg:-top-14 z-[-1]"></div>
       </m.div>
     </m.div>
     </Container>

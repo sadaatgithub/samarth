@@ -58,14 +58,14 @@ const blogSearchHandler = (e) =>{
           <h1 className="text-2xl sm:text-3xl lg:text-5xl text-gray-800 font-semibold">Browse our latest Blogs and articles</h1>
         </div>
         <div className="mt-20">
-          <div className="flex sm:flex-row flex-col md:gap-2 justify-between sticky top-[70px] z-[10] bg-white/90 backdrop-blur-sm">
+          <div className="flex sm:flex-row flex-col md:gap-2 justify-between sticky top-[70px] z-[20] bg-white ">
            <Filter categories={categories} setCategory={setCategory} activeCategory={activeCategory}/>
-            <div className="flex items-center text-gray-500  rounded-md border overflow-hidden">
-              <div className="w-full h-full grid place-items-center bg-white">
-              <FaSearch className="w-8  "/>
+            <div className="flex items-center text-gray-500 border overflow-hidden rounded-sm">
+              <div className="h-full grid place-items-center w-24 bg-gray-200 p-3 border-r">
+              <FaSearch className=""/>
               </div>
             
-            <input type="text" name="" id="" placeholder="Search" className="border p-2 focus:outline-none border-none" onChange={blogSearchHandler}/>
+            <input type="text" name="" id="" placeholder="Search" className="border p-2 focus:outline-none border-none w-full" onChange={blogSearchHandler}/>
 
             </div>
           </div>

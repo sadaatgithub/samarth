@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutImage from "../../public/slide1.jpg"
+import aboutImage from "../../public/samarth_physio_pic.jpg"
 import { motion as m } from "framer-motion";
 import { fadeIn ,textContainer,textVariant} from "../../lib/Animation";
 
@@ -17,7 +17,7 @@ const About = () => {
       <m.div variants={textContainer} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}} className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center text-left mt-16">
       <div className="[&>p]:text-lg">
         <m.h3 variants={textVariant(0.1)} className="text-2xl font-bold  text-slate-600">Our History</m.h3>
-        <m.p variants={textVariant(0.2)} className="text-gray-500 text-lg   mb-4 mt-6">XYZ Physiotherapy was founded in 2010 by Dr. Jane Smith, a highly experienced physiotherapist with over 20 years of experience in the field. Dr. Smith saw the need for a physiotherapy practice that provided personalized care in a comfortable and supportive environment, and she set out to create a place where patients could receive the highest quality of care.</m.p>
+        <m.p variants={textVariant(0.2)} className="text-gray-500 text-lg   mb-4 mt-6">Samarth Physiotherapy and Rehab Clinic was founded in 2010 by Dr. Abhinav Fadnis, a highly experienced physiotherapist with over 20 years of experience in the field. Dr. Fadnis saw the need for a physiotherapy practice that provided personalized care in a comfortable and supportive environment, and she set out to create a place where patients could receive the highest quality of care.</m.p>
         <m.p variants={textVariant(0.3)} className="text-gray-500 text-lg">Since our founding, we have helped thousands of patients overcome injuries and conditions that limit their mobility and quality of life. Our team of skilled therapists is committed to providing personalized care to each patient, using the latest techniques and technology to help them achieve their goals.</m.p>
       </div>
       <m.div variants={fadeIn('up','tween',0.2,0.5)}>

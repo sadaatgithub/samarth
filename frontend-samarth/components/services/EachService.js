@@ -26,7 +26,7 @@ const EachService = ({service,idx}) => {
     <div className="px-4 flex flex-col">
       <div className="flex flex-col gap-y-4  mt-8">
         <h4 className="text-2xl text-gray-700 font-semibold">{service.name}</h4>
-        <p className="text-gray-500">{service.content}</p>
+        <p className="text-gray-400">{service.content}</p>
       </div>
       <button className="self-end mr-4 mb-4 mt-6 text-teal-400  font-semibold ">
         <Link

@@ -73,7 +73,7 @@ const Testimonials = () => {
             whileInView="show"
             viewport={{ once: true, amount: 0.5 }}  className="">
       <Swiper  
-        slidesPerView={3}
+        slidesPerView={2}
         spaceBetween={20}
         slidesPerGroup={2}
         loop={true}
@@ -89,19 +89,8 @@ const Testimonials = () => {
         breakpoints={{
           240:{
             slidesPerView: 1,
-            // spaceBetween: 20,
+            spaceBetween: 20,
           slidesPerGroup:1,
-          },
-          420:{
-            slidesPerView: 1,
-            spaceBetween: 10,
-          slidesPerGroup:1,
-          },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-          slidesPerGroup:1,
-
           },
           768: {
             slidesPerView: 2,
@@ -109,22 +98,16 @@ const Testimonials = () => {
           slidesPerGroup:2,
 
           },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          slidesPerGroup:3,
-
-          },
         }}
         navigation={false}
         modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper  w-full h-ful relative   mt-8 md:mt-20 gap-8  group  grid grid-cols-1 group"
+        className="mySwiper  w-full h-full relative   mt-8 md:mt-20 gap-8  group  grid grid-cols-1"
       >
         {testimonial.map((data,idx) => {
           return (
             <SwiperSlide 
               key={data.id}
-              className="w-full flex flex-col p-8  rounded-md shadow-sm bg-white"
+              className="w-full flex flex-col p-8  rounded-md bg-white border border-teal-100"
             >
              
                 <div className="flex flex-col   w-full gap-8 ">
@@ -148,7 +131,7 @@ const Testimonials = () => {
                   <p className="font-medium text-gray-900">
                      {data.patient}
                   </p>
-                  <p className="text-gray-500">
+                  <p className="text-gray-400">
                     {data.designation}
                   </p>
                   </div>

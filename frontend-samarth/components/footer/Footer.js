@@ -18,7 +18,7 @@ const Footer = () => {
         </h1>
         <p className="text-gray-300">We here at Samarth – The best Physiotherapy in Nagpur will help you take those little steps by making you go through a detailed examination conducted by our Certified Healthcare Professionals. </p>
         <div className="flex gap-4 text-white/50 [&>svg:hover]:text-white [&>svg]:cursor-pointer">
-            <FaInstagram/> <FaYoutube/> <FaTwitter/>
+            <a href="https://instagram.com/samarthphysioclinic" target="_blank"><FaInstagram/></a> <FaYoutube/> <FaTwitter/>
         </div>
     </div>
     <div className="md:w-[60%] grid sm:grid-cols-3">
@@ -36,6 +36,7 @@ const Footer = () => {
             
             </ul>
         </div>
+        {/*     */}
         <div className="flex flex-col text-gray-200 gap-4 z-10">
             <h5 className="font-semibold">Links</h5>
             <ul className="text-gray-400 cursor-pointer [&>li:hover]:underline text-sm [&>li:hover]:text-gray-200 [&>li]:pb-2">
@@ -49,8 +50,8 @@ const Footer = () => {
         <div className="flex flex-col text-gray-200 z-10">
         <h5 className="font-semibold">Address :</h5>
         <address className="text-sm font-normal mt-2">
-            123, Swawalambi Nagar, Abc Road, Nagpur <br/>
-            Dist Nagpur 440022 MS
+        Plot No 114, Deendayal Nagar, Ram Mandir Marg, Swavalambi Nagar, Nagpur <br/>
+        Maharashtra 440022
         </address>
         <div className="mt-6">
             <p className="font-semibold">Contact :</p>
