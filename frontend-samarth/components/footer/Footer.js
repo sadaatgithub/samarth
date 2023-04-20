@@ -18,7 +18,7 @@ const Footer = () => {
         </h1>
         <p className="text-gray-300">We here at Samarth – The best Physiotherapy in Nagpur will help you take those little steps by making you go through a detailed examination conducted by our Certified Healthcare Professionals. </p>
         <div className="flex gap-4 text-white/50 [&>svg:hover]:text-white [&>svg]:cursor-pointer">
-            <a href="https://instagram.com/samarthphysioclinic" target="_blank"><FaInstagram/></a> <FaYoutube/> <FaTwitter/>
+            <a href="https://instagram.com/samarthphysioclinic" target="_blank" rel="noreferrer"><FaInstagram/></a> <FaYoutube/> <FaTwitter/>
         </div>
     </div>
     <div className="md:w-[60%] grid sm:grid-cols-3">
