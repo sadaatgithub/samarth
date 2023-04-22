@@ -6,6 +6,7 @@ import { ImSpinner8 } from "react-icons/im";
 import { submitContactForm } from "@/lib/submitContactForm";
 
 
+
 const initialFormValue = {
   name: "",
   email: "",
@@ -136,7 +137,7 @@ const FreeConsultation = ({ setOpen }) => {
                 />
                 <button
                   type="submit"
-                  className="px-3 py-2 cursor-pointer border shadow-md mt-4 w-20 h-10 bg-teal-500 rounded-sm text-white flex items-center justify-center"
+                  className="px-3 py-2 cursor-pointer border border-teal-500 shadow-md mt-4 w-20 h-10 bg-teal-500 rounded-sm text-white flex items-center justify-center"
                 >
                   {isLoading ? (
                     <ImSpinner8 className="animate-spin self-center" />

@@ -41,11 +41,11 @@ const Navlink = ({ visible }) => {
 
  
   return (
-    <nav className="flex flex-grow  w-full lg:px-14  text-gray-600 font-medium">
+    <nav className="flex flex-grow  w-full lg:px-14 md:px-6 text-gray-600 font-medium">
       <ul
         className={` ${
           visible ? "justify-end" : ""
-        }  hidden w-full md:flex gap-8 [&>li]:cursor-pointer items-center navlink  [&>li]:relative [&>li]:py-3`}
+        }  hidden w-full md:flex gap-6 lg:gap-8 [&>li]:cursor-pointer items-center navlink  [&>li]:relative [&>li]:py-3`}
       >
         {menuLink.map((link) => {
           const isSublink = typeof link.sublink === "object";

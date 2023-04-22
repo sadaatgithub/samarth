@@ -104,7 +104,7 @@ const Services = () => {
                       
                     );
                   })}
-                  <div className="max-w-xs mt-8 text-lg">
+                  <div className="lg:max-w-xs mt-8 text-lg">
                   <BookAppointement title="Book An Appointment"/></div>
                 </div>
               </div> 
@@ -114,10 +114,10 @@ const Services = () => {
 
 
         
-        <div className="flex flex-col p-6  md:w-1/4 left-0 relative grow">
+        <div className="flex flex-col lg:p-6 p-2  md:min-w-[250px] left-0 relative grow">
           <div className="sticky top-14 ">
-          <h4 className="text-xl text-gray-600 font-semibold mt-10">Other Services</h4>
-          <ul className=" flex flex-col gap-2 text-slate-500 mt-4 list-disc list-inside">
+          <h4 className="text-xl text-gray-600 font-medium mt-10">Other Services</h4>
+          <ul className=" flex flex-col gap-2 text-gray-400 mt-4 list-disc list-inside">
             {eachService.filter(service => service.slug != query.slug).map(service =>{
               const title = service.slug.split("-").join(" ")
               const capitalTitle = title.charAt(0).toUpperCase() + title.slice(1)

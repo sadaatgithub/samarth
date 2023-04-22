@@ -56,7 +56,7 @@ const Navbar = () => {
       </div>
 
 
-      <div className={` md:py-2 logo px-6  lg:px-14 grid md:grid-cols-12 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2 relative`}>
+      <div className={`  md:py-2 logo px-6  lg:px-14 grid md:grid-cols-12 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2 relative`}>
           <Logo/>
        <FaBars className="absolute right-3 text-[#485170] z-[9] md:hidden w-8 h-8 p-1 cursor-pointer bg-white  rounded-sm" onClick={()=> setBurgerMenuState(!burgerMenuState)}/>
           <div className="md:col-span-7 lg:col-span-8 w-full hidden md:flex  flex-wrap justify-center md:justify-end font-medium text-slate-700 text-base md:text-lg gap-x-6">
@@ -72,7 +72,8 @@ const Navbar = () => {
                     </div>
                     <a href="mailto:samarthphysioclinic@gmail.com" className="text-gray-500 hover:text-blue-500 duration-300">samarthphysioclinic@gmail.com</a>
                 </div>
-                <BookAppointement title="Book Now"/>
+                <div className="hidden lg:block">
+                <BookAppointement title="Book Now"/></div>
           </div>
         </div>
       <Navlink animateNav={animateNav}/>

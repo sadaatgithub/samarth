@@ -35,7 +35,7 @@ md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:text-slate-800 [&>di
           <BiClinic className="bg-rose-500 rounded-full p-2 font-thin shadow-rose-100 shadow-lg group-hover:-translate-y-2 transition-all duration-500 "/>
           <h3>Trusted Clinic</h3>
           <p className="">
-            Samarth Physio is a trusted clinic with a team of experienced
+            Samartha Physio is a trusted clinic with a team of experienced
             physiotherapists dedicated to providing personalized care and
             effective solutions for your physical health and wellness needs.
           </p>
@@ -44,7 +44,7 @@ md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:text-slate-800 [&>di
           <TbPhysotherapist className="bg-sky-900 rounded-full p-2 font-thin shadow-sky-100 shadow-lg group-hover:-translate-y-2 transition-all duration-500 "/>
           <h3>Expert Therapist</h3>
           <p className="">
-            At Samarth Physio, our team of expert therapists are highly trained
+            At Samartha Physio, our team of expert therapists are highly trained
             and specialized in various areas of physiotherapy, ensuring you
             receive the best possible care for your unique needs.
           </p>

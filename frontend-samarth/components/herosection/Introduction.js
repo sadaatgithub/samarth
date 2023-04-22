@@ -16,15 +16,15 @@ const Introduction = () => {
     <Container bg="">
     <m.div  variants={textContainer} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}}
       className="lg:mt-48 mt-8 intro-div  bg-white 
-       min-h-screen flex-col-reverse md:flex-row  flex justify-center items-center gap-16 md:gap-20 "
+       min-h-screen flex-col-reverse lg:flex-row  flex justify-center items-center gap-y-16  lg:gap-20 "
     >
        
      <div 
-       className={` flex flex-col relative w-full md:w-7/12 justify-center text-left  md:items-start `}>
+       className={` flex flex-col relative w-full lg:w-7/12 justify-center text-left  md:items-start `}>
         <m.p variants={textVariant(0)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}} className={` font-semibold text-rose-500`}>Welcome to</m.p>
         <m.h2 variants={textVariant(0.1)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}} className={` text-3xl md:text-5xl font-bold text-sky-900 mt-4`}>
-          Samarth Physiotherapy & 
-          Rehab Care Unit
+          Samartha Physiotherapy & 
+          Rehab Clinic
         </m.h2>
         <m.div variants={textVariant(0.2)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}} className="w-2/3  justify-center">
         <Underline/>
@@ -87,7 +87,7 @@ const Introduction = () => {
        
       </div> 
 
-      <m.div variants={fadeIn('up','tween',0.2,0.5)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}} className={` md:w-5/12 w-full grow h-[320px]   md:h-[420px] shadow-sm  rounded-tl-full px-2 md:px-0 relative z-[2]`}>
+      <m.div variants={fadeIn('up','tween',0.2,0.5)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}} className={` lg:w-5/12 w-full grow h-[320px]   md:h-[420px] shadow-sm  rounded-tl-full px-2 md:px-0 relative z-[2]`}>
         <Image
           src={heroImage}
           width={640}
