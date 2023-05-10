@@ -20,7 +20,7 @@ export const menuLink = [
   {
     id: 3,
     title: "Services",
-    href: "",
+    // href: "",
     sublink:link,
   },
   {
@@ -49,10 +49,10 @@ const Navlink = ({ visible }) => {
       >
         {menuLink.map((link) => {
           const isSublink = typeof link.sublink === "object";
-          const isLinkActive = link.href === pathname
+          const isLinkActive = link.href === pathname 
 
           return isSublink ? (
-            <li  className={`${isLinkActive? "active":""} group flex gap-2`} key={link.id}>
+            <li  className={` group flex gap-2`} key={link.id}>
               {link.title} <DesktopSubmenus sublink={link.sublink} />
               <AiOutlineCaretDown className="text-sm self-center" />
             </li>

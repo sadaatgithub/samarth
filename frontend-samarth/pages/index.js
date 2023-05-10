@@ -34,7 +34,7 @@ export default function Home({post}) {
 }
 export async function getStaticProps() {
   const post = await sanityClient.fetch(`*[_type=="post" && defined(slug.current) && !(_id in path("drafts.**"))] 
-  | order(_createdAt desc) {_id,title,description,mainImage,_createdAt, "slug":slug.current}[0...6]`)
+  | order(_createdAt desc) {_id,title,description,mainImage,_createdAt,"categories": categories[]->title, "slug":slug.current}[0...6]`)
 
   // console.log(services)
   return {

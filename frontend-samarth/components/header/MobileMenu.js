@@ -8,7 +8,7 @@ import {
   FaTimes,
   FaTwitter,
 } from "react-icons/fa";
-
+import {motion} from "framer-motion"
 
 const MobileMenu = ({ setBurgerMenu, menuState }) => {
   const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(false);
@@ -16,21 +16,19 @@ const MobileMenu = ({ setBurgerMenu, menuState }) => {
   return (
 
     // 
-      <div
-        className="fixed inset-0 h-full flex  items-center z-[110]  backdrop-blur-sm
-        bg-black/70"
+      <motion.div initial={{opacity:0,x:"-100%"}} animate={{opacity:1,x:0}} exit={{opacity:0,x:"-100%"}} transition={{duration:0.2}} 
+        className="fixed inset-0 h-full flex  items-center z-[150]  backdrop-blur-sm
+        "
       >
 
         <div 
-          className={`${
-            menuState ? "animate-slideInLeft" : "-translate-x-full "
-          } h-full bg-teal-700/80 w-5/6 flex flex-col justify-between`}
+          className={` h-full bg-teal-600/90 w-full sm:w-5/6 flex flex-col justify-between relative`}
         >
           <FaTimes
-            className="absolute right-1 top-1 md:hidden w-8 h-8 p-1 cursor-pointer text-white"
+            className="absolute right-3 top-3 md:hidden w-8 h-8 p-1 cursor-pointer text-white"
             onClick={() => setBurgerMenu(false)}
           />
-          <ul className={`flex flex-col gap-6 mt-[30%]  text-white transition-all duration-500  text-xl focus:bg-none   [&>li]:pl-8`}>
+          <ul className={`flex flex-col gap-4 mt-[20%] text-white transition-all duration-500  text-xl focus:bg-none   [&>li]:pl-8`}>
             {menuLink.map((menulink) => {
               const isSublink = typeof menulink.sublink === "object";
 
@@ -75,13 +73,16 @@ const MobileMenu = ({ setBurgerMenu, menuState }) => {
               );
             })}
           </ul>
-          <div className="mt-auto p-6 pl-8 flex gap-4 text-xl text-gray-300">
+          <div className="mt-auto p-6 pl-8 flex flex-col gap-2 text-white ">
+            <p>Follow Us</p>
+            <div className="flex gap-4 text-xl text-gray-300">
             <FaTwitter />
             <FaFacebook />
-            <FaInstagram />
+            <a href="https://instagram.com/samarthphysioclinic" target="_blank" rel="noreferrer"> <FaInstagram /></a>
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
   );
 };
 export default MobileMenu;

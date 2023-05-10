@@ -17,7 +17,7 @@ const HeroBanner = () => {
    
         <div   className="static lg:absolute  -bottom-[250px] left-0 z-[20]  md:flex-row  flex-col px-2  flex w-full [&>div>svg]:text-5xl [&>div]:max-w-xl items-center lg:items-start
 md:[&>div>svg]:text-5xl [&>div]:items-center  [&>div]:p-8 lg:gap-10 [&>div]:text-center [&>div>svg]:text-white [&>div>h3]:text-xl [&>div>h3]:mt-4
-md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:text-slate-800 [&>div>p]:text-gray-500 [&>div>p]:font-normal lg:px-12 [&>div>p]:mt-4 text-justify lg:[&>div]:w-1/3">
+md:[&>div>h3]:text-2xl  [&>div>h3]:font-semibold [&>div>h3]:text-slate-600 [&>div>p]:text-gray-500 [&>div>p]:font-normal lg:px-12 [&>div>p]:mt-4 text-justify lg:[&>div]:w-1/3">
         
         <m.div variants={fadeIn('up','spring',0.2,0.5)} initial="hidden" whileInView="show" viewport={{once:true, amount:0.1}}
         

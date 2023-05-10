@@ -4,6 +4,7 @@ import FormsInput from "../forms/FormsInput";
 import { useState } from "react";
 import { ImSpinner8 } from "react-icons/im";
 import { submitContactForm } from "@/lib/submitContactForm";
+import { motion as m,AnimatePresence } from "framer-motion";
 
 
 
@@ -49,7 +50,8 @@ const FreeConsultation = ({ setOpen }) => {
   };
 
   return (
-      <div initial={{y:"100%"}} animate={{y:"0%"}} className="fixed top-0 w-full h-full flex flex-col  justify-center items-center bg-black/60 z-[1000] py-10">
+    
+      <m.div initial={{opacity:0,y:"-50%"}} animate={{opacity:1,y:0}} exit={{opacity:0,y:"-50%"}} transition={{duration:0.2}} className="fixed top-0 w-full h-full flex flex-col  justify-center items-center bg-black/70 backdrop-blur-sm z-[1000] py-10">
         <FaTimes
           onClick={() => setOpen(false)}
           className="cursor-pointer absolute right-3 top-4 text-white text-3xl"
@@ -63,7 +65,8 @@ const FreeConsultation = ({ setOpen }) => {
             </p>
           </div>
         ) : (
-          <form
+        
+          <form  
             className="relative w-[90%] lg:w-2/5 bg-white px-4 md:px-16 py-10 flex flex-col gap-6 md:gap-6 rounded-md overflow-y-auto"
             onSubmit={submitHandler}
           >
@@ -149,7 +152,8 @@ const FreeConsultation = ({ setOpen }) => {
             </div>
           </form>
         )}
-      </div>
+      </m.div>
+      
   );
 };
 

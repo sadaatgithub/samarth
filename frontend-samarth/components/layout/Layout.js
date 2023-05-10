@@ -5,9 +5,9 @@ export default function Layout({ children }) {
   
   return (
     <>
-    <div className="max-w-[1440px]">
+    <div className="max-w-[1440px] ">
       <Navbar/>
-      <main className="bg-none">{children}</main>
+      <main className="bg-none ">{children}</main>
       <Footer/>
       </div>
     </>

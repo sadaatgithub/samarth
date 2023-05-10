@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FreeConsultation from "../modals/FreeConsultation";
 import Portal from "../portal/Portal";
-
+import { AnimatePresence } from "framer-motion";
 const AppointmentBanner = () => {
   const [open, setOpen] = useState(false);
 
@@ -23,12 +23,13 @@ const AppointmentBanner = () => {
         {/* <div className="w-48 h-48 bg-teal-300/10 absolute right-[50%] -bottom-[30%] rounded-full"></div> */}
     </div>
 
-
-    {open ? (
+<AnimatePresence>
+    {open && 
           <Portal>
             <FreeConsultation setOpen={setOpen} open={open} />
           </Portal>
-        ) : null}
+         }
+        </AnimatePresence>
     </section>
    
   )

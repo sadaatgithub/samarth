@@ -13,8 +13,8 @@ const Footer = () => {
      
     <div className="flex flex-col md:flex-row px-4 md:px-16 lg:gap-x-20 gap-x-10   gap-y-16">
     <div className="md:w-[40%] flex flex-col gap-6 z-10 grow">
-        <h1 className="text-3xl text-gray-200 font-bold flex flex-col ">Samartha
-        <span className="text-gray-300 text-sm font-light">Physiotherapy & Rehab Clinic</span>
+        <h1 className="text-3xl font-bold flex flex-col font-aladin text-teal-400">Samartha
+        <span className="text-gray-400 text-sm font-light font-sourceSansPro">Physiotherapy & Rehab Clinic</span>
         </h1>
         <p className="text-gray-300">We here at Samarth – The best Physiotherapy in Nagpur will help you take those little steps by making you go through a detailed examination conducted by our Certified Healthcare Professionals. </p>
         <div className="flex gap-4 text-white/50 [&>svg:hover]:text-white [&>svg]:cursor-pointer">

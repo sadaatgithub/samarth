@@ -19,7 +19,7 @@ const EachBlog = ({post,w="max-w-lg",idx}) => {
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.2 }} 
-    className={`w-full ${w} rounded-sm border border-transparent  overflow-hidden group hover:border-gray-200`}>
+    className={`w-full ${w} rounded-sm border  overflow-hidden group hover:shadow-2xl hover:shadow-gray-300`}>
     <Link href={`/blog/${post.slug}`} className={``}>
     
     <div className="flex flex-col h-full">
@@ -36,9 +36,9 @@ const EachBlog = ({post,w="max-w-lg",idx}) => {
               </div>
           </div>
           <div className="flex flex-col gap-2 px-2 mt-6">
-            <p className="text-sm font-semibold text-rose-500 flex gap-1">{post.categories?  post.categories?.map(category => <span key={category} className="">{category} &nbsp;</span>) :"Uncategorised" }</p>
+            <p className="text-sm font-semibold text-rose-400 flex gap-1">{post.categories?  post.categories?.map(category => <span key={category} className="">{category} &nbsp;</span>) :"Uncategorised" }</p>
             <h5 className="text-2xl font-semibold text-slate-700 hover:text-teal-500 transition-all duration-300">{post.title}</h5>
-            <p className="text-gray-500">{post.description}</p>
+            <p className="text-gray-500">{post.description.slice(0,100)}...</p>
           </div>  
           <div className="flex gap-4  p-2 mt-auto pt-6">
            

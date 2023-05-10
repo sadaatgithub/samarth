@@ -10,7 +10,9 @@ module.exports = {
     extend: {
       fontFamily:{
         sourceSansPro:['var(--source-sans-pro)', ...fontFamily.sans],
-        raleway:['var(--source-raleway)',...fontFamily.sans]
+        raleway:['var(--source-raleway)', ...fontFamily.sans],
+        aladin:['var(--source-aladin)', ...fontFamily.sans]
+
 
       },
       animation:{

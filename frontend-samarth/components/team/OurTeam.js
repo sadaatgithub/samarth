@@ -54,14 +54,12 @@ const OurTeam = () => {
 
         <div className="flex justify-evenly w-full mt-10 md:mt-20 md:flex-row flex-col gap-16 items-center z-[1]">
           {team.map((member, idx) => (
-            <Link href={`our-team/${member.id}`} key={member.id}>
-              <m.div
-                variants={fadeIn("up", "tween", idx * 0.2, 0.5)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.3 }}
-                className="flex flex-col  gap-4 md:gap-6  w-full "
-              >
+            <m.div className="flex flex-col  gap-4 md:gap-6" key={member.id}  
+            variants={fadeIn("up", "tween", idx * 0.2, 0.5)} initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}>
+            <Link href={`our-team/${member.id}`} >
+              <div className="flex flex-col  gap-4 md:gap-6  w-full">
                 <div className="h-[300px] lg:h-[405px] w-full  overflow-hidden object-cover">
                   <Image
                     src={member.image}
@@ -84,13 +82,15 @@ const OurTeam = () => {
                     <p className="text-gray-500">{member.desc.slice(0, 180)}</p>
                   </div>
                 </div>
-                <div className="flex gap-4 text-2xl text-gray-400 [&>svg]:cursor-pointer  [&>svg]:transition-all [&>svg]:duration-150">
-                  <BsTwitter className="hover:text-sky-400" />
-                  <BsFacebook className="hover:text-blue-600" />
-                  <AiFillInstagram className="hover:text-rose-600" />
-                </div>
-              </m.div>
+               
+              </div>
             </Link>
+             <div className="flex gap-4 text-2xl text-gray-400 [&>svg]:cursor-pointer  [&>svg]:transition-all [&>svg]:duration-150">
+             <BsTwitter className="hover:text-sky-400" />
+             <BsFacebook className="hover:text-blue-600" />
+             <AiFillInstagram className="hover:text-rose-600" />
+           </div>
+           </m.div>
           ))}
         </div>
       </div>

@@ -26,7 +26,7 @@ const About = () => {
     </m.div>
     <m.div variants={textContainer} initial="hidden" whileInView="show" viewport={{once:true, amount:0.3}}  className="mt-12 text-left [&>p]:text-lg">
       <m.h3 variants={textVariant(0.1)} className="text-2xl font-bold text-slate-600">Our Mission</m.h3>
-      <m.p variants={textVariant(0.2)} className="text-gray-500 leading-relaxed mt-6">At XYZ Physiotherapy, our mission is to help our patients regain their strength, mobility, and confidence. We believe that every patient is unique, and we work with them to develop personalized treatment plans that address their specific needs and goals. We strive to provide a comfortable and supportive environment where patients can feel empowered to take an active role in their own recovery.</m.p>
+      <m.p variants={textVariant(0.2)} className="text-gray-500 leading-relaxed mt-6">At Samartha Physio & Rehab Clinic, our mission is to help our patients regain their strength, mobility, and confidence. We believe that every patient is unique, and we work with them to develop personalized treatment plans that address their specific needs and goals. We strive to provide a comfortable and supportive environment where patients can feel empowered to take an active role in their own recovery.</m.p>
       <m.p variants={textVariant(0.3)} className="text-gray-500 leading-relaxed mt-6">We are committed to staying up-to-date with the latest advancements in physiotherapy, and we are dedicated to providing the highest quality of care to each and every patient. Our goal is to help our patients achieve long-lasting results and a better quality of life.</m.p>
     </m.div>
 

@@ -18,13 +18,12 @@ import Container from "../container/Container";
 import Subheading from "../headings/Subheading";
 import { motion as m } from "framer-motion";
 import { fadeIn } from "../../lib/Animation";
-// bg-[url('../public/slide2.jpg')] bg-fixed after:content-[''] after:absolute after:inset-0
-        //  after:bg-gradient-to-r after:from-slate-800/80 after:to-slate-800/80 
+
 const testimonial = [
   {
     id: 1,
-    patient: "John doe",
-    designation: "Cricketer",
+    patient: "Chetan Kale",
+    designation: "Hemophilia",
     desc: `I was skeptical about physiotherapy at first, but after just a few sessions with the team at Samarth Physio, I am completely pain-free and back to my active lifestyle. I can't thank them enough for their expertise and personalized care.`,
     image:Slide1
   },
@@ -44,8 +43,8 @@ const testimonial = [
   },
   {
     id: 4,
-    patient: "Sarah Johnson",
-    designation: "CA",
+    patient: "Saurabh Rathkanthiwar",
+    designation: "CA,Nagpur",
     desc: `I was nervous about undergoing physiotherapy after a recent surgery, but the team at Samarth Physio put me at ease from the moment I walked in the door. Their evidence-based techniques and personalized attention have made all the difference in my recovery.`,
     image:Slide2
   },
@@ -57,7 +56,6 @@ const testimonial = [
     image:Slide1
   },
 ];
-// bgpattern.svg
 
 const Testimonials = () => {
   return ( 

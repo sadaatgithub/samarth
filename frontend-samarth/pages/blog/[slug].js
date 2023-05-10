@@ -69,9 +69,9 @@ const Post = ({ post }) => {
         <SocialShare/>
 
           </div>
-          <div className="flex gap-6 py-12 [&>span]:bg-gray-200 [&>span]:px-2">
+          {/* <div className="flex gap-6 py-12 [&>span]:bg-gray-200 [&>span]:px-2">
           <span>Tag 1</span><span>Tag 2</span><span>Tag 3</span>
-          </div>
+          </div> */}
 
       </div>
     </div>

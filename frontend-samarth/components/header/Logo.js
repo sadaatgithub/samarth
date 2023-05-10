@@ -9,7 +9,7 @@ const Logo = ({visible}) => {
       
     <Image src={logoPng} width={80} height={0} alt="logo" className="translate-y-2 -translate-x-5"/>
 
-     <h1 className="-translate-x-5 flex flex-col text-left text-teal-500 "> Samartha <span className="text-gray-400 text-sm font-medium">Physiotherapy & Rehab Clinic</span></h1></Link></div>
+     <h1 className="-translate-x-5 flex flex-col text-left text-teal-400 font-aladin drop-shadow-sm"> Samartha <span className="text-gray-400 text-sm font-medium font-sourceSansPro">Physiotherapy & Rehab Clinic</span></h1></Link></div>
 
   )
 }

@@ -13,6 +13,7 @@ import { FaBars ,FaTimes} from "react-icons/fa";
 import Portal from "../portal/Portal";
 import MobileMenu from "./MobileMenu";
 import GoToTop from "../buttons/GoToTop";
+import { AnimatePresence } from "framer-motion";
 
 
 
@@ -58,7 +59,7 @@ const Navbar = () => {
 
       <div className={`  md:py-2 logo px-6  lg:px-14 grid md:grid-cols-12 grid-cols-1 grid-flow-row border-b md:flex-row place-items-center gap-y-2 relative`}>
           <Logo/>
-       <FaBars className="absolute right-3 text-[#485170] z-[9] md:hidden w-8 h-8 p-1 cursor-pointer bg-white  rounded-sm" onClick={()=> setBurgerMenuState(!burgerMenuState)}/>
+       <FaBars className="absolute right-3 text-teal-500 z-[9] md:hidden w-8 h-8 p-1 cursor-pointer bg-white  rounded-sm" onClick={()=> setBurgerMenuState(!burgerMenuState)}/>
           <div className="md:col-span-7 lg:col-span-8 w-full hidden md:flex  flex-wrap justify-center md:justify-end font-medium text-slate-700 text-base md:text-lg gap-x-6">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10  p-2 rounded-full bg-slate-100 flex justify-center items-center">
@@ -77,11 +78,14 @@ const Navbar = () => {
           </div>
         </div>
       <Navlink animateNav={animateNav}/>
+      
+      {/* navigation after scrolling some part */}
        <AnimatedNav visible={animateNav} setBurgerMenuState={setBurgerMenuState} burgerMenuState={burgerMenuState}/>
-
-       {burgerMenuState?<Portal>
+<AnimatePresence>
+       {burgerMenuState &&<Portal>
         <MobileMenu setBurgerMenu={setBurgerMenuState} menuState={burgerMenuState}/>
-       </Portal>:null}
+       </Portal>}
+       </AnimatePresence>
        <GoToTop visible={goToTop}/>
     </header>
   )
