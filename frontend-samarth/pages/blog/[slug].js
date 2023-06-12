@@ -3,9 +3,8 @@ import { PortableText } from "@portabletext/react";
 import RichTextComponent from "../../components/richtext/RichTextComponent";
 import urlFor from "@/lib/urlFor";
 import Image from "next/image";
-import { FaFacebook, FaInstagram, FaUserCircle, FaWhatsapp } from "react-icons/fa";
+import {FaUserCircle } from "react-icons/fa";
 import SocialShare from "@/lib/SocialShare";
-import BlogsAndArticles from "../blogs-and-articles";
 
 const Post = ({ post }) => {
   const { mainImage, body, _createdAt } = post;
@@ -51,14 +50,11 @@ const Post = ({ post }) => {
           })}
         </span>
         <div className="flex ml-auto gap-4 [&>svg]:cursor-pointer ">
-          {/* <FaInstagram className="text-rose-500"/>
-          <FaFacebook className="text-blue-700"/>
-          <FaWhatsapp className="text-emerald-500"/> */}
+        
           <SocialShare/>
           </div>
       </div>
 
-      {/* <p>{post.description}</p> */}
       <div className="mt-10 [&>p]:text-slate-500 [&>p]:mb-4">
         <PortableText value={body} components={RichTextComponent} />
       </div>
@@ -69,9 +65,7 @@ const Post = ({ post }) => {
         <SocialShare/>
 
           </div>
-          {/* <div className="flex gap-6 py-12 [&>span]:bg-gray-200 [&>span]:px-2">
-          <span>Tag 1</span><span>Tag 2</span><span>Tag 3</span>
-          </div> */}
+         
 
       </div>
     </div>

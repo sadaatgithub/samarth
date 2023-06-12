@@ -22,7 +22,7 @@ const MobileMenu = ({ setBurgerMenu, menuState }) => {
       >
 
         <div 
-          className={` h-full bg-teal-600/90 w-full sm:w-5/6 flex flex-col justify-between relative`}
+          className={` h-full bg-sky-900/90 w-full sm:w-5/6 flex flex-col justify-between relative`}
         >
           <FaTimes
             className="absolute right-3 top-3 md:hidden w-8 h-8 p-1 cursor-pointer text-white"

@@ -2,10 +2,11 @@
 import { useRouter } from "next/router";
 import { EmailIcon, TwitterIcon ,TwitterShareButton,FacebookShareButton,FacebookIcon} from "react-share"
 
+const basePath = "https://www.samarthaphysio.com/"
 
 const SocialShare = () => {
   const router = useRouter();
-  const curUrl = "http://127.0.0.1:3000/" + router.asPath
+  const curUrl = basePath + router.asPath
 
 
   return (

@@ -3,6 +3,7 @@ import { TfiEmail, TfiLocationPin } from "react-icons/tfi";
 import FormsInput from "@/components/forms/FormsInput";
 import { useState } from "react";
 import PageBanner from "@/components/banners/PageBanner";
+import { submitContactForm } from "@/lib/submitContactForm";
 
 const initialFormValue = {
   name: "",
@@ -85,14 +86,15 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-7/12 lg:w-7/12 bg-white p-4 md:shadow-lg md:rounded-r-lg flex justify-center ">
+        <div className="w-full md:w-7/12 lg:w-7/12 bg-white p-4 md:shadow-lg md:rounded-r-lg flex flex-col gap-8  justify-center ">
+        <h2 className="text-xl md:text-3xl font-semibold text-secondary py-2 text-teal-400 md:pl-8">
+              Enter Details
+            </h2>
           <form
             onSubmit={submitHandler}
             className="w-full  lg:w-10/12 flex md:pl-8 flex-col gap-y-8 py-1 [&>div>label]:text-sm [&>div]:gap-y-1 [&>div>label]:text-gray-600"
           >
-            <h2 className="text-xl md:text-3xl font-semibold text-secondary py-2 text-teal-400">
-              Enter Details
-            </h2>
+            
             <div className="flex flex-col">
               <FormsInput
                 value={values?.name}
@@ -143,7 +145,7 @@ const ContactUs = () => {
                 onClick={() => setState(initialState)}
               />
               <button className="bg-teal-500 px-3 py-2 shadow-md text-white rounded-sm hover:-translate-y-1 transition-all duration-200">
-                {isLoading ? "Sending" : "Submit"}
+                {isLoading ? "Submitting" : "Submit"}
               </button>
             </div>
           </form>

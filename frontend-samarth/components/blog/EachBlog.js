@@ -24,9 +24,9 @@ const EachBlog = ({post,w="max-w-lg",idx}) => {
     
     <div className="flex flex-col h-full">
       <div className="overflow-hidden relative">
-    <Image alt="" width={320} height={240}
+    <Image alt="" width={1440} height={960}
             src={urlFor(post.mainImage)
-              .width(320)
+              .width(1440)
               .url()}
               className="object-cover w-full h-[250px]  group-hover:scale-125 group-hover:rotate-6 transition-transform duration-300"
           />

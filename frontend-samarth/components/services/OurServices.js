@@ -1,4 +1,3 @@
-"use client";
 import Container from "../container/Container";
 import DivHeading from "../headings/DivHeading";
 import Slide1 from "../../public/slide1.jpg";

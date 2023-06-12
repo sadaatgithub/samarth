@@ -9,10 +9,10 @@ import urlFor from "@/lib/urlFor"
             return null
           }
           return (
-            <Image width={320} height={240}
+            <Image width={640} height={480}
               alt={value.alt || ' '}
               loading="lazy"
-              src={urlFor(value).width(320).height(240).fit('max').auto('format').url()}
+              src={urlFor(value).width(640).height(480).fit('max').auto('format').url()}
             />
           )
         }
