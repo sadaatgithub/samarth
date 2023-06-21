@@ -103,7 +103,7 @@ const HeroSlider = () => {
                             isActive
                               ? "translate-x-0  opacity-100 duration-1000"
                               : "-translate-x-10 opacity-0 duration-200 "
-                          } px-4 py-2 md:p-4 overflow-hidden bg-white transition-all  ease-in-out  text-teal-500 capitalize `}
+                          } px-4 py-2 md:p-4 overflow-hidden bg-white transition-all  ease-in-out  text-teal-500 capitalize text-center [text-wrap:"balanced"]`}
                         >
                           {" "}
                           {firstDesc}{" "}
@@ -115,7 +115,7 @@ const HeroSlider = () => {
                             isActive
                               ? "translate-x-0 opacity-100 duration-1000 delay-300"
                               : "translate-x-10 opacity-0 duration-200"
-                          } px-4 py-2 md:p-4 overflow-hidden transition-all ease-in-out   text-white bg-teal-500 capitalize`}
+                          } px-4 py-2 md:p-4 overflow-hidden transition-all ease-in-out   text-white bg-teal-500 capitalize text-center [text-wrap:"balanced"]`}
                         >
                           {" "}
                           {secondDesc}

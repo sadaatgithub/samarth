@@ -8,12 +8,12 @@ import {  fadeIn } from "../../lib/Animation";
 
 const EachService = ({service,idx}) => {
   return (
-    <m.div variants={fadeIn(" ", "tween", idx*0.2, 0.5)}
+    <m.div variants={fadeIn("up", "tween", idx*0.2, 0.3)}
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.2 }}
     
-    className="flex flex-col max-w-sm bg-white group border rounded-sm overflow-hidden hover:shadow-2xl hover:shadow-gray-300 transition-all duration-300"
+    className="flex flex-col max-w-sm bg-white group border rounded-sm overflow-hidden hover:shadow-2xl hover:shadow-gray-300 "
   >
     <div className="overflow-hidden h-[240px]">
     <Image

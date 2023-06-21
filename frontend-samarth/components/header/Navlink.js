@@ -45,7 +45,7 @@ const Navlink = ({ visible }) => {
       <ul
         className={` ${
           visible ? "justify-end" : ""
-        }  hidden w-full md:flex gap-6 lg:gap-8 [&>li]:cursor-pointer items-center navlink  [&>li]:relative [&>li]:py-3`}
+        }  hidden w-full md:flex gap-6 lg:gap-8 [&>li]:cursor-pointer items-center navlink  [&>li]:relative [&>li]:py-3 text-lg font-semibold`}
       >
         {menuLink.map((link) => {
           const isSublink = typeof link.sublink === "object";
