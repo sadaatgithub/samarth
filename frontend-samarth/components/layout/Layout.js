@@ -5,7 +5,7 @@ export default function Layout({ children }) {
   
   return (
     <>
-    <div className="max-w-[1440px] ">
+    <div className="max-w-[1440px] mx-auto">
       <Navbar/>
       <main className="bg-none ">{children}</main>
       <Footer/>
