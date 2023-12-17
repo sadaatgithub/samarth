@@ -1,8 +1,8 @@
 import "../styles/globals.css";
-import {  Source_Sans_Pro,Raleway ,Aladin,Handlee} from "@next/font/google";
+import {  Source_Sans_3,Raleway ,Aladin,Handlee} from "next/font/google";
 import Layout from "../components/layout/Layout";
 
-const sourceSansPro = Source_Sans_Pro({
+const sourceSansPro = Source_Sans_3({
   weight: ["200", "300", "400", "600", "700"],
   subsets: ["latin"],
 });
